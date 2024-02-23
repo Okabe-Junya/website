@@ -369,7 +369,7 @@ spec:
 
 #### リージョンPD PersistentVolumeを手動でプロビジョニングする
 
-[GCE PDのStorageClass](/docs/concepts/storage/storage-classes/#gce-pd)を使用して動的プロビジョニングが可能です。
+[GCE PDのStorageClass](/ja/docs/concepts/storage/storage-classes/#gce-pd)を使用して動的プロビジョニングが可能です。
 SPDPersistentVolumeを作成する前に、永続ディスクを作成する必要があります。
 
 ```shell
@@ -496,7 +496,7 @@ AdmissionPolicyによって特定のディレクトリへのHostPathアクセス
 
 * HostPath は、特権的なシステム認証情報(Kubeletなど)や特権的なAPI(コンテナランタイムソケットなど)を公開する可能性があり、コンテナのエスケープやクラスターの他の部分への攻撃に利用される可能性があります。
 * 同一構成のPod(PodTemplateから作成されたものなど)は、ノード上のファイルが異なるため、ノードごとに動作が異なる場合があります。
-* ホスト上に作成されたファイルやディレクトリは、rootでしか書き込みができません。[特権コンテナ](/docs/tasks/configure-pod-container/security-context/)内でrootとしてプロセスを実行するか、ホスト上のファイルのパーミッションを変更して`hostPath`ボリュームに書き込みができるようにする必要があります。
+* ホスト上に作成されたファイルやディレクトリは、rootでしか書き込みができません。[特権コンテナ](/ja/docs/tasks/configure-pod-container/security-context/)内でrootとしてプロセスを実行するか、ホスト上のファイルのパーミッションを変更して`hostPath`ボリュームに書き込みができるようにする必要があります。
 
 #### hostPathの設定例
 
@@ -523,7 +523,7 @@ spec:
 
 {{< caution >}}
 `FileOrCreate`モードでは、ファイルの親ディレクトリは作成されません。マウントされたファイルの親ディレクトリが存在しない場合、Podは起動に失敗します。
-このモードが確実に機能するようにするには、[`FileOrCreate`構成](＃hostpath-fileorcreate-example)に示すように、ディレクトリとファイルを別々にマウントしてみてください。
+このモードが確実に機能するようにするには、[`FileOrCreate`構成](/ja＃hostpath-fileorcreate-example)に示すように、ディレクトリとファイルを別々にマウントしてみてください。
 {{< /caution >}}
 
 #### hostPath FileOrCreateの設定例 {#hostpath-fileorcreate-example}
@@ -619,7 +619,7 @@ KubernetesのスケジューラはPersistentVolume `nodeAffinity`を使用して
 PersistentVolume `volumeMode`を(デフォルト値の「Filesystem」ではなく)「Block」に設定して、ローカルボリュームをrawブロックデバイスとして公開できます。
 
 ローカルボリュームを使用する場合、`volumeBindingMode`を`WaitForFirstConsumer`に設定したStorageClassを作成することをお勧めします。
-詳細については、local [StorageClass](/docs/concepts/storage/storage-classes/#local)の例を参照してください。
+詳細については、local [StorageClass](/ja/docs/concepts/storage/storage-classes/#local)の例を参照してください。
 ボリュームバインディングを遅延させると、PersistentVolumeClaimバインディングの決定が、ノードリソース要件、ノードセレクター、Podアフィニティ、Podアンチアフィニティなど、Podが持つ可能性のある他のノード制約も含めて評価されるようになります。
 
 ローカルボリュームのライフサイクルの管理を改善するために、外部の静的プロビジョナーを個別に実行できます。
@@ -688,7 +688,7 @@ Podで使用する前に、`pxvol`という名前の既存のPortworxVolumeが�
 ### 投影
 
 投影ボリュームは、複数の既存のボリュームソースを同じディレクトリにマッピングします。
-詳細については[投影ボリューム](/docs/concepts/storage/projected-volumes/)を参照してください。
+詳細については[投影ボリューム](/ja/docs/concepts/storage/projected-volumes/)を参照してください。
 
 ### quobyte(非推奨) {#quobyte}
 
@@ -1018,8 +1018,8 @@ CSI互換のボリュームドライバーがKubernetesクラスター上に展�
 `csi`ボリュームはPodで3つの異なる方法によって使用することができます。
 
 * [PersistentVolumeClaim](#persistentvolumeclaim)の参照を通して
-* [一般的なエフェメラルボリューム](/docs/concepts/storage/ephemeral-volumes/#generic-ephemeral-volumes)(alpha機能)で
-* ドライバーがそれをサポートしている場合は、[CSIエフェメラルボリューム](/docs/concepts/storage/ephemeral-volumes/#csi-ephemeral-volumes)(beta機能)を使って
+* [一般的なエフェメラルボリューム](/ja/docs/concepts/storage/ephemeral-volumes/#generic-ephemeral-volumes)(alpha機能)で
+* ドライバーがそれをサポートしている場合は、[CSIエフェメラルボリューム](/ja/docs/concepts/storage/ephemeral-volumes/#csi-ephemeral-volumes)(beta機能)を使って
 
 ストレージ管理者は、CSI永続ボリュームを構成するために次のフィールドを使用できます。
 
@@ -1040,13 +1040,13 @@ CSI互換のボリュームドライバーがKubernetesクラスター上に展�
 
 外部のCSIドライバーを使用するベンダーは、Kubernetesワークロードでrawブロックボリュームサポートを実装できます。
 
-CSI固有の変更を行うことなく、通常どおり、[rawブロックボリュームをサポートするPersistentVolume/PersistentVolumeClaim](/docs/concepts/storage/persistent-volumes/#raw-block-volume-support)を設定できます。
+CSI固有の変更を行うことなく、通常どおり、[rawブロックボリュームをサポートするPersistentVolume/PersistentVolumeClaim](/ja/docs/concepts/storage/persistent-volumes/#raw-block-volume-support)を設定できます。
 
 #### CSIエフェメラルボリューム
 
 {{< feature-state for_k8s_version="v1.16" state="beta" >}}
 
-Pod仕様内でCSIボリュームを直接構成できます。この方法で指定されたボリュームは一時的なものであり、Podを再起動しても持続しません。詳細については[エフェメラルボリューム](/docs/concepts/storage/ephemeral-volumes/#csi-ephemeral-volumes)を参照してください。
+Pod仕様内でCSIボリュームを直接構成できます。この方法で指定されたボリュームは一時的なものであり、Podを再起動しても持続しません。詳細については[エフェメラルボリューム](/ja/docs/concepts/storage/ephemeral-volumes/#csi-ephemeral-volumes)を参照してください。
 
 CSIドライバーの開発方法の詳細については[kubernetes-csiドキュメント](https://kubernetes-csi.github.io/docs/)を参照してください。
 
@@ -1059,7 +1059,7 @@ CSIドライバーの開発方法の詳細については[kubernetes-csiドキ�
 
 サポートされている操作と機能には、プロビジョニング/削除、アタッチ/デタッチ、マウント/アンマウント、およびボリュームのサイズ変更が含まれます。
 
-`CSIMigration`をサポートし、対応するCSIドライバーが実装されているツリー内プラグインは、[ボリュームのタイプ](＃volume-types)にリストされています。
+`CSIMigration`をサポートし、対応するCSIドライバーが実装されているツリー内プラグインは、[ボリュームのタイプ](/ja＃volume-types)にリストされています。
 
 ### flexVolume
 
@@ -1128,5 +1128,5 @@ sudo systemctl restart docker
 
 ## {{% heading "whatsnext" %}}
 
-[永続ボリュームを使用してWordPressとMySQLをデプロイする例](/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/)に従ってください。
+[永続ボリュームを使用してWordPressとMySQLをデプロイする例](/ja/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/)に従ってください。
 

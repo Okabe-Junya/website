@@ -193,7 +193,7 @@ resources:
 ```
 
 コンテナが独自のメモリー要求と制限を指定していなかったため、LimitRangeから与えられのです。
-コンテナが独自のメモリー要求と制限を指定していなかったため、LimitRangeから[デフォルトのメモリー要求と制限](/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/)が与えられたのです。
+コンテナが独自のメモリー要求と制限を指定していなかったため、LimitRangeから[デフォルトのメモリー要求と制限](/ja/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/)が与えられたのです。
 
 この時点で、コンテナは起動しているかもしれませんし、起動していないかもしれません。このタスクの前提条件は、ノードが少なくとも1GiBのメモリーを持っていることであることを思い出してください。それぞれのノードが1GiBのメモリーしか持っていない場合、どのノードにも1GiBのメモリー要求に対応するのに十分な割り当て可能なメモリーがありません。たまたま2GiBのメモリーを持つノードを使用しているのであれば、おそらく1GiBのメモリーリクエストに対応するのに十分なスペースを持っていることになります。
 
@@ -237,7 +237,7 @@ kubectl delete namespace constraints-mem-example
 
 ### クラスター管理者向け
 
-* [名前空間に対するデフォルトのメモリー要求と制限の構成](/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/)
+* [名前空間に対するデフォルトのメモリー要求と制限の構成](/ja/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/)
 
 * [名前空間に対するデフォルトのCPU要求と制限の構成](/docs/tasks/administer-cluster/manage-resources/cpu-default-namespace/)
 
@@ -251,8 +251,8 @@ kubectl delete namespace constraints-mem-example
 
 ### アプリケーション開発者向け
 
-* [コンテナとPodへのメモリーリソースの割り当て](/docs/tasks/configure-pod-container/assign-memory-resource/)
+* [コンテナとPodへのメモリーリソースの割り当て](/ja/docs/tasks/configure-pod-container/assign-memory-resource/)
 
-* [コンテナとPodへのCPUリソースの割り当て](/docs/tasks/configure-pod-container/assign-cpu-resource/)
+* [コンテナとPodへのCPUリソースの割り当て](/ja/docs/tasks/configure-pod-container/assign-cpu-resource/)
 
 * [PodのQoS(サービス品質)を設定](/ja/docs/tasks/configure-pod-container/quality-service-pod/)

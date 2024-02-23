@@ -20,7 +20,7 @@ weight: 50
 ボリュームの動的プロビジョニングの実装は`storage.k8s.io`というAPIグループ内の`StorageClass`というAPIオブジェクトに基づいています。クラスター管理者は`StorageClass`オブジェクトを必要に応じていくつでも定義でき、各オブジェクトはボリュームをプロビジョンする*Volumeプラグイン* (別名*プロビジョナー*)と、プロビジョンされるときにプロビジョナーに渡されるパラメーターを指定します。
 クラスター管理者はクラスター内で複数の種類のストレージ(同一または異なるストレージシステム)を定義し、さらには公開でき、それらのストレージはパラメーターのカスタムセットを持ちます。この仕組みにおいて、エンドユーザーはストレージがどのようにプロビジョンされるか心配する必要がなく、それでいて複数のストレージオプションから選択できることを保証します。
 
-StorageClassに関するさらなる情報は[Storage Class](/docs/concepts/storage/storage-classes/)を参照ください。
+StorageClassに関するさらなる情報は[Storage Class](/ja/docs/concepts/storage/storage-classes/)を参照ください。
 
 ## 動的プロビジョニングを有効にする
 
@@ -86,6 +86,6 @@ spec:
 
 ## トポロジーに関する注意
 
-[マルチゾーン](/docs/setup/multiple-zones)クラスター内では、Podは単一のリージョン内のゾーンをまたいでしか稼働できません。シングルゾーンのStorageバックエンドはPodがスケジュールされるゾーン内でプロビジョンされる必要があります。これは[Volume割り当てモード](/docs/concepts/storage/storage-classes/#volume-binding-mode)を設定することにより可能となります。
+[マルチゾーン](/ja/docs/setup/multiple-zones)クラスター内では、Podは単一のリージョン内のゾーンをまたいでしか稼働できません。シングルゾーンのStorageバックエンドはPodがスケジュールされるゾーン内でプロビジョンされる必要があります。これは[Volume割り当てモード](/ja/docs/concepts/storage/storage-classes/#volume-binding-mode)を設定することにより可能となります。
 
 

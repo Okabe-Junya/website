@@ -20,8 +20,8 @@ REST APIはKubernetesの基本的な構造です。
 
 [Kubernetes APIリファレンス](/docs/reference/generated/kubernetes-api/{{< param "version" >}}/)は、Kubernetesバージョン{{< param "version" >}}のAPI一覧を提供します。
 
-一般的な背景情報を知るには、[The Kubernetes API](/docs/concepts/overview/kubernetes-api/)、
-[Controlling Access to the Kubernetes API](/docs/concepts/security/controlling-access/)を読んでください。
+一般的な背景情報を知るには、[The Kubernetes API](/ja/docs/concepts/overview/kubernetes-api/)、
+[Controlling Access to the Kubernetes API](/ja/docs/concepts/security/controlling-access/)を読んでください。
 それらはKubernetes APIサーバーがクライアントを認証する方法とリクエストを認可する方法を説明します。
 
 ## APIバージョニング

@@ -52,19 +52,19 @@ _スコアリング_ ステップでは、Podを割り当てるのに最も適�
 
 スケジューラーのフィルタリングとスコアリングの動作に関する設定には2つのサポートされた手法があります。
 
-1. [スケジューリングポリシー](/docs/reference/scheduling/policies) は、フィルタリングのための _Predicates_ とスコアリングのための _Priorities_ の設定することができます。
-1. [スケジューリングプロファイル](/docs/reference/scheduling/config/#profiles)は、`QueueSort`、 `Filter`、 `Score`、 `Bind`、 `Reserve`、 `Permit`やその他を含む異なるスケジューリングの段階を実装するプラグインを設定することができます。kube-schedulerを異なるプロファイルを実行するように設定することもできます。
+1. [スケジューリングポリシー](/ja/docs/reference/scheduling/policies) は、フィルタリングのための _Predicates_ とスコアリングのための _Priorities_ の設定することができます。
+1. [スケジューリングプロファイル](/ja/docs/reference/scheduling/config/#profiles)は、`QueueSort`、 `Filter`、 `Score`、 `Bind`、 `Reserve`、 `Permit`やその他を含む異なるスケジューリングの段階を実装するプラグインを設定することができます。kube-schedulerを異なるプロファイルを実行するように設定することもできます。
 
 
 ## {{% heading "whatsnext" %}}
 
 * [スケジューラーのパフォーマンスチューニング](/ja/docs/concepts/scheduling-eviction/scheduler-perf-tuning/)を参照してください。
-* [Podトポロジーの分散制約](/docs/concepts/workloads/pods/pod-topology-spread-constraints/)を参照してください。
+* [Podトポロジーの分散制約](/ja/docs/concepts/workloads/pods/pod-topology-spread-constraints/)を参照してください。
 * kube-schedulerの[リファレンスドキュメント](/docs/reference/command-line-tools-reference/kube-scheduler/)を参照してください。
-* [複数のスケジューラーの設定](/docs/tasks/administer-cluster/configure-multiple-schedulers/)について学んでください。
+* [複数のスケジューラーの設定](/ja/docs/tasks/administer-cluster/configure-multiple-schedulers/)について学んでください。
 * [トポロジーの管理ポリシー](/ja/docs/tasks/administer-cluster/topology-manager/)について学んでください。
 * [Podのオーバーヘッド](/ja/docs/concepts/scheduling-eviction/pod-overhead/)について学んでください。
 * ボリュームを使用するPodのスケジューリングについて以下で学んでください。
-  * [Volume Topology Support](/docs/concepts/storage/storage-classes/#volume-binding-mode)
+  * [Volume Topology Support](/ja/docs/concepts/storage/storage-classes/#volume-binding-mode)
   * [ストレージ容量の追跡](/ja/docs/concepts/storage/storage-capacity/)
   * [Node-specific Volume Limits](/docs/concepts/storage/storage-limits/)

@@ -183,7 +183,7 @@ Nodeには、ローカルに接続された書き込み可能なデバイス、�
 Podは、スクラッチ領域、キャッシュ、ログ用にエフェメラルなローカルストレージを使用しています。
 kubeletは、ローカルのエフェメラルストレージを使用して、Podにスクラッチ領域を提供し、[`emptyDir`](https://kubernetes.io/docs/concepts/storage/volumes/#emptydir) {{< glossary_tooltip term_id="volume" text="ボリューム" >}}をコンテナにマウントできます。
 
-また、kubeletはこの種類のストレージを使用して、[Nodeレベルのコンテナログ](/docs/concepts/cluster-administration/logging/#logging-at-the-node-level)、コンテナイメージ、実行中のコンテナの書き込み可能なレイヤーを保持します。
+また、kubeletはこの種類のストレージを使用して、[Nodeレベルのコンテナログ](/ja/docs/concepts/cluster-administration/logging/#logging-at-the-node-level)、コンテナイメージ、実行中のコンテナの書き込み可能なレイヤーを保持します。
 
 {{< caution >}}
 Nodeに障害が発生すると、そのエフェメラルストレージ内のデータが失われる可能性があります。
@@ -200,7 +200,7 @@ Kubernetesは、Node上のローカルエフェメラルストレージを構成
 この構成では、さまざまな種類のローカルのエフェメラルデータ(`emptyDir`ボリュームや、書き込み可能なレイヤー、コンテナイメージ、ログなど)をすべて1つのファイルシステムに配置します。
 kubeletを構成する最も効果的な方法は、このファイルシステムをKubernetes(kubelet)データ専用にすることです。
 
-kubeletは[Nodeレベルのコンテナログ](/docs/concepts/cluster-administration/logging/#logging-at-the-node-level)も書き込み、これらをエフェメラルなローカルストレージと同様に扱います。
+kubeletは[Nodeレベルのコンテナログ](/ja/docs/concepts/cluster-administration/logging/#logging-at-the-node-level)も書き込み、これらをエフェメラルなローカルストレージと同様に扱います。
 
 kubeletは、設定されたログディレクトリ(デフォルトでは`/var/log`)内のファイルにログを書き出し、ローカルに保存された他のデータのベースディレクトリ(デフォルトでは`/var/lib/kubelet`)を持ちます。
 
@@ -212,7 +212,7 @@ Nodeには、Kubernetesに使用されていない他のファイルシステム
 Node上にファイルシステムがありますが、このファイルシステムは、ログや`emptyDir`ボリュームなど、実行中のPodの一時的なデータに使用されます。
 このファイルシステムは、例えばKubernetesに関連しないシステムログなどの他のデータに使用することができ、ルートファイルシステムとすることさえ可能です。
 
-また、kubeletは[ノードレベルのコンテナログ](/docs/concepts/cluster-administration/logging/#logging-at-the-node-level)を最初のファイルシステムに書き込み、これらをエフェメラルなローカルストレージと同様に扱います。
+また、kubeletは[ノードレベルのコンテナログ](/ja/docs/concepts/cluster-administration/logging/#logging-at-the-node-level)を最初のファイルシステムに書き込み、これらをエフェメラルなローカルストレージと同様に扱います。
 
 また、別の論理ストレージデバイスでバックアップされた別のファイルシステムを使用することもできます。
 この設定では、コンテナイメージレイヤーと書き込み可能なレイヤーを配置するようにkubeletに指示するディレクトリは、この2番目のファイルシステム上にあります。
@@ -317,7 +317,7 @@ kubeletがローカルのエフェメラルストレージを測定していな�
 
 ただし、書き込み可能なコンテナレイヤー、Nodeレベルのログ、または`emptyDir`ボリュームのファイルシステムスペースが少なくなると、Nodeはローカルストレージが不足していると汚染{{< glossary_tooltip text="taints" term_id="taint" >}}し、この汚染は、汚染を特に許容しないPodの排出をトリガーします。
 
-ローカルのエフェメラルストレージについては、サポートされている[設定](＃configurations-for-local-ephemeral-storage)をご覧ください。
+ローカルのエフェメラルストレージについては、サポートされている[設定](/ja＃configurations-for-local-ephemeral-storage)をご覧ください。
 {{< /caution >}}
 
 kubeletはPodストレージの使用状況を測定するさまざまな方法をサポートしています
@@ -559,7 +559,7 @@ Allocated resources:
 `allocatable`フィールド[NodeStatus](/docs/reference/generated/kubernetes-api/{{< param "version" >}}/#nodestatus-v1-core)は、Podに利用可能なリソースの量を与えます。
 詳細については、[ノード割り当て可能なリソース](https://git.k8s.io/design-proposals-archive/node/node-allocatable.md)を参照してください。
 
-[リソースクォータ](/docs/concepts/policy/resource-quotas/)機能は、消費できるリソースの総量を制限するように設定することができます。
+[リソースクォータ](/ja/docs/concepts/policy/resource-quotas/)機能は、消費できるリソースの総量を制限するように設定することができます。
 名前空間と組み合わせて使用すると、1つのチームがすべてのリソースを占有するのを防ぐことができます。
 
 ### コンテナが終了した {#my-container-is-terminated}

@@ -30,14 +30,14 @@ weight: 80
 
 - `CSIStorageCapacity`フィーチャーゲートがtrueである
 - Podがまだ作成されていないボリュームを使用する時
-- そのボリュームが、CSIドライバーを参照し、[volume binding mode](/docs/concepts/storage/storage-classes/#volume-binding-mode)に`WaitForFirstConsumer`を使う{{< glossary_tooltip text="StorageClass" term_id="storage-class" >}}を使用している
+- そのボリュームが、CSIドライバーを参照し、[volume binding mode](/ja/docs/concepts/storage/storage-classes/#volume-binding-mode)に`WaitForFirstConsumer`を使う{{< glossary_tooltip text="StorageClass" term_id="storage-class" >}}を使用している
 - ドライバーに対する`CSIDriver`オブジェクトの`StorageCapacity`がtrueに設定されている
 
 その場合、スケジューラーはPodに対して、十分なストレージ容量が利用できるノードだけを考慮するようになります。このチェックは非常に単純で、ボリュームのサイズと、`CSIStorageCapacity`オブジェクトに一覧された容量を、ノードを含むトポロジーで比較するだけです。
 
 volume binding modeが`Immediate`のボリュームの場合、ストレージドライバーはボリュームを使用するPodとは関係なく、ボリュームを作成する場所を決定します。次に、スケジューラーはボリュームが作成された後、Podをボリュームが利用できるノードにスケジューリングします。
 
-[CSI ephemeral volumes](/docs/concepts/storage/ephemeral-volumes/#csi-ephemeral-volumes)の場合、スケジューリングは常にストレージ容量を考慮せずに行われます。このような動作になっているのは、このボリュームタイプはノードローカルな特別なCSIドライバーでのみ使用され、そこでは特に大きなリソースが必要になることはない、という想定に基づいています。
+[CSI ephemeral volumes](/ja/docs/concepts/storage/ephemeral-volumes/#csi-ephemeral-volumes)の場合、スケジューリングは常にストレージ容量を考慮せずに行われます。このような動作になっているのは、このボリュームタイプはノードローカルな特別なCSIドライバーでのみ使用され、そこでは特に大きなリソースが必要になることはない、という想定に基づいています。
 
 ## 再スケジューリング
 

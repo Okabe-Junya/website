@@ -29,7 +29,7 @@ Kubesprayは次を提供します:
   - Amazon Linux 2
 * 継続的インテグレーションテスト。
 
-あなたのユースケースに最適なツールの選択には、[kubeadm](/docs/reference/setup-tools/kubeadm/)や[kops](/docs/setup/production-environment/tools/kops/)と[比較したドキュメント](https://github.com/kubernetes-sigs/kubespray/blob/master/docs/comparisons.md)を参照してください。
+あなたのユースケースに最適なツールの選択には、[kubeadm](/ja/docs/reference/setup-tools/kubeadm/)や[kops](/ja/docs/setup/production-environment/tools/kops/)と[比較したドキュメント](https://github.com/kubernetes-sigs/kubespray/blob/master/docs/comparisons.md)を参照してください。
 
 
 

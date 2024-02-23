@@ -347,7 +347,7 @@ horizontalpodautoscaler.autoscaling/my-nginx autoscaled
 
 実行すると、nginxのレプリカは必要に応じて自動でスケールアップ、スケールダウンします。
 
-さらなる情報は、[kubectl scale](/docs/reference/generated/kubectl/kubectl-commands/#scale)、[kubectl autoscale](/docs/reference/generated/kubectl/kubectl-commands/#autoscale) and [horizontal pod autoscaler](/docs/tasks/run-application/horizontal-pod-autoscale/)を参照してください。
+さらなる情報は、[kubectl scale](/docs/reference/generated/kubectl/kubectl-commands/#scale)、[kubectl autoscale](/docs/reference/generated/kubectl/kubectl-commands/#autoscale) and [horizontal pod autoscaler](/ja/docs/tasks/run-application/horizontal-pod-autoscale/)を参照してください。
 
 
 ## リソースの直接的アップデート

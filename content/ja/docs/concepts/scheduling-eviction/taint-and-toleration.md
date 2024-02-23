@@ -134,7 +134,7 @@ tolerationが設定されたPodはtaintの設定された（専有の）Nodeと�
 `kubectl taint nodes nodename special=true:PreferNoSchedule`)して、ハードウェアを使用するPodに対応するtolerationを追加することで可能です。
 専有Nodeのユースケースと同様に、tolerationを容易に適用する方法はカスタム
 [アドミッションコントローラー](/docs/reference/access-authn-authz/admission-controllers/)を使うことです。
-例えば、特殊なハードウェアを表すために[拡張リソース](/docs/concepts/configuration/manage-compute-resources-container/#extended-resources)
+例えば、特殊なハードウェアを表すために[拡張リソース](/ja/docs/concepts/configuration/manage-compute-resources-container/#extended-resources)
 を使い、ハードウェアを備えるNodeに拡張リソースの名称のtaintを追加して、
 [拡張リソースtoleration](/docs/reference/access-authn-authz/admission-controllers/#extendedresourcetoleration)
 アドミッションコントローラーを実行することが推奨されます。Nodeにはtaintが付与されているため、tolerationのないPodはスケジューリングされません。しかし拡張リソースを要求するPodを作成しようとすると、`拡張リソースtoleration` アドミッションコントローラーはPodに自動的に適切なtolerationを設定し、Podはハードウェアを備えるNodeへスケジューリングされます。
@@ -217,5 +217,5 @@ DaemonSetのコントローラーは、DaemonSetが中断されるのを防ぐ�
 
 ## {{% heading "whatsnext" %}}
 
-* [リソース枯渇の対処](/docs/tasks/administer-cluster/out-of-resource/)とどのような設定ができるかについてを読む
-* [Podの優先度](/docs/concepts/configuration/pod-priority-preemption/)を読む
+* [リソース枯渇の対処](/ja/docs/tasks/administer-cluster/out-of-resource/)とどのような設定ができるかについてを読む
+* [Podの優先度](/ja/docs/concepts/configuration/pod-priority-preemption/)を読む

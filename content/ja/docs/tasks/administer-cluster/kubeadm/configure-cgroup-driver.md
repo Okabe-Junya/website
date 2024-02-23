@@ -52,7 +52,7 @@ kubeadm init --config kubeadm-config.yaml
 {{< note >}}
 Kubeadmはクラスター内の全ノードで同じ`KubeletConfiguration`を使用します。
 
-`KubeletConfiguration`は`kube-system`名前空間下の[ConfigMap](/docs/concepts/configuration/configmap)オブジェクトに格納されます。
+`KubeletConfiguration`は`kube-system`名前空間下の[ConfigMap](/ja/docs/concepts/configuration/configmap)オブジェクトに格納されます。
 
 サブコマンド`init`、`join`、`upgrade`を実行すると、kubeadmが`KubeletConfiguration`を`/var/lib/kubelet/config.yaml`以下にファイルとして書き込み、ローカルノードのkubeletに渡します。
 {{< /note >}}

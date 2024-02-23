@@ -52,10 +52,10 @@ class first,second white
 - Kubernetesのドキュメントは、Markdownのスタイルとして[CommonMark](https://commonmark.org)を使用しています。
 - ソースは[GitHub](https://github.com/kubernetes/website)にあります。Kubernetesのドキュメントは`/content/en/docs/`にあります。リファレンスドキュメントの一部は、`update-imported-docs/`ディレクトリ内のスクリプトから自動的に生成されます。
 - [Page content types](/docs/contribute/style/page-content-types/)にHugoによるドキュメントのコンテンツの見え方を記述しています。
-- Kubernetesのドキュメントに貢献するのに[Docsy shortcode](https://www.docsy.dev/docs/adding-content/shortcodes/)や[カスタムのHugo shortcode](/docs/contribute/style/hugo-shortcodes/)が使えます。
-- 標準のHugoのshortcodeに加えて、多数の[カスタムのHugo shortcode](/docs/contribute/style/hugo-shortcodes/)を使用してコンテンツの見え方をコントロールしています。
+- Kubernetesのドキュメントに貢献するのに[Docsy shortcode](https://www.docsy.dev/docs/adding-content/shortcodes/)や[カスタムのHugo shortcode](/ja/docs/contribute/style/hugo-shortcodes/)が使えます。
+- 標準のHugoのshortcodeに加えて、多数の[カスタムのHugo shortcode](/ja/docs/contribute/style/hugo-shortcodes/)を使用してコンテンツの見え方をコントロールしています。
 - ドキュメントのソースは`/content/`内にある複数の言語で利用できます。各言語はそれぞれ[ISO 639-1標準](https://www.loc.gov/standards/iso639-2/php/code_list.php)で定義された2文字のコードの名前のフォルダを持ちます。たとえば、英語のドキュメントのソースは`/content/en/docs/`内に置かれています。
-- 複数言語でのドキュメントへの貢献や新しい翻訳の開始に関する情報については、[Kubernetesのドキュメントを翻訳する](/docs/contribute/localization)を参照してください。
+- 複数言語でのドキュメントへの貢献や新しい翻訳の開始に関する情報については、[Kubernetesのドキュメントを翻訳する](/ja/docs/contribute/localization)を参照してください。
 
 ## 始める前に {#before-you-begin}
 
@@ -73,7 +73,7 @@ pull requestをオープンするときは、どのブランチをベースに�
 :---------|:------------
 現在のリリースに対する既存または新しい英語のコンテンツ | `main`
 機能変更のリリースに対するコンテンツ | 機能変更が含まれるメジャーおよびマイナーバージョンに対応する、`dev-<version>`というパターンのブランチを使います。たとえば、機能変更が`v{{< skew nextMinorVersion >}}`に含まれる場合、ドキュメントの変更は``dev-{{< skew nextMinorVersion >}}``ブランチに追加します。
-他の言語内のコンテンツ(翻訳) | 各翻訳対象の言語のルールに従います。詳しい情報は、[翻訳のブランチ戦略](/docs/contribute/localization/#branching-strategy)を読んでください。
+他の言語内のコンテンツ(翻訳) | 各翻訳対象の言語のルールに従います。詳しい情報は、[翻訳のブランチ戦略](/ja/docs/contribute/localization/#branching-strategy)を読んでください。
 
 それでも選ぶべきブランチがわからないときは、Slack上の`#sig-docs`チャンネルで質問してください。
 

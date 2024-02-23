@@ -180,4 +180,4 @@ kubectl delete secret mysecret
 
 - [Secretのコンセプト](/ja/docs/concepts/configuration/secret/)を読む
 - [kubectlを使用してSecretを管理する](/ja/docs/tasks/configmap-secret/managing-secret-using-kubectl/)方法を知る
-- [kustomizeを使用してSecretを管理する](/docs/tasks/configmap-secret/managing-secret-using-kustomize/)方法を知る
+- [kustomizeを使用してSecretを管理する](/ja/docs/tasks/configmap-secret/managing-secret-using-kustomize/)方法を知る

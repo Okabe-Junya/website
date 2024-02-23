@@ -83,7 +83,7 @@ toc_hide: true
 
 スタンドアローンのコンテンツページ(Markdownファイル)に加えて、Hugoでは、[Page Bundles](https://gohugo.io/content-management/page-bundles/)がサポートされています。
 
-Page Bundleの1つの例は、[カスタムのHugo Shortcode](/docs/contribute/style/hugo-shortcodes/)です。これは、`leaf bundle`であると見做されます。ディレクトリ内のすべてのファイルは、`index.md`を含めてバンドルの一部となります。これには、ページからの相対リンク、処理可能な画像なども含まれます。
+Page Bundleの1つの例は、[カスタムのHugo Shortcode](/ja/docs/contribute/style/hugo-shortcodes/)です。これは、`leaf bundle`であると見做されます。ディレクトリ内のすべてのファイルは、`index.md`を含めてバンドルの一部となります。これには、ページからの相対リンク、処理可能な画像なども含まれます。
 
 ```bash
 en/docs/home/contribute/includes
@@ -118,6 +118,6 @@ en/includes
 
 ## {{% heading "whatsnext" %}}
 
-* [カスタムのHugo shortcode](/docs/contribute/style/hugo-shortcodes/)について学ぶ
+* [カスタムのHugo shortcode](/ja/docs/contribute/style/hugo-shortcodes/)について学ぶ
 * [スタイルガイド](/docs/contribute/style/style-guide)について学ぶ
-* [コンテンツガイド](/docs/contribute/style/content-guide)について学ぶ
+* [コンテンツガイド](/ja/docs/contribute/style/content-guide)について学ぶ

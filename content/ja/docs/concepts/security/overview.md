@@ -75,7 +75,7 @@ Kubernetesを保護する為には２つの懸念事項があります。
 
 ### クラスターのコンポーネント {#cluster-components}
 
-想定外または悪意のあるアクセスからクラスターを保護して適切なプラクティスを採用したい場合、[クラスターの保護](/docs/tasks/administer-cluster/securing-a-cluster/)に関するアドバイスを読み従ってください。
+想定外または悪意のあるアクセスからクラスターを保護して適切なプラクティスを採用したい場合、[クラスターの保護](/ja/docs/tasks/administer-cluster/securing-a-cluster/)に関するアドバイスを読み従ってください。
 
 ### クラスター内のコンポーネント(アプリケーション) {#cluster-applications}
 
@@ -127,8 +127,8 @@ TLS経由のアクセスのみ | コードがTCP通信を必要とする場合�
 
 * [Podセキュリティの標準](/ja/docs/concepts/security/pod-security-standards/)
 * [Podのネットワークポリシー](/ja/docs/concepts/services-networking/network-policies/)
-* [Kubernetes APIへのアクセスを制御する](/docs/concepts/security/controlling-access)
-* [クラスターの保護](/docs/tasks/administer-cluster/securing-a-cluster/)
+* [Kubernetes APIへのアクセスを制御する](/ja/docs/concepts/security/controlling-access)
+* [クラスターの保護](/ja/docs/tasks/administer-cluster/securing-a-cluster/)
 * コントロールプレーンとの[通信時のデータ暗号化](/docs/tasks/tls/managing-tls-in-a-cluster/)
 * [保存時のデータ暗号化](/docs/tasks/administer-cluster/encrypt-data/)
 * [Kubernetes Secret](/ja/docs/concepts/configuration/secret/)

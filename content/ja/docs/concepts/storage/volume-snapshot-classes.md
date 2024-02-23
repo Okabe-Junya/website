@@ -8,7 +8,7 @@ weight: 61 # just after volume snapshots
 <!-- overview -->
 
 このドキュメントでは、Kubernetesにおける`VolumeSnapshotClass`のコンセプトについて説明します。  
-関連する項目として、[Volumeのスナップショット](/docs/concepts/storage/volume-snapshots/)と[ストレージクラス](/docs/concepts/storage/storage-classes)も参照してください。
+関連する項目として、[Volumeのスナップショット](/ja/docs/concepts/storage/volume-snapshots/)と[ストレージクラス](/ja/docs/concepts/storage/storage-classes)も参照してください。
 
 
 

@@ -120,19 +120,19 @@ Kubernetes v1.18におけるWindows上でのContainerDは以下の既知の欠�
 
 #### 永続ストレージ
 
-Kubernetes[ボリューム](/docs/concepts/storage/volumes/)を使用すると、データの永続性とPodボリュームの共有要件を備えた複雑なアプリケーションをKubernetesにデプロイできます。特定のストレージバックエンドまたはプロトコルに関連付けられた永続ボリュームの管理には、ボリュームのプロビジョニング/プロビジョニング解除/サイズ変更、Kubernetesノードへのボリュームのアタッチ/デタッチ、およびデータを永続化する必要があるPod内の個別のコンテナへのボリュームのマウント/マウント解除などのアクションが含まれます。特定のストレージバックエンドまたはプロトコルに対してこれらのボリューム管理アクションを実装するコードは、Kubernetesボリューム[プラグイン](/docs/concepts/storage/volumes/#types-of-volumes)の形式で出荷されます。次の幅広いクラスのKubernetesボリュームプラグインがWindowsでサポートされています。:
+Kubernetes[ボリューム](/ja/docs/concepts/storage/volumes/)を使用すると、データの永続性とPodボリュームの共有要件を備えた複雑なアプリケーションをKubernetesにデプロイできます。特定のストレージバックエンドまたはプロトコルに関連付けられた永続ボリュームの管理には、ボリュームのプロビジョニング/プロビジョニング解除/サイズ変更、Kubernetesノードへのボリュームのアタッチ/デタッチ、およびデータを永続化する必要があるPod内の個別のコンテナへのボリュームのマウント/マウント解除などのアクションが含まれます。特定のストレージバックエンドまたはプロトコルに対してこれらのボリューム管理アクションを実装するコードは、Kubernetesボリューム[プラグイン](/ja/docs/concepts/storage/volumes/#types-of-volumes)の形式で出荷されます。次の幅広いクラスのKubernetesボリュームプラグインがWindowsでサポートされています。:
 
 ##### In-treeボリュームプラグイン
 In-treeボリュームプラグインに関連付けられたコードは、コアKubernetesコードベースの一部として提供されます。In-treeボリュームプラグインのデプロイでは、追加のスクリプトをインストールしたり、個別のコンテナ化されたプラグインコンポーネントをデプロイしたりする必要はありません。これらのプラグインは、ストレージバックエンドでのボリュームのプロビジョニング/プロビジョニング解除とサイズ変更、Kubernetesノードへのボリュームのアタッチ/アタッチ解除、Pod内の個々のコンテナへのボリュームのマウント/マウント解除を処理できます。次のIn-treeプラグインは、Windowsノードをサポートしています。:
 
-* [awsElasticBlockStore](/docs/concepts/storage/volumes/#awselasticblockstore)
-* [azureDisk](/docs/concepts/storage/volumes/#azuredisk)
-* [azureFile](/docs/concepts/storage/volumes/#azurefile)
-* [gcePersistentDisk](/docs/concepts/storage/volumes/#gcepersistentdisk)
-* [vsphereVolume](/docs/concepts/storage/volumes/#vspherevolume)
+* [awsElasticBlockStore](/ja/docs/concepts/storage/volumes/#awselasticblockstore)
+* [azureDisk](/ja/docs/concepts/storage/volumes/#azuredisk)
+* [azureFile](/ja/docs/concepts/storage/volumes/#azurefile)
+* [gcePersistentDisk](/ja/docs/concepts/storage/volumes/#gcepersistentdisk)
+* [vsphereVolume](/ja/docs/concepts/storage/volumes/#vspherevolume)
 
 ##### FlexVolume Plugins
-[FlexVolume](/docs/concepts/storage/volumes/#flexVolume)プラグインに関連付けられたコードは、ホストに直接デプロイする必要があるout-of-treeのスクリプトまたはバイナリとして出荷されます。FlexVolumeプラグインは、Kubernetesノードとの間のボリュームのアタッチ/デタッチ、およびPod内の個々のコンテナとの間のボリュームのマウント/マウント解除を処理します。FlexVolumeプラグインに関連付けられた永続ボリュームのプロビジョニング/プロビジョニング解除は、通常FlexVolumeプラグインとは別の外部プロビジョニング担当者を通じて処理できます。次のFlexVolume[プラグイン](https://github.com/Microsoft/K8s-Storage-Plugins/tree/master/flexvolume/windows)は、Powershellスクリプトとしてホストにデプロイされ、Windowsノードをサポートします:
+[FlexVolume](/ja/docs/concepts/storage/volumes/#flexVolume)プラグインに関連付けられたコードは、ホストに直接デプロイする必要があるout-of-treeのスクリプトまたはバイナリとして出荷されます。FlexVolumeプラグインは、Kubernetesノードとの間のボリュームのアタッチ/デタッチ、およびPod内の個々のコンテナとの間のボリュームのマウント/マウント解除を処理します。FlexVolumeプラグインに関連付けられた永続ボリュームのプロビジョニング/プロビジョニング解除は、通常FlexVolumeプラグインとは別の外部プロビジョニング担当者を通じて処理できます。次のFlexVolume[プラグイン](https://github.com/Microsoft/K8s-Storage-Plugins/tree/master/flexvolume/windows)は、Powershellスクリプトとしてホストにデプロイされ、Windowsノードをサポートします:
 
 * [SMB](https://github.com/microsoft/K8s-Storage-Plugins/tree/master/flexvolume/windows/plugins/microsoft.com~smb.cmd)
 * [iSCSI](https://github.com/microsoft/K8s-Storage-Plugins/tree/master/flexvolume/windows/plugins/microsoft.com~iscsi.cmd)
@@ -301,7 +301,7 @@ Secretはノードのボリュームに平文テキストで書き込まれま�
 1. ファイルACLを使用してSecretファイルの場所を保護する
 2.  [BitLocker](https://docs.microsoft.com/en-us/windows/security/information-protection/bitlocker/bitlocker-how-to-deploy-on-windows-server)を使って、ボリュームレベルの暗号化を使用する
 
-[RunAsUser](/docs/concepts/policy/pod-security-policy/#users-and-groups)は、現在Windowsではサポートされていません。回避策は、コンテナをパッケージ化する前にローカルアカウントを作成することです。RunAsUsername機能は、将来のリリースで追加される可能性があります。
+[RunAsUser](/ja/docs/concepts/policy/pod-security-policy/#users-and-groups)は、現在Windowsではサポートされていません。回避策は、コンテナをパッケージ化する前にローカルアカウントを作成することです。RunAsUsername機能は、将来のリリースで追加される可能性があります。
 
 SELinux、AppArmor、Seccomp、特性（POSIX機能）のような、Linux固有のPodセキュリティ環境の権限はサポートされていません。
 

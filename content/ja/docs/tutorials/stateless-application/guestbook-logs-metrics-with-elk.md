@@ -50,7 +50,7 @@ card:
 
 ## Cluster role bindingを追加する
 
-[クラスターレベルのrole binding](/docs/reference/access-authn-authz/rbac/#rolebinding-and-clusterrolebinding)を作成して、kube-state-metricsとBeatsをクラスターレベルで(kube-system内に)デプロイできるようにします。
+[クラスターレベルのrole binding](/ja/docs/reference/access-authn-authz/rbac/#rolebinding-and-clusterrolebinding)を作成して、kube-state-metricsとBeatsをクラスターレベルで(kube-system内に)デプロイできるようにします。
 
 ```shell
 kubectl create clusterrolebinding cluster-admin-binding \
@@ -457,6 +457,6 @@ DeploymentとServiceを削除すると、実行中のすべてのPodも削除さ
 ## {{% heading "whatsnext" %}}
 
 * [リソースを監視するためのツール](/ja/docs/tasks/debug/debug-cluster/resource-usage-monitoring/)について学ぶ。
-* [ロギングのアーキテクチャ](/docs/concepts/cluster-administration/logging/)についてもっと読む。
+* [ロギングのアーキテクチャ](/ja/docs/concepts/cluster-administration/logging/)についてもっと読む。
 * [アプリケーションのイントロスペクションとデバッグ](/ja/docs/tasks/debug/debug-application/)についてもっと読む。
 * [アプリケーションのトラブルシューティング](/ja/docs/tasks/debug/debug-cluster/resource-usage-monitoring/)についてもっと読む。

@@ -7,7 +7,7 @@ weight: 50
 <!-- overview -->
 
 Kubernetesでは、TLS認証のためにPKI証明書が必要です。
-[kubeadm](/docs/reference/setup-tools/kubeadm/kubeadm/)でKubernetesをインストールする場合、必要な証明書は自動で生成されます。
+[kubeadm](/ja/docs/reference/setup-tools/kubeadm/kubeadm/)でKubernetesをインストールする場合、必要な証明書は自動で生成されます。
 自身で証明書を作成することも可能です。例えば、秘密鍵をAPIサーバーに保持しないことで、管理をよりセキュアにする場合が挙げられます。
 本ページでは、クラスターに必要な証明書について説明します。
 
@@ -72,7 +72,7 @@ CAの秘密鍵をクラスターにコピーしたくない場合、自身で全
 | kube-apiserver-kubelet-client | kubernetes-ca             | system:masters | client                                 |                                                     |
 | front-proxy-client            | kubernetes-front-proxy-ca |                | client                                 |                                                     |
 
-[1]: クラスターに接続するIPおよびDNS名( [kubeadm](/docs/reference/setup-tools/kubeadm/kubeadm/)を使用する場合と同様、ロードバランサーのIPおよびDNS名、`kubernetes`、`kubernetes.default`、`kubernetes.default.svc`、`kubernetes.default.svc.cluster`、`kubernetes.default.svc.cluster.local`)
+[1]: クラスターに接続するIPおよびDNS名( [kubeadm](/ja/docs/reference/setup-tools/kubeadm/kubeadm/)を使用する場合と同様、ロードバランサーのIPおよびDNS名、`kubernetes`、`kubernetes.default`、`kubernetes.default.svc`、`kubernetes.default.svc.cluster`、`kubernetes.default.svc.cluster.local`)
 
 `kind`は下記の[x509の鍵用途](https://pkg.go.dev/k8s.io/api/certificates/v1beta1#KeyUsage)のタイプにマッピングされます:
 
@@ -96,7 +96,7 @@ kubeadm利用者のみ：
 
 ### 証明書のパス
 
-証明書は推奨パスに配置するべきです([kubeadm](/docs/reference/setup-tools/kubeadm/kubeadm/)を使用する場合と同様)。
+証明書は推奨パスに配置するべきです([kubeadm](/ja/docs/reference/setup-tools/kubeadm/kubeadm/)を使用する場合と同様)。
 パスは場所に関係なく与えられた引数で特定されます。
 
 | デフォルトCN                   | 鍵の推奨パス        　　　　　　 | 証明書の推奨パス    　　　　　   | コマンド        | 鍵を指定する引数               | 証明書を指定する引数                          |

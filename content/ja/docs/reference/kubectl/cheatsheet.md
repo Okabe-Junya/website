@@ -349,7 +349,7 @@ kubectl api-resources --api-group=extensions # "extensions" APIグループの�
 `-o=custom-columns-file=<filename>` | `<filename>`ファイル内のカスタムカラムテンプレートを使用してテーブルを表示します
 `-o=json`     | JSON形式のAPIオブジェクトを出力します
 `-o=jsonpath=<template>` | [jsonpath](/ja/docs/reference/kubectl/jsonpath)式で定義されたフィールドを出力します
-`-o=jsonpath-file=<filename>` | `<filename>`ファイル内の[jsonpath](/docs/reference/kubectl/jsonpath)式で定義されたフィールドを出力します
+`-o=jsonpath-file=<filename>` | `<filename>`ファイル内の[jsonpath](/ja/docs/reference/kubectl/jsonpath)式で定義されたフィールドを出力します
 `-o=name`     | リソース名のみを出力し、それ以外は何も出力しません。
 `-o=wide`     | 追加の情報を含むプレーンテキスト形式で出力します。Podの場合、Node名が含まれます。
 `-o=yaml`     | YAML形式のAPIオブジェクトを出力します
@@ -388,10 +388,10 @@ kubectlのログレベルは、レベルを表す整数が後に続く`-v`また
 
 ## {{% heading "whatsnext" %}}
 
-* kubectlについてより深く学びたい方は[コマンドラインツール(kubectl)](/ja/docs/reference/kubectl/)や[JsonPath](/docs/reference/kubectl/jsonpath)をご覧ください。
+* kubectlについてより深く学びたい方は[コマンドラインツール(kubectl)](/ja/docs/reference/kubectl/)や[JsonPath](/ja/docs/reference/kubectl/jsonpath)をご覧ください。
 
 * オプションについては[kubectl](/docs/reference/kubectl/kubectl/) optionsをご覧ください。
  
-* また[kubectlの利用パターン](/docs/reference/kubectl/conventions/)では再利用可能なスクリプトでkubectlを利用する方法を学べます。
+* また[kubectlの利用パターン](/ja/docs/reference/kubectl/conventions/)では再利用可能なスクリプトでkubectlを利用する方法を学べます。
 
 * コミュニティ版[kubectlチートシート](https://github.com/dennyzhang/cheatsheet-kubernetes-A4)もご覧ください。

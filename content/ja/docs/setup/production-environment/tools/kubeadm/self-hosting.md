@@ -8,7 +8,7 @@ weight: 100
 
 ### コントロールプレーンのセルフホスティング {#self-hosting}
 
-kubeadmを使用すると、セルフホスト型のKubernetesコントロールプレーンを実験的に作成できます。これはAPIサーバー、コントローラーマネージャー、スケジューラーなどの主要コンポーネントは、静的ファイルを介してkubeletで構成された[static pods](/docs/tasks/configure-pod-container/static-pod/)ではなく、Kubernetes APIを介して構成された[DaemonSet pods](/ja/docs/concepts/workloads/controllers/daemonset/)として実行されることを意味します。
+kubeadmを使用すると、セルフホスト型のKubernetesコントロールプレーンを実験的に作成できます。これはAPIサーバー、コントローラーマネージャー、スケジューラーなどの主要コンポーネントは、静的ファイルを介してkubeletで構成された[static pods](/ja/docs/tasks/configure-pod-container/static-pod/)ではなく、Kubernetes APIを介して構成された[DaemonSet pods](/ja/docs/concepts/workloads/controllers/daemonset/)として実行されることを意味します。
 
 セルフホスト型クラスターを作成する場合は[kubeadm alpha selfhosting pivot](/docs/reference/setup-tools/kubeadm/kubeadm-alpha/#cmd-selfhosting)を参照してください。
 
@@ -24,7 +24,7 @@ kubeadmを使用すると、セルフホスト型のKubernetesコントロール
 
 1. 1.8以降のセルフホスティングには、いくつかの重要な制限があります。特に、セルフホスト型クラスターは、手動の介入なしにコントロールプレーンのNode再起動から回復することはできません。
 
-1. デフォルトでは、セルフホスト型のコントロールプレーンのPodは、[`hostPath`](/docs/concepts/storage/volumes/#hostpath)ボリュームからロードされた資格情報に依存しています。最初の作成を除いて、これらの資格情報はkubeadmによって管理されません。
+1. デフォルトでは、セルフホスト型のコントロールプレーンのPodは、[`hostPath`](/ja/docs/concepts/storage/volumes/#hostpath)ボリュームからロードされた資格情報に依存しています。最初の作成を除いて、これらの資格情報はkubeadmによって管理されません。
 
 1. コントロールプレーンのセルフホストされた部分にはetcdが含まれていませんが、etcdは静的Podとして実行されます。
 

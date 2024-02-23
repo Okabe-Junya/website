@@ -156,5 +156,5 @@ Deployment、ReplicaSet、およびHello Worldアプリケーションが動作�
 ## {{% heading "whatsnext" %}}
 
 
-[connecting applications with services](/docs/concepts/services-networking/connect-applications-service/)にて詳細を学ぶことができます。
+[connecting applications with services](/ja/docs/concepts/services-networking/connect-applications-service/)にて詳細を学ぶことができます。
 

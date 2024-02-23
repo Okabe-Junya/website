@@ -8,7 +8,7 @@ weight: 10
 このチュートリアルは、新しいクラスターにのみ適用されます。
 {{% /alert %}}
 
-Podセキュリティアドミッション(PSA)は、[ベータへ進み](/blog/2021/12/09/pod-security-admission-beta/)、v1.23以降でデフォルトで有効になっています。
+Podセキュリティアドミッション(PSA)は、[ベータへ進み](/ja/blog/2021/12/09/pod-security-admission-beta/)、v1.23以降でデフォルトで有効になっています。
 Podセキュリティアドミッションは、Podが作成される際に、[Podセキュリティの標準](/ja/docs/concepts/security/pod-security-standards/)の適用の認可を制御するものです。
 このチュートリアルでは、クラスター内の全ての名前空間に標準設定を適用することで、クラスターレベルで`baseline` Podセキュリティの標準を強制する方法を示します。
 
@@ -292,7 +292,7 @@ kind delete cluster --name psa-wo-cluster-pss
 
 ## {{% heading "whatsnext" %}}
 
-- 前出の一連の手順を一度に全て行うために[シェルスクリプト](/examples/security/kind-with-cluster-level-baseline-pod-security.sh)を実行します:
+- 前出の一連の手順を一度に全て行うために[シェルスクリプト](/ja/examples/security/kind-with-cluster-level-baseline-pod-security.sh)を実行します:
   1. クラスターレベルの設定に基づきPodセキュリティの標準を作成します。
   2. APIサーバーでこの設定を取り込むようにファイルを作成します。
   3. この設定のAPIサーバーを立てるクラスターを作成します。

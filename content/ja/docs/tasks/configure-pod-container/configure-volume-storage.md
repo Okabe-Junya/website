@@ -10,7 +10,7 @@ weight: 80
 
 コンテナのファイルシステムは、コンテナが存在する間のみ存続します。
 そのため、コンテナが終了して再起動すると、ファイルシステムの変更は失われます。
-コンテナに依存しない、より一貫したストレージを実現するには、[ボリューム](/docs/concepts/storage/volumes/)を使用できます。
+コンテナに依存しない、より一貫したストレージを実現するには、[ボリューム](/ja/docs/concepts/storage/volumes/)を使用できます。
 これは、キーバリューストア(Redisなど)やデータベースなどのステートフルアプリケーションにとって特に重要です。
 
 
@@ -27,7 +27,7 @@ weight: 80
 ## Podのボリュームを構成する
 
 この演習では、1つのコンテナを実行するPodを作成します。
-今回作成するPodには、コンテナが終了して再起動した場合でもPodの寿命が続く[emptyDir](/docs/concepts/storage/volumes/#emptydir)タイプのボリュームがあります。
+今回作成するPodには、コンテナが終了して再起動した場合でもPodの寿命が続く[emptyDir](/ja/docs/concepts/storage/volumes/#emptydir)タイプのボリュームがあります。
 これがPodの設定ファイルです:
 
 {{% codenew file="pods/storage/redis.yaml" %}}
@@ -130,7 +130,7 @@ weight: 80
 
 * [Pod](/docs/reference/generated/kubernetes-api/{{< param "version" >}}/#pod-v1-core)参照
 
-* `emptyDir`によって提供されるローカルディスクストレージに加えて、Kubernetesは、GCEのPDやEC2のEBSなど、さまざまなネットワーク接続ストレージソリューションをサポートします。これらは、重要なデータに好ましく、ノード上のデバイスのマウントやアンマウントなどの詳細を処理します。詳細は[ボリューム](/docs/concepts/storage/volumes/)を参照してください。
+* `emptyDir`によって提供されるローカルディスクストレージに加えて、Kubernetesは、GCEのPDやEC2のEBSなど、さまざまなネットワーク接続ストレージソリューションをサポートします。これらは、重要なデータに好ましく、ノード上のデバイスのマウントやアンマウントなどの詳細を処理します。詳細は[ボリューム](/ja/docs/concepts/storage/volumes/)を参照してください。
 
 
 

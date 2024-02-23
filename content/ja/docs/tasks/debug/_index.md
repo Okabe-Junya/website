@@ -29,7 +29,7 @@ no_list: true
 
 [コンセプト](/ja/docs/concepts/)では、Kubernetesのアーキテクチャと各コンポーネントの動作について説明し、[セットアップ](/ja/docs/setup/)では、使い始めるための実用的な手順を提供しています。
 [タスク](/ja/docs/tasks/) は、よく使われるタスクの実行方法を示し、 [チュートリアル](/ja/docs/tutorials/)は、実世界の業界特有、またはエンドツーエンドの開発シナリオ、より包括的なウォークスルーとなります。
-[リファレンス](/ja/docs/reference/)セクションでは、[Kubernetes API](/docs/reference/generated/kubernetes-api/{{< param "version" >}}/)や[`kubectl`](/docs/reference/kubectl/)などのコマンドラインインターフェース(CLI)に関する詳しいドキュメントが提供されています。
+[リファレンス](/ja/docs/reference/)セクションでは、[Kubernetes API](/docs/reference/generated/kubernetes-api/{{< param "version" >}}/)や[`kubectl`](/ja/docs/reference/kubectl/)などのコマンドラインインターフェース(CLI)に関する詳しいドキュメントが提供されています。
 
 ## ヘルプ!私の質問はカバーされていません!今すぐ助けてください!
 

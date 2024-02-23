@@ -43,7 +43,7 @@ kubectl get services  --all-namespaces --field-selector metadata.namespace!=defa
 ```
 
 ## 連結されたセレクター
-[ラベル](/docs/concepts/overview/working-with-objects/labels)や他のセレクターと同様に、フィールドセレクターはコンマ区切りのリストとして連結することができます。  
+[ラベル](/ja/docs/concepts/overview/working-with-objects/labels)や他のセレクターと同様に、フィールドセレクターはコンマ区切りのリストとして連結することができます。  
 下記の`kubectl`コマンドは、`status.phase`が`Runnning`でなく、かつ`spec.restartPolicy`フィールドが`Always`に等しいような全てのPodを選択します。  
 
 ```shell

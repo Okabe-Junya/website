@@ -426,7 +426,7 @@ NodePort上では、 `NodePort` タイプのどのサービスもそのIPアド�
 `kubectl get service $SERVICE --output='jsonpath="{.spec.ports[0].nodePort}"'`
 
 ## 永続ボリューム
-Minikubeは `hostPath` タイプの[PersistentVolumes](/docs/concepts/storage/persistent-volumes/)をサポートします。
+Minikubeは `hostPath` タイプの[PersistentVolumes](/ja/docs/concepts/storage/persistent-volumes/)をサポートします。
 このPersistentVolumesはMinikubeのVM内のディレクトリーにマッピングされます。
 
 MinikubeのVMはtmpfsで起動するため、ほとんどのディレクトリーは再起動しても持続しません (`minikube stop`)。
@@ -469,7 +469,7 @@ spec:
 
 ## プライベートコンテナレジストリ
 
-プライベートコンテナレジストリにアクセスするには、[このページ](/docs/concepts/containers/images/)の手順に従ってください。
+プライベートコンテナレジストリにアクセスするには、[このページ](/ja/docs/concepts/containers/images/)の手順に従ってください。
 
 `ImagePullSecrets` を使用することをおすすめしますが、MinikubeのVM内でアクセス設定したい場合には、`/home/docker` ディレクトリに `.dockercfg` を置くか、または `/home/docker/.docker` ディレクトリに `config.json` を置いてください。
 

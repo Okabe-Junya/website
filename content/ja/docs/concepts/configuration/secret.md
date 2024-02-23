@@ -588,7 +588,7 @@ Secretはwatch（デフォルト）、TTLベース、単に全てのリクエス
 キャッシュの遅延は、キャッシュの種別により、それぞれwatchの伝搬遅延、キャッシュのTTL、0になります。
 
 {{< note >}}
-Secretを[subPath](/docs/concepts/storage/volumes#using-subpath)を指定してボリュームにマウントしているコンテナには、Secretの更新が反映されません。
+Secretを[subPath](/ja/docs/concepts/storage/volumes#using-subpath)を指定してボリュームにマウントしているコンテナには、Secretの更新が反映されません。
 {{< /note >}}
 
 ### Secretを環境変数として使用する {#using-secrets-as-environment-variables}
@@ -696,7 +696,7 @@ kubeletはこの情報をPodのためにプライベートイメージをpullす
 ### 手動で作成されたSecretの自動的なマウント
 
 手動で作成されたSecret（例えばGitHubアカウントへのアクセスに使うトークンを含む）はサービスアカウントを基に自動的にアタッチすることができます。
-詳細な説明は[PodPresetを使ったPodへの情報の注入](/docs/tasks/inject-data-application/podpreset/)を参照してください。
+詳細な説明は[PodPresetを使ったPodへの情報の注入](/ja/docs/tasks/inject-data-application/podpreset/)を参照してください。
 
 ## 詳細
 
@@ -1035,7 +1035,7 @@ Secretは様々な種類の重要な値を保持することが多く、サー�
 
 これらの理由により、ネームスペース内のSecretに対する`watch`や`list`リクエストはかなり強力な能力であり、避けるべきです。Secretのリストを取得することはクライアントにネームスペース内の全てのSecretの値を調べさせることを認めるからです。クラスター内の全てのSecretに対する`watch`、`list`権限は最も特権的な、システムレベルのコンポーネントに限って認めるべきです。
 
-Secret APIへのアクセスが必要なアプリケーションは、必要なSecretに対する`get`リクエストを発行すべきです。管理者は全てのSecretに対するアクセスは制限しつつ、アプリケーションが必要とする[個々のインスタンスに対するアクセス許可](/docs/reference/access-authn-authz/rbac/#referring-to-resources)を与えることができます。
+Secret APIへのアクセスが必要なアプリケーションは、必要なSecretに対する`get`リクエストを発行すべきです。管理者は全てのSecretに対するアクセスは制限しつつ、アプリケーションが必要とする[個々のインスタンスに対するアクセス許可](/ja/docs/reference/access-authn-authz/rbac/#referring-to-resources)を与えることができます。
 
 `get`リクエストの繰り返しに対するパフォーマンスを向上するために、クライアントはSecretを参照するリソースを設計し、それを`watch`して、参照が変更されたときにSecretを再度リクエストすることができます。加えて、個々のリソースを`watch`することのできる["bulk watch" API](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/api-machinery/bulk_watch.md)が提案されており、将来のKubernetesリリースにて利用可能になる可能性があります。
 
@@ -1082,7 +1082,7 @@ Podに複数のコンテナが含まれることもあります。しかし、Po
 
 ## {{% heading "whatsnext" %}}
 
-- [`kubectl`を使用してSecretを管理する](/docs/tasks/configmap-secret/managing-secret-using-kubectl/)方法を学ぶ
-- [config fileを使用してSecretを管理する](/docs/tasks/configmap-secret/managing-secret-using-config-file/)方法を学ぶ
-- [kustomizeを使用してSecretを管理する](/docs/tasks/configmap-secret/managing-secret-using-kustomize/)方法を学ぶ
+- [`kubectl`を使用してSecretを管理する](/ja/docs/tasks/configmap-secret/managing-secret-using-kubectl/)方法を学ぶ
+- [config fileを使用してSecretを管理する](/ja/docs/tasks/configmap-secret/managing-secret-using-config-file/)方法を学ぶ
+- [kustomizeを使用してSecretを管理する](/ja/docs/tasks/configmap-secret/managing-secret-using-kustomize/)方法を学ぶ
 - [SecretのAPIリファレンス](/docs/reference/kubernetes-api/config-and-storage-resources/secret-v1/)を読む

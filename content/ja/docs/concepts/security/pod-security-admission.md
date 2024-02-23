@@ -13,7 +13,7 @@ min-kubernetes-server-version: v1.22
 Kubernetesの[Podセキュリティの標準](/ja/docs/concepts/security/pod-security-standards/)はPodに対して異なる分離レベルを定義します。
 これらの標準によって、Podの動作をどのように制限したいかを、明確かつ一貫した方法で定義することができます。
 
-ベータ版機能として、Kubernetesは[PodSecurityPolicy](/docs/concepts/policy/pod-security-policy/)の後継である組み込みの _Pod Security_ {{< glossary_tooltip text="アドミッションコントローラー" term_id="admission-controller" >}}を提供しています。
+ベータ版機能として、Kubernetesは[PodSecurityPolicy](/ja/docs/concepts/policy/pod-security-policy/)の後継である組み込みの _Pod Security_ {{< glossary_tooltip text="アドミッションコントローラー" term_id="admission-controller" >}}を提供しています。
 Podセキュリティの制限は、Pod作成時に{{< glossary_tooltip text="名前空間" term_id="namespace" >}}レベルで適用されます。
 
 {{< note >}}
@@ -52,7 +52,7 @@ kubectl apply -k .
 
 ## Podのセキュリティレベル {#pod-security-levels}
 
-Podのセキュリティアドミッションは、Podの[Security Context](/docs/tasks/configure-pod-container/security-context/)とその他の関連フィールドに、[Podセキュリティの標準](/ja/docs/concepts/security/pod-security-standards)で定義された3つのレベル、`privileged`、`baseline`、`restricted`に従って要件を設定するものです。
+Podのセキュリティアドミッションは、Podの[Security Context](/ja/docs/tasks/configure-pod-container/security-context/)とその他の関連フィールドに、[Podセキュリティの標準](/ja/docs/concepts/security/pod-security-standards)で定義された3つのレベル、`privileged`、`baseline`、`restricted`に従って要件を設定するものです。
 これらの要件の詳細については、[Podセキュリティの標準](/ja/docs/concepts/security/pod-security-standards)のページを参照してください。
 
 ## Podの名前空間に対するセキュリティアドミッションラベル {#pod-security-admission-labels-for-namespaces}

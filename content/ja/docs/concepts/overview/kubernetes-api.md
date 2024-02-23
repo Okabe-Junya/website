@@ -18,7 +18,7 @@ APIサーバーは、エンドユーザー、クラスターのさまざまな�
 
 Kubernetes APIを使用すると、Kubernetes API内のオブジェクトの状態をクエリで操作できます（例：Pod、Namespace、ConfigMap、Events）。
 
-ほとんどの操作は、APIを使用している[kubectl](/ja/docs/reference/kubectl/)コマンドラインインターフェースもしくは[kubeadm](/docs/reference/setup-tools/kubeadm/)のような別のコマンドラインツールを通して実行できます。
+ほとんどの操作は、APIを使用している[kubectl](/ja/docs/reference/kubectl/)コマンドラインインターフェースもしくは[kubeadm](/ja/docs/reference/setup-tools/kubeadm/)のような別のコマンドラインツールを通して実行できます。
 RESTコールを利用して直接APIにアクセスすることも可能です。
 
 Kubernetes APIを利用してアプリケーションを書いているのであれば、[client libraries](/docs/reference/using-api/client-libraries/)の利用を考えてみてください。
@@ -73,7 +73,7 @@ Kubernetesは、他の手段として主にクラスター間の連携用途向�
 
 {{< feature-state state="beta"  for_k8s_version="v1.24" >}}
 
-Kubernetes {{< param "version" >}}では、OpenAPI v3によるAPI仕様をベータサポートとして提供しています。これは、デフォルトで有効化されているベータ機能です。kube-apiserverの`OpenAPIV3`という[feature gate](/docs/reference/command-line-tools-reference/feature-gates/)を切ることにより、このベータ機能を無効化することができます。
+Kubernetes {{< param "version" >}}では、OpenAPI v3によるAPI仕様をベータサポートとして提供しています。これは、デフォルトで有効化されているベータ機能です。kube-apiserverの`OpenAPIV3`という[feature gate](/ja/docs/reference/command-line-tools-reference/feature-gates/)を切ることにより、このベータ機能を無効化することができます。
 
 `/openapi/v3`が、全ての利用可能なグループやバージョンの一覧を閲覧するためのディスカバリーエンドポイントとして提供されています。このエンドポイントは、JSONのみを返却します。利用可能なグループやバージョンは、次のような形式で提供されます。
 
@@ -141,7 +141,7 @@ KubernetesはAPIリソースの観点からシリアル化された状態を{{< 
 
 APIが、システムリソースと動作について明確かつ一貫したビューを提供し、サポート終了、実験的なAPIへのアクセス制御を有効にするために、リソースまたはフィールドレベルではなく、APIレベルでバージョンが行われます。
 
-APIの発展や拡張を簡易に行えるようにするため、Kubernetesは[有効もしくは無効](/docs/reference/using-api/#enabling-or-disabling)を行える[APIグループ](/docs/reference/using-api/#api-groups)を実装しました。
+APIの発展や拡張を簡易に行えるようにするため、Kubernetesは[有効もしくは無効](/ja/docs/reference/using-api/#enabling-or-disabling)を行える[APIグループ](/ja/docs/reference/using-api/#api-groups)を実装しました。
 
 APIリソースは、APIグループ、リソースタイプ、ネームスペース（namespacedリソースのための）、名前によって区別されます。APIサーバーは、APIバージョン間の変換を透過的に処理します。すべてのバージョンの違いは、実際のところ同じ永続データとして表現されます。APIサーバーは、同じ基本的なデータを複数のAPIバージョンで提供することができます。
 
@@ -172,7 +172,7 @@ alpha APIバージョンを使っている場合、クラスターをアップ�
 APIが互換性のない方法で変更された場合は、アップグレードをする前に既存のalphaオブジェクトをすべて削除する必要があります。
 {{< /note >}}
 
-APIバージョンレベルの定義に関する詳細は[APIバージョンのリファレンス](/docs/reference/using-api/#api-versioning)を参照してください。
+APIバージョンレベルの定義に関する詳細は[APIバージョンのリファレンス](/ja/docs/reference/using-api/#api-versioning)を参照してください。
 
 ## APIの拡張
 
@@ -185,6 +185,6 @@ Kubernetes APIは2つの方法で拡張できます。
 ## {{% heading "whatsnext" %}}
 
 - 自分自身で[カスタムリソース定義](/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/)を追加してKubernetes APIを拡張する方法について学んでください。
-- [Kubernetes APIのアクセス制御](/docs/concepts/security/controlling-access/)では、クラスターがAPIアクセスの認証と承認を管理する方法を説明しています。
+- [Kubernetes APIのアクセス制御](/ja/docs/concepts/security/controlling-access/)では、クラスターがAPIアクセスの認証と承認を管理する方法を説明しています。
 - [APIリファレンス](/ja/docs/reference/kubernetes-api/)を読んで、APIエンドポイント、リソースタイプやサンプルについて学んでください。
 - [APIの変更](https://git.k8s.io/community/contributors/devel/sig-architecture/api_changes.md#readme)から、互換性のある変更とは何か, どのようにAPIを変更するかについて学んでください。

@@ -8,12 +8,12 @@ weight: 10
 
 {{< feature-state for_k8s_version="v1.15" state="stable" >}}
 
-[kubeadm](/docs/reference/setup-tools/kubeadm/)で生成されたクライアント証明書は1年で失効します。
+[kubeadm](/ja/docs/reference/setup-tools/kubeadm/)で生成されたクライアント証明書は1年で失効します。
 このページでは、kubeadmで証明書の更新を管理する方法について説明します。
 
 ## {{% heading "prerequisites" %}}
 
-[KubernetesにおけるPKI証明書と要件](/docs/setup/best-practices/certificates/)を熟知している必要があります。
+[KubernetesにおけるPKI証明書と要件](/ja/docs/setup/best-practices/certificates/)を熟知している必要があります。
 
 <!-- steps -->
 
@@ -36,7 +36,7 @@ kubeadmはディスク上のCAキーがなくても処理を進めます。
 
 代わりに、Controller-managerをスタンドアロンで、`--controllers=csrsigner`と実行し、CA証明書と鍵を指し示します。
 
-[PKI certificates and requirements](/docs/setup/best-practices/certificates/)には、外部CAを使用するためのクラスターのセットアップに関するガイダンスが含まれています。
+[PKI certificates and requirements](/ja/docs/setup/best-practices/certificates/)には、外部CAを使用するためのクラスターのセットアップに関するガイダンスが含まれています。
 
 ## 証明書の有効期限の確認
 
@@ -76,9 +76,9 @@ front-proxy-ca          Dec 28, 2029 23:36 UTC   9y              no
 {{< /warning >}}
 
 {{< note >}}
-kubeadmは`/var/lib/kubelet/pki`以下にあるローテート可能な証明書でkubeletの[証明書の自動更新](/docs/task/tls/certificate-rotation/)を構成するので`kubelet.conf`は上記のリストに含まれません。
+kubeadmは`/var/lib/kubelet/pki`以下にあるローテート可能な証明書でkubeletの[証明書の自動更新](/ja/docs/task/tls/certificate-rotation/)を構成するので`kubelet.conf`は上記のリストに含まれません。
 
-期限切れのkubeletクライアント証明書を修復するには、[Kubelet クライアント証明書のローテーションに失敗しました](/docs/setup/production-environment/tools/kubeadm/troubleshooting-kubeadm/#kubelet-client-cert)を参照ください。
+期限切れのkubeletクライアント証明書を修復するには、[Kubelet クライアント証明書のローテーションに失敗しました](/ja/docs/setup/production-environment/tools/kubeadm/troubleshooting-kubeadm/#kubelet-client-cert)を参照ください。
 {{< /note >}}
 
 {{< warning >}}
@@ -118,7 +118,7 @@ kubeadmバージョン1.17より前のバージョンでは、`kubeadm upgrade n
 
 コマンド実行後、コントロールプレーンのPodを再起動する必要があります。
 これは、現在すべてのコンポーネントと証明書について動的な証明書のリロードがサポートされていないため、必要な作業です。
-[スタティックPod](/docs/tasks/configure-pod-container/static-pod/)はローカルkubeletによって管理され、API Serverによって管理されないため、kubectlで削除および再起動することはできません。
+[スタティックPod](/ja/docs/tasks/configure-pod-container/static-pod/)はローカルkubeletによって管理され、API Serverによって管理されないため、kubectlで削除および再起動することはできません。
 
 スタティックPodを再起動するには、一時的に`/etc/kubernetes/manifests/`からマニフェストファイルを削除して20秒間待ちます([KubeletConfiguration struct](/docs/reference/config-api/kubelet-config.v1beta1/)の`fileCheckFrequency`値を参照してください)。
 マニフェストディレクトリにPodが無くなると、kubeletはPodを終了します。
@@ -193,7 +193,7 @@ CSRとそれに付随する秘密鍵の両方が出力されます。
 `kubeadm init`と同様に、`--csr-dir`フラグで出力先ディレクトリを指定することができます。
 
 CSRには、証明書の名前、ドメイン、IPが含まれますが、用途は指定されません。
-証明書を発行する際に、[正しい証明書の使用法](/docs/setup/best-practices/certificates/#all-certificates)を指定するのはCAの責任です。
+証明書を発行する際に、[正しい証明書の使用法](/ja/docs/setup/best-practices/certificates/#all-certificates)を指定するのはCAの責任です。
 
 * `openssl`では、[`openssl ca`コマンド](https://superuser.com/questions/738612/openssl-ca-keyusage-extension)を使って行います。
 
@@ -256,7 +256,7 @@ kubectl certificate approve <CSR-name>
 
 Kubeadmは`KubeletConfiguration`フィールド`rotateCertificates`を`true`に設定します。これは有効期限が切れる間際に、サービング証明書のための新しいCSRセットを作成し、ローテーションを完了するために承認する必要があることを意味します。
 
-詳しくは[Certificate Rotation](/docs/reference/command-line-tools-reference/kubelet-tls-bootstrapping/#certificate-rotation)をご覧ください。
+詳しくは[Certificate Rotation](/ja/docs/reference/command-line-tools-reference/kubelet-tls-bootstrapping/#certificate-rotation)をご覧ください。
 
 これらのCSRを自動的に承認するためのソリューションをお探しの場合は、以下をお勧めします。
 クラウドプロバイダーに連絡し、ノードの識別をアウトオブバンドのメカニズムで行うCSRの署名者がいるかどうか尋ねてください。

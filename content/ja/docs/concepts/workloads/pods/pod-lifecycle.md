@@ -12,7 +12,7 @@ Podの実行中、kubeletはコンテナを再起動して、ある種の障害�
 
 Kubernetes APIでは、Podには仕様と実際のステータスの両方があります。Podオブジェクトのステータスは、[PodのCondition](#pod-conditions)のセットで構成されます。[カスタムのReadiness情報](#pod-readiness-gate)をPodのConditionデータに挿入することもできます。
 
-Podはその生存期間に1回だけ[スケジューリング](/docs/concepts/scheduling-eviction/)されます。PodがNodeにスケジュール(割り当て)されると、Podは停止または[終了](#pod-termination)するまでそのNode上で実行されます。
+Podはその生存期間に1回だけ[スケジューリング](/ja/docs/concepts/scheduling-eviction/)されます。PodがNodeにスケジュール(割り当て)されると、Podは停止または[終了](#pod-termination)するまでそのNode上で実行されます。
 
 
 <!-- body -->

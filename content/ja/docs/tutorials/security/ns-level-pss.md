@@ -8,11 +8,11 @@ weight: 20
 このチュートリアルは、新しいクラスターにのみ適用されます。
 {{% /alert %}}
 
-Podセキュリティアドミッション(PSA)は、[ベータへ進み](/blog/2021/12/09/pod-security-admission-beta/)、v1.23以降でデフォルトで有効になっています。
+Podセキュリティアドミッション(PSA)は、[ベータへ進み](/ja/blog/2021/12/09/pod-security-admission-beta/)、v1.23以降でデフォルトで有効になっています。
 Podセキュリティアドミッションは、Podが作成される際に、[Podセキュリティの標準](/ja/docs/concepts/security/pod-security-standards/)の適用の認可を制御するものです。
 このチュートリアルでは、一度に1つの名前空間で`baseline` Podセキュリティ標準を強制します。
 
-Podセキュリティの標準を複数の名前空間に一度にクラスターレベルで適用することもできます。やり方については[クラスターレベルでのPodセキュリティの標準の適用](/docs/tutorials/security/cluster-level-pss/)を参照してください。
+Podセキュリティの標準を複数の名前空間に一度にクラスターレベルで適用することもできます。やり方については[クラスターレベルでのPodセキュリティの標準の適用](/ja/docs/tutorials/security/cluster-level-pss/)を参照してください。
 
 ## {{% heading "prerequisites" %}}
 
@@ -137,7 +137,7 @@ kind delete cluster --name psa-ns-level
 
 ## {{% heading "whatsnext" %}}
 
-- 前出の一連の手順を一度に全て行うために[シェルスクリプト](/examples/security/kind-with-namespace-level-baseline-pod-security.sh)を実行します。
+- 前出の一連の手順を一度に全て行うために[シェルスクリプト](/ja/examples/security/kind-with-namespace-level-baseline-pod-security.sh)を実行します。
 
   1. KinDクラスターを作成します。
   2. 新しい名前空間を作成します。

@@ -167,8 +167,8 @@ type PreFilterPlugin interface {
 
 ## プラグインの設定
 
-スケジューラーの設定でプラグインを有効化・無効化することができます。Kubernetes v1.18以降を使用しているなら、ほとんどのスケジューリング[プラグイン](/docs/reference/scheduling/config/#scheduling-plugins)は使用されており、デフォルトで有効になっています。
+スケジューラーの設定でプラグインを有効化・無効化することができます。Kubernetes v1.18以降を使用しているなら、ほとんどのスケジューリング[プラグイン](/ja/docs/reference/scheduling/config/#scheduling-plugins)は使用されており、デフォルトで有効になっています。
 
 デフォルトのプラグインに加えて、独自のスケジューリングプラグインを実装し、デフォルトのプラグインと一緒に使用することも可能です。詳しくは[スケジューラープラグイン](https://github.com/kubernetes-sigs/scheduler-plugins)をご覧下さい。
 
-Kubernetes v1.18以降を使用しているなら、プラグインのセットをスケジューラープロファイルとして設定し、様々な種類のワークロードに適合するように複数のプロファイルを定義することが可能です。詳しくは[複数のプロファイル](/docs/reference/scheduling/config/#multiple-profiles)をご覧下さい。
+Kubernetes v1.18以降を使用しているなら、プラグインのセットをスケジューラープロファイルとして設定し、様々な種類のワークロードに適合するように複数のプロファイルを定義することが可能です。詳しくは[複数のプロファイル](/ja/docs/reference/scheduling/config/#multiple-profiles)をご覧下さい。

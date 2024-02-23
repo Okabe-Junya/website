@@ -8,7 +8,7 @@ weight: 100
 
 Horizontal Pod Autoscalerは、Deployment、ReplicaSetまたはStatefulSetといったレプリケーションコントローラー内のPodの数を、観測されたCPU使用率（もしくはベータサポートの、アプリケーションによって提供されるその他のメトリクス）に基づいて自動的にスケールさせます。
 
-このドキュメントはphp-apacheサーバーに対しHorizontal Pod Autoscalerを有効化するという例に沿ってウォークスルーで説明していきます。Horizontal Pod Autoscalerの動作についてのより詳細な情報を知りたい場合は、[Horizontal Pod Autoscalerユーザーガイド](/docs/tasks/run-application/horizontal-pod-autoscale/)をご覧ください。
+このドキュメントはphp-apacheサーバーに対しHorizontal Pod Autoscalerを有効化するという例に沿ってウォークスルーで説明していきます。Horizontal Pod Autoscalerの動作についてのより詳細な情報を知りたい場合は、[Horizontal Pod Autoscalerユーザーガイド](/ja/docs/tasks/run-application/horizontal-pod-autoscale/)をご覧ください。
 
 ## {{% heading "prerequisites" %}}
 
@@ -18,7 +18,7 @@ Horizontal Pod Autoscalerはメトリクスを収集するためにこのAPIを�
 
 Horizontal Pod Autoscalerで複数のリソースメトリクスを利用するためには、バージョン1.6以上のKubernetesクラスターおよびkubectlが必要です。カスタムメトリクスを使えるようにするためには、あなたのクラスターがカスタムメトリクスAPIを提供するAPIサーバーと通信できる必要があります。
 最後に、Kubernetesオブジェクトと関係のないメトリクスを使うにはバージョン1.10以上のKubernetesクラスターおよびkubectlが必要で、さらにあなたのクラスターが外部メトリクスAPIを提供するAPIサーバーと通信できる必要があります。
-詳細については[Horizontal Pod Autoscaler user guide](/docs/tasks/run-application/horizontal-pod-autoscale/#support-for-custom-metrics)をご覧ください。
+詳細については[Horizontal Pod Autoscaler user guide](/ja/docs/tasks/run-application/horizontal-pod-autoscale/#support-for-custom-metrics)をご覧ください。
 
 <!-- steps -->
 
@@ -65,7 +65,7 @@ service/php-apache created
 
 サーバーが起動したら、[kubectl autoscale](/docs/reference/generated/kubectl/kubectl-commands#autoscale)を使ってautoscalerを作成しましょう。以下のコマンドで、最初のステップで作成したphp-apache deploymentによって制御されるPodレプリカ数を1から10の間に維持するHorizontal Pod Autoscalerを作成します。
 簡単に言うと、HPAは（Deploymentを通じて）レプリカ数を増減させ、すべてのPodにおける平均CPU使用率を50%（それぞれのPodは`kubectl run`で200 milli-coresを要求しているため、平均CPU使用率100 milli-coresを意味します）に保とうとします。
-このアルゴリズムについての詳細は[こちら](/docs/tasks/run-application/horizontal-pod-autoscale/#algorithm-details)をご覧ください。
+このアルゴリズムについての詳細は[こちら](/ja/docs/tasks/run-application/horizontal-pod-autoscale/#algorithm-details)をご覧ください。
 
 ```shell
 kubectl autoscale deployment php-apache --cpu-percent=50 --min=1 --max=10

@@ -22,7 +22,7 @@ Kubernetesが提供するNamespaceの機能が必要となった時に、Namespa
 
 Namespaceは名前空間のスコープを提供します。リソース名は単一のNamespace内ではユニークである必要がありますが、Namespace全体ではその必要はありません。Namespaceは相互にネストすることはできず、各Kubernetesリソースは1つのNamespaceにのみ存在できます。
 
-Namespaceは、複数のユーザーの間でクラスターリソースを分割する方法です。(これは[リソースクォータ](/docs/concepts/policy/resource-quotas/)を介して分割します。)
+Namespaceは、複数のユーザーの間でクラスターリソースを分割する方法です。(これは[リソースクォータ](/ja/docs/concepts/policy/resource-quotas/)を介して分割します。)
 
 同じアプリケーションの異なるバージョンなど、少し違うリソースをただ分割するだけに、複数のNamespaceを使う必要はありません。
 同一のNamespace内でリソースを区別するためには[ラベル](/ja/docs/concepts/overview/working-with-objects/labels/)を使用してください。

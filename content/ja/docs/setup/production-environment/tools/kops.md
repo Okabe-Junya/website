@@ -23,7 +23,7 @@ kops is an automated provisioning system:
 ## {{% heading "prerequisites" %}}
 
 
-* You must have [kubectl](/docs/tasks/tools/install-kubectl/) installed.
+* You must have [kubectl](/ja/docs/tasks/tools/install-kubectl/) installed.
 
 * You must [install](https://github.com/kubernetes/kops#installing) `kops` on a 64-bit (AMD64 and Intel 64) device architecture.
 
@@ -231,7 +231,7 @@ See the [list of add-ons](/ja/docs/concepts/cluster-administration/addons/) to e
 ## {{% heading "whatsnext" %}}
 
 
-* Learn more about Kubernetes [concepts](/docs/concepts/) and [`kubectl`](/ja/docs/reference/kubectl/).
+* Learn more about Kubernetes [concepts](/ja/docs/concepts/) and [`kubectl`](/ja/docs/reference/kubectl/).
 * Learn more about `kops` [advanced usage](https://kops.sigs.k8s.io/) for tutorials, best practices and advanced configuration options.
 * Follow `kops` community discussions on Slack: [community discussions](https://github.com/kubernetes/kops#other-ways-to-communicate-with-the-contributors)
 * Contribute to `kops` by addressing or raising an issue [GitHub Issues](https://github.com/kubernetes/kops/issues)

@@ -23,7 +23,7 @@ Kubernetes {{< skew currentVersion >}}においては、{{< glossary_tooltip ter
 
 {{< note >}}
 v1.24以前のKubernetesリリースでは、 _dockershim_ という名前のコンポーネントを使用したDocker Engineとの直接の統合が含まれていました。
-この特別な直接統合は、もはやKubernetesの一部ではありません(この削除はv1.20リリースの一部として[発表](/blog/2020/12/08/kubernetes-1-20-release-announcement/#dockershim-deprecation)されています)。
+この特別な直接統合は、もはやKubernetesの一部ではありません(この削除はv1.20リリースの一部として[発表](/ja/blog/2020/12/08/kubernetes-1-20-release-announcement/#dockershim-deprecation)されています)。
 dockershimの廃止がどのような影響を与えるかについては、[dockershim削除の影響範囲を確認する](/ja/docs/tasks/administer-cluster/migrating-from-dockershim/check-if-dockershim-removal-affects-you/) をご覧ください。
 dockershimからの移行について知りたい場合、[dockershimからの移行](/ja/docs/tasks/administer-cluster/migrating-from-dockershim/)を参照してください。
 

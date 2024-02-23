@@ -16,7 +16,7 @@ weight: 20
 スケジューリングプロファイルは、{{< glossary_tooltip text="kube-scheduler" term_id="kube-scheduler" >}}でスケジューリングの異なるステージを設定することができます。
 各ステージは、拡張点に公開されています。プラグインをそれらの拡張点に1つ以上実装することで、スケジューリングの振る舞いを変更できます。
 
-KubeSchedulerConfiguration([`v1beta2`](/docs/reference/config-api/kube-scheduler-config.v1beta2/)か[`v1beta3`](/docs/reference/config-api/kube-scheduler-config.v1beta3/))構造体を使用して、`kube-scheduler --config <filename>`を実行することで、スケジューリングプロファイルを指定することができます。
+KubeSchedulerConfiguration([`v1beta2`](/ja/docs/reference/config-api/kube-scheduler-config.v1beta2/)か[`v1beta3`](/ja/docs/reference/config-api/kube-scheduler-config.v1beta3/))構造体を使用して、`kube-scheduler --config <filename>`を実行することで、スケジューリングプロファイルを指定することができます。
 
 最小限の設定は次の通りです。
 
@@ -85,7 +85,7 @@ profiles:
   拡張点:`preFilter`、`filter`
 - `NodeAffinity`:[nodeselectors](/ja/docs/concepts/scheduling-eviction/assign-pod-node/#nodeselector)と[Nodeアフィニティ](/ja/docs/concepts/scheduling-eviction/assign-pod-node/#node-affinity)を実行します。
   拡張点:`filter`、`score`
-- `PodTopologySpread`:[Podトポロジーの分散制約](/docs/concepts/workloads/pods/pod-topology-spread-constraints/)を実行します。
+- `PodTopologySpread`:[Podトポロジーの分散制約](/ja/docs/concepts/workloads/pods/pod-topology-spread-constraints/)を実行します。
   拡張点:`preFilter`、`filter`、`preScore`、`score`
 - `NodeUnschedulable`:`.spec.unschedulable`がtrueに設定されているNodeをフィルタリングします。
   拡張点:`filter`.
@@ -383,5 +383,5 @@ profiles:
 
 * [kube-schedulerリファレンス](/docs/reference/command-line-tools-reference/kube-scheduler/)を読む
 * [scheduling](/ja/docs/concepts/scheduling-eviction/kube-scheduler/)について学ぶ
-* [kube-scheduler設定(v1beta2)](/docs/reference/config-api/kube-scheduler-config.v1beta2/)のリファレンスを読む
-* [kube-scheduler設定(v1beta3)](/docs/reference/config-api/kube-scheduler-config.v1beta3/)のリファレンスを読む
+* [kube-scheduler設定(v1beta2)](/ja/docs/reference/config-api/kube-scheduler-config.v1beta2/)のリファレンスを読む
+* [kube-scheduler設定(v1beta3)](/ja/docs/reference/config-api/kube-scheduler-config.v1beta3/)のリファレンスを読む

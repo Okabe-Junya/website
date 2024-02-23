@@ -313,7 +313,7 @@ spec:
 全体的な効果として、各キャッシュインスタンスは、同じNode上で実行している単一のクライアントによってアクセスされる可能性が高いです。この方法は、スキュー(負荷の偏り)とレイテンシーの両方を最小化することを目的としています。
 
 Podアンチアフィニティを使用する理由は他にもあります。
-この例と同様の方法で、アンチアフィニティを用いて高可用性を実現したStatefulSetの使用例は[ZooKeeperチュートリアル](/docs/tutorials/stateful-application/zookeeper/#tolerating-node-failure)を参照してください。
+この例と同様の方法で、アンチアフィニティを用いて高可用性を実現したStatefulSetの使用例は[ZooKeeperチュートリアル](/ja/docs/tutorials/stateful-application/zookeeper/#tolerating-node-failure)を参照してください。
 
 ## nodeName {#nodename}
 

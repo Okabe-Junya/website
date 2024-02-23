@@ -66,4 +66,4 @@ CronJobはスケジュールに一致するJobの作成にのみ関与するの�
 
 [Cron表現形式](https://en.wikipedia.org/wiki/Cron)では、CronJobの`schedule`フィールドのフォーマットを説明しています。
 
-cronジョブの作成や動作の説明、CronJobマニフェストの例については、[Running automated tasks with cron jobs](/docs/tasks/job/automated-tasks-with-cron-jobs)を見てください。
+cronジョブの作成や動作の説明、CronJobマニフェストの例については、[Running automated tasks with cron jobs](/ja/docs/tasks/job/automated-tasks-with-cron-jobs)を見てください。

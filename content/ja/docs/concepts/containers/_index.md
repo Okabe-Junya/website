@@ -29,5 +29,5 @@ no_list: true
 
 ## {{% heading "whatsnext" %}}
 
-* [コンテナイメージ](/docs/concepts/containers/images/)についてお読みください。
+* [コンテナイメージ](/ja/docs/concepts/containers/images/)についてお読みください。
 * [Pod](/ja/docs/concepts/workloads/pods/)についてお読みください。

@@ -52,6 +52,6 @@ LimitRangeに対する競合や変更は、すでに作成済みのリソース�
 - [名前空間ごとにCPUの最小値と最大値の制約を設定する方法](/docs/tasks/administer-cluster/manage-resources/cpu-constraint-namespace/)。
 - [名前空間ごとにメモリーの最小値と最大値の制約を設定する方法](/ja/docs/tasks/administer-cluster/manage-resources/memory-constraint-namespace/)。
 - [名前空間ごとにCPUのRequestとLimitのデフォルト値を設定する方法](/docs/tasks/administer-cluster/manage-resources/cpu-default-namespace/)。
-- [名前空間ごとにメモリーのRequestとLimitのデフォルト値を設定する方法](/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/)。
+- [名前空間ごとにメモリーのRequestとLimitのデフォルト値を設定する方法](/ja/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/)。
 - [名前空間ごとにストレージ消費量の最小値と最大値を設定する方法](/docs/tasks/administer-cluster/limit-storage-consumption/#limitrange-to-limit-requests-for-storage)。
 - [名前空間ごとのクォータを設定する詳細な例](/docs/tasks/administer-cluster/manage-resources/quota-memory-cpu-namespace/)。

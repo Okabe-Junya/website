@@ -13,7 +13,7 @@ weight: 10
 
 レビューを行う前には、以下のことを理解しておくとよいでしょう。
 
-- [コンテンツガイド](/docs/contribute/style/content-guide/)と[スタイルガイド](/docs/contribute/style/style-guide/)を読んで、有益なコメントを残せるようにする。
+- [コンテンツガイド](/ja/docs/contribute/style/content-guide/)と[スタイルガイド](/docs/contribute/style/style-guide/)を読んで、有益なコメントを残せるようにする。
 - Kubernetesのドキュメントコミュニティにおける[役割と責任](/docs/contribute/participate/roles-and-responsibilities/)の違いを理解する。
 
 <!-- body -->
@@ -70,7 +70,7 @@ class third,fourth white
 
 2.  open状態のPRに、以下に示すラベルを1つ以上使って絞り込みます。
 
-    - `cncf-cla: yes` (推奨): CLAにサインしていないコントリビューターが提出したPRはマージできません。詳しい情報は、[CLAの署名](/docs/contribute/new-content/#sign-the-cla)を読んでください。
+    - `cncf-cla: yes` (推奨): CLAにサインしていないコントリビューターが提出したPRはマージできません。詳しい情報は、[CLAの署名](/ja/docs/contribute/new-content/#sign-the-cla)を読んでください。
     - `language/en` (推奨): 英語のPRだけに絞り込みます。
     - `size/<size>`: 特定の大きさのPRだけに絞り込みます。レビューを始めたばかりの人は、小さなPRから始めてください。
 
@@ -119,7 +119,7 @@ class third,fourth white
 - PRは新しいページを作成するものですか？ その場合、次の点に注意してください。
   - ページは正しい[page content type](/docs/contribute/style/page-content-types/)と関係するHugoのshortcodeを使用していますか？
   - セクションの横のナビゲーションにページは正しく表示されますか(または表示されませんか)？
-  - ページは[Docs Home](/docs/home/)に一覧されますか？
+  - ページは[Docs Home](/ja/docs/home/)に一覧されますか？
 - Netlifyのプレビューで変更は確認できますか？ 特にリスト、コードブロック、テーブル、備考、画像などに注意してください。
 
 ### その他

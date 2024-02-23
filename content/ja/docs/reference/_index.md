@@ -17,7 +17,7 @@ no_list: true
 
 * [標準化用語集](/ja/docs/reference/glossary) - Kubernetesの用語の包括的で標準化されたリストです。
 
-* [Kubernetes APIリファレンス](/docs/reference/using-api/)
+* [Kubernetes APIリファレンス](/ja/docs/reference/using-api/)
 * [Kubernetes {{< param "version" >}}の単一ページのAPIリファレンス](/docs/reference/generated/kubernetes-api/{{< param "version" >}}/)
 * [Kubernetes APIの使用](/ja/docs/reference/using-api/) - KubernetesのAPIの概要です。
 * [API アクセスコントロール](/docs/reference/access-authn-authz/) - KubernetesがAPIアクセスをどのように制御するかの詳細です。

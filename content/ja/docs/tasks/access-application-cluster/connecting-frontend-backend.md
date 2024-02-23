@@ -142,7 +142,7 @@ service/frontend created
 ```
 
 {{< note >}}
-nginxの構成は、[コンテナイメージ](/examples/service/access/Dockerfile)に焼き付けられます。
+nginxの構成は、[コンテナイメージ](/ja/examples/service/access/Dockerfile)に焼き付けられます。
 これを行うためのより良い方法は、[ConfigMap](/ja/docs/tasks/configure-pod-container/configure-pod-configmap/)を使用して、構成をより簡単に変更できるようにすることです。
 {{< /note >}}
 
@@ -204,7 +204,7 @@ kubectl delete deployment frontend hello
 
 
 * [Service](/ja/docs/concepts/services-networking/service/)の詳細
-* [ConfigMap](/docs/tasks/configure-pod-container/configure-pod-configmap/)の詳細
+* [ConfigMap](/ja/docs/tasks/configure-pod-container/configure-pod-configmap/)の詳細
 
 
 

@@ -31,7 +31,7 @@ Kubernetesでは、コンテナのCPU使用率やメモリ使用率といった�
 
 ### CPU
 
-CPUは、一定期間の平均使用量を[CPU cores](/docs/concepts/configuration/manage-resources-containers/#meaning-of-cpu)という単位で報告されます。
+CPUは、一定期間の平均使用量を[CPU cores](/ja/docs/concepts/configuration/manage-resources-containers/#meaning-of-cpu)という単位で報告されます。
 この値は、カーネルが提供する累積CPUカウンターの比率を取得することで得られます(LinuxとWindowsの両カーネルで)。
 kubeletは、比率計算のためのウィンドウを選択します。
 
@@ -49,7 +49,7 @@ Kubernetesはスワップをサポートしていないため、すべての匿�
 デフォルトでは、`kube-up.sh`スクリプトで作成されたクラスターにDeploymentオブジェクトとしてデプロイされます。
 別のKubernetesセットアップ機構を使用する場合は、提供される[deployment components.yaml](https://github.com/kubernetes-sigs/metrics-server/releases)ファイルを使用してデプロイすることができます。
 メトリクスサーバーは、Summary APIからメトリクスを収集します。
-各ノードの[Kubelet](/docs/reference/command-line-tools-reference/kubelet/)から[Kubernetes aggregator](/docs/concepts/extend-kubernetes/api-extension/apiserver-aggregation/)経由でメインAPIサーバーに登録されるようになっています。
+各ノードの[Kubelet](/docs/reference/command-line-tools-reference/kubelet/)から[Kubernetes aggregator](/ja/docs/concepts/extend-kubernetes/api-extension/apiserver-aggregation/)経由でメインAPIサーバーに登録されるようになっています。
 
 メトリクスサーバーについては、[Design proposals](https://github.com/kubernetes/design-proposals-archive/blob/main/instrumentation/metrics-server.md)で詳しく解説しています。
 

@@ -25,7 +25,7 @@ weight: 100
 
 - `kubectl get pods --all-namespaces`を使用して、すべての名前空間のPodを取得します
 - `-o jsonpath={.. image}`を使用して、コンテナイメージ名のリストのみが含まれるように出力をフォーマットします。これは、返されたjsonの`image`フィールドを再帰的に解析します。
-  - jsonpathの使い方については、[jsonpathリファレンス](/docs/reference/kubectl/jsonpath/)を参照してください。
+  - jsonpathの使い方については、[jsonpathリファレンス](/ja/docs/reference/kubectl/jsonpath/)を参照してください。
 - `tr`、`sort`、`uniq`などの標準ツールを使用して出力をフォーマットします。
   - `tr`を使用してスペースを改行に置換します。
   - `sort`を使用して結果を並べ替えます。
@@ -104,7 +104,7 @@ kubectl get pods --all-namespaces -o go-template --template="{{range .items}}{{r
 
 ### 参照
 
-* [jsonpath](/docs/reference/kubectl/jsonpath/)参照ガイド
+* [jsonpath](/ja/docs/reference/kubectl/jsonpath/)参照ガイド
 * [Go template](https://pkg.go.dev/text/template)参照ガイド
 
 

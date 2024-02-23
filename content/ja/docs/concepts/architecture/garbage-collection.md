@@ -20,12 +20,12 @@ weight: 70
 
 ## オーナーの依存関係 {#owners-dependents}
 
-Kubernetesの多くのオブジェクトは、[*owner reference*](/docs/concepts/overview/working-with-objects/owners-dependents/)を介して相互にリンクしています。
+Kubernetesの多くのオブジェクトは、[*owner reference*](/ja/docs/concepts/overview/working-with-objects/owners-dependents/)を介して相互にリンクしています。
 owner referenceは、どのオブジェクトが他のオブジェクトに依存しているかをコントロールプレーンに通知します。
 Kubernetesは、owner referenceを使用して、コントロールプレーンやその他のAPIクライアントに、オブジェクトを削除する前に関連するリソースをクリーンアップする機会を提供します。
 ほとんどの場合、Kubernetesはowner referenceを自動的に管理します。
 
-Ownershipは、一部のリソースでも使用される[ラベルおよびセレクター](/docs/concepts/overview/working-with-objects/labels/)メカニズムとは異なります。
+Ownershipは、一部のリソースでも使用される[ラベルおよびセレクター](/ja/docs/concepts/overview/working-with-objects/labels/)メカニズムとは異なります。
 たとえば、`EndpointSlice`オブジェクトを作成する{{<glossary_tooltip text="Service" term_id="service">}}を考えます。
 Serviceは*ラベル*を使用して、コントロールプレーンがServiceに使用されている`EndpointSlice`オブジェクトを判別できるようにします。
 ラベルに加えて、Serviceに代わって管理される各`EndpointSlice`には、owner referenceがあります。
@@ -131,6 +131,6 @@ kubeletは、次の変数に基づいて未使用のコンテナをガベージ�
 
 ## {{% heading "whatsnext" %}}
 
-* [Kubernetes オブジェクトの所有権](/docs/concepts/overview/working-with-objects/owners-dependents/)を学びます。
-* Kubernetes [finalizer](/docs/concepts/overview/working-with-objects/finalizers/)を学びます。
+* [Kubernetes オブジェクトの所有権](/ja/docs/concepts/overview/working-with-objects/owners-dependents/)を学びます。
+* Kubernetes [finalizer](/ja/docs/concepts/overview/working-with-objects/finalizers/)を学びます。
 * 完了したジョブをクリーンアップする[TTL controller](/ja/docs/concepts/workloads/controllers/ttlafterfinished/)(beta)について学びます。

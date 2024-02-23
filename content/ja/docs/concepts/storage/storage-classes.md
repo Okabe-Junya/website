@@ -337,7 +337,7 @@ vSphereストレージクラスのプロビジョナーには2つのタイプが
 - [CSIプロビジョナー](#vsphere-provisioner-csi):`csi.vsphere.vmware.com`
 - [vCPプロビジョナー](#vcp-provisioner):`kubernetes.io/vsphere-volume`
 
-インツリープロビジョナーは[非推奨です](/blog/2019/12/09/kubernetes-1-17-feature-csi-migration-beta/#why-are-we-migrating-in-tree-plugins-to-csi)。CSIプロビジョナーの詳細については、[Kubernetes vSphere CSIドライバー](https://vsphere-csi-driver.sigs.k8s.io/)および[vSphereVolume CSI移行](/ja/docs/concepts/storage/volumes/#vsphere-csi-migration)を参照してください。
+インツリープロビジョナーは[非推奨です](/ja/blog/2019/12/09/kubernetes-1-17-feature-csi-migration-beta/#why-are-we-migrating-in-tree-plugins-to-csi)。CSIプロビジョナーの詳細については、[Kubernetes vSphere CSIドライバー](https://vsphere-csi-driver.sigs.k8s.io/)および[vSphereVolume CSI移行](/ja/docs/concepts/storage/volumes/#vsphere-csi-migration)を参照してください。
 
 #### CSIプロビジョナー {#vsphere-provisioner-csi}
 

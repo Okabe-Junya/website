@@ -5,7 +5,7 @@ weight: 100
 ---
 
 <!-- overview -->
-このページでは、[`projected`](/docs/concepts/storage/volumes/#projected)(投影)ボリュームを使用して、既存の複数のボリュームソースを同一ディレクトリ内にマウントする方法を説明します。
+このページでは、[`projected`](/ja/docs/concepts/storage/volumes/#projected)(投影)ボリュームを使用して、既存の複数のボリュームソースを同一ディレクトリ内にマウントする方法を説明します。
 現在、`secret`、`configMap`、`downwardAPI`および`serviceAccountToken`ボリュームを投影できます。
 
 {{< note >}}
@@ -22,7 +22,7 @@ weight: 100
 ## ProjectedボリュームをPodに設定する
 
 この課題では、ローカルファイルからユーザーネームおよびパスワードの{{< glossary_tooltip text="Secret" term_id="secret" >}}を作成します。
-次に、単一のコンテナを実行するPodを作成し、[`projected`](/docs/concepts/storage/volumes/#projected)ボリュームを使用してそれぞれのSecretを同じ共有ディレクトリにマウントします。
+次に、単一のコンテナを実行するPodを作成し、[`projected`](/ja/docs/concepts/storage/volumes/#projected)ボリュームを使用してそれぞれのSecretを同じ共有ディレクトリにマウントします。
 
 以下にPodの設定ファイルを示します:
 
@@ -78,6 +78,6 @@ kubectl delete secret user pass
 
 ## {{% heading "whatsnext" %}}
 
-* [`projected`](/docs/concepts/storage/volumes/#projected)ボリュームについてさらに学ぶ
+* [`projected`](/ja/docs/concepts/storage/volumes/#projected)ボリュームについてさらに学ぶ
 * [all-in-oneボリューム](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/node/all-in-one-volume.md)のデザインドキュメントを読む
 

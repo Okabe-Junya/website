@@ -215,15 +215,15 @@ kubectl delete namespace cpu-example
 
 * [コンテナおよびPodへのメモリーリソースの割り当て](/ja/docs/tasks/configure-pod-container/assign-memory-resource/)
 
-* [PodのQuality of Serviceを設定する](/docs/tasks/configure-pod-container/quality-service-pod/)
+* [PodのQuality of Serviceを設定する](/ja/docs/tasks/configure-pod-container/quality-service-pod/)
 
 ### クラスター管理者向け
 
-* [Namespaceにメモリー要求および制限のデフォルト値を設定する](/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/)
+* [Namespaceにメモリー要求および制限のデフォルト値を設定する](/ja/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/)
 
 * [NamespaceにCPU要求および制限のデフォルト値を設定する](/docs/tasks/administer-cluster/manage-resources/cpu-default-namespace/)
 
-* [Namespaceに最小および最大メモリー量の制約を設定する](/docs/tasks/administer-cluster/manage-resources/memory-constraint-namespace/)
+* [Namespaceに最小および最大メモリー量の制約を設定する](/ja/docs/tasks/administer-cluster/manage-resources/memory-constraint-namespace/)
 
 * [Namespaceに最小および最大のCPU使用量の制約を設定する](/docs/tasks/administer-cluster/manage-resources/cpu-constraint-namespace/)
 

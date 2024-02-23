@@ -27,7 +27,7 @@ kubeletは、各static Podに対して、自動的にKubernetes APIサーバー�
 
 ## static Podを作成する {#static-pod-creation}
 
-static Podは、[ファイルシステム上でホストされた設定ファイル](#configuration-files)または[ウェブ上でホストされた設定ファイル](/#pods-created-via-http)を使用して設定できます。
+static Podは、[ファイルシステム上でホストされた設定ファイル](#configuration-files)または[ウェブ上でホストされた設定ファイル](/ja/#pods-created-via-http)を使用して設定できます。
 
 ### ファイルシステム上でホストされたstatic Podマニフェスト {#configuration-files}
 
@@ -146,7 +146,7 @@ static-web-my-node1        1/1       Running   0          2m
 ```
 
 {{< note >}}
-kubeletにAPIサーバー上のミラーPodを作成する権限があることを確認してください。もし権限がない場合、APIサーバーによって作成のリクエストが拒否されてしまいます。詳しくは、[PodSecurityPolicy](/docs/concepts/policy/pod-security-policy/)を参照してください。
+kubeletにAPIサーバー上のミラーPodを作成する権限があることを確認してください。もし権限がない場合、APIサーバーによって作成のリクエストが拒否されてしまいます。詳しくは、[PodSecurityPolicy](/ja/docs/concepts/policy/pod-security-policy/)を参照してください。
 {{< /note >}}
 
 

@@ -17,5 +17,5 @@ tags:
 
 CSIはベンダーがKubernetesリポジトリにコードを追加することなく(Kubernetesリポジトリツリー外のプラグインとして)独自のストレージプラグインを作成することを可能にします。CSIドライバをストレージプロバイダから利用するには、はじめに[クラスターにCSIプラグインをデプロイする](https://kubernetes-csi.github.io/docs/deploying.html)必要があります。その後のCSIドライバーを使用するための{{< glossary_tooltip text="StorageClass" term_id="storage-class" >}}を作成することができます。
 
-* [KubernetesにおけるCSIのドキュメント](/docs/concepts/storage/volumes/#csi)
+* [KubernetesにおけるCSIのドキュメント](/ja/docs/concepts/storage/volumes/#csi)
 * [利用可能なCSIドライバの一覧](https://kubernetes-csi.github.io/docs/drivers.html)

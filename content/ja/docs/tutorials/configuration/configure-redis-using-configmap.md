@@ -5,7 +5,7 @@ content_type: tutorial
 
 <!-- overview -->
 
-本ページでは、[ConfigMapを使ったコンテナの設定](/docs/tasks/configure-pod-container/configure-pod-configmap/)に基づき、ConfigMapを使ってRedisの設定を行う実践的な例を提供します。
+本ページでは、[ConfigMapを使ったコンテナの設定](/ja/docs/tasks/configure-pod-container/configure-pod-configmap/)に基づき、ConfigMapを使ってRedisの設定を行う実践的な例を提供します。
 
 
 
@@ -108,5 +108,5 @@ kubectl delete pod redis
 ## {{% heading "whatsnext" %}}
 
 
-* [ConfigMap](/docs/tasks/configure-pod-container/configure-pod-configmap/)について学ぶ
+* [ConfigMap](/ja/docs/tasks/configure-pod-container/configure-pod-configmap/)について学ぶ
 

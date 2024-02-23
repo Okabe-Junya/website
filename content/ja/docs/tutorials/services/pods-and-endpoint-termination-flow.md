@@ -7,7 +7,7 @@ weight: 60
 
 <!-- overview -->
 
-[アプリケーションをServiceに接続する](/docs/tutorials/services/connect-applications-service/)で概略を示したステップに従ってアプリケーションをServiceに接続すると、ネットワーク上で公開され、継続的に実行されて、複製されたアプリケーションが得られます。
+[アプリケーションをServiceに接続する](/ja/docs/tutorials/services/connect-applications-service/)で概略を示したステップに従ってアプリケーションをServiceに接続すると、ネットワーク上で公開され、継続的に実行されて、複製されたアプリケーションが得られます。
 このチュートリアルでは、Podを終了する流れを見て、gracefulな(猶予のある)接続ドレインを実装する手法を模索するための手助けをします。
 
 <!-- body -->
@@ -199,7 +199,7 @@ Podが削除される時には、古いエンドポイントも削除されま�
 ## {{% heading "whatsnext" %}}
 
 
-* [アプリケーションをServiceに接続する](/docs/tutorials/services/connect-applications-service/)方法を学びます。
+* [アプリケーションをServiceに接続する](/ja/docs/tutorials/services/connect-applications-service/)方法を学びます。
 * [Serviceを利用したクラスター内のアプリケーションへのアクセス](/ja/docs/tasks/access-application-cluster/service-access-application-cluster/)を学びます。
 * [Serviceを使用してフロントエンドをバックエンドに接続する](/ja/docs/tasks/access-application-cluster/connecting-frontend-backend/)を学びます。
 * [外部ロードバランサーの作成](/docs/tasks/access-application-cluster/create-external-load-balancer/)を学びます。

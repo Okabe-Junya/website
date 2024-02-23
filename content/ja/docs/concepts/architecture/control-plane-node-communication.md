@@ -18,7 +18,7 @@ aliases:
 Kubernetesには「ハブアンドスポーク」というAPIパターンがあります。ノード(またはノードが実行するPod)からのすべてのAPIの使用は、APIサーバーで終了します。他のコントロールプレーンコンポーネントは、どれもリモートサービスを公開するようには設計されていません。APIサーバーは、1つ以上の形式のクライアント[認証](/ja/docs/reference/access-authn-authz/authentication/)が有効になっている状態で、セキュアなHTTPSポート(通常は443)でリモート接続をリッスンするように設定されています。
 特に[匿名リクエスト](/ja/docs/reference/access-authn-authz/authentication/#anonymous-requests)や[サービスアカウントトークン](/ja/docs/reference/access-authn-authz/authentication/#service-account-token)が許可されている場合は、1つ以上の[認可](/docs/reference/access-authn-authz/authorization/)形式を有効にする必要があります。
 
-ノードは、有効なクライアント認証情報とともに、APIサーバーに安全に接続できるように、クラスターのパブリックルート{{< glossary_tooltip text="証明書" term_id="certificate" >}}でプロビジョニングされる必要があります。適切なやり方は、kubeletに提供されるクライアント認証情報が、クライアント証明書の形式であることです。kubeletクライアント証明書の自動プロビジョニングについては、[kubelet TLSブートストラップ](/docs/reference/command-line-tools-reference/kubelet-tls-bootstrapping/)を参照してください。
+ノードは、有効なクライアント認証情報とともに、APIサーバーに安全に接続できるように、クラスターのパブリックルート{{< glossary_tooltip text="証明書" term_id="certificate" >}}でプロビジョニングされる必要があります。適切なやり方は、kubeletに提供されるクライアント認証情報が、クライアント証明書の形式であることです。kubeletクライアント証明書の自動プロビジョニングについては、[kubelet TLSブートストラップ](/ja/docs/reference/command-line-tools-reference/kubelet-tls-bootstrapping/)を参照してください。
 
 APIサーバーに接続したい{{< glossary_tooltip text="Pod" term_id="pod" >}}は、サービスアカウントを利用することで、安全に接続することができます。これにより、Podのインスタンス化時に、Kubernetesはパブリックルート証明書と有効なBearerトークンを自動的にPodに挿入します。
 `kubernetes`サービス(`デフォルト`の名前空間)は、APIサーバー上のHTTPSエンドポイントに(`{{< glossary_tooltip text="kube-proxy" term_id="kube-proxy" >}}`経由で)リダイレクトされる仮想IPアドレスで構成されます。

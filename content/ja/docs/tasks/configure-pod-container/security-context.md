@@ -165,9 +165,9 @@ securityContext:
 
 {{< note >}}
 このフィールドは
-[`secret`](/docs/concepts/storage/volumes/#secret)、
-[`configMap`](/docs/concepts/storage/volumes/#configmap)、
-[`emptydir`](/docs/concepts/storage/volumes/#emptydir)
+[`secret`](/ja/docs/concepts/storage/volumes/#secret)、
+[`configMap`](/ja/docs/concepts/storage/volumes/#configmap)、
+[`emptydir`](/ja/docs/concepts/storage/volumes/#emptydir)
 のようなエフェメラルボリュームタイプに対しては効果がありません。
 {{< /note >}}
 
@@ -439,6 +439,6 @@ kubectl delete pod security-context-demo-4
 * [最新の強化されたセキュリティでDockerを調整する](https://github.com/containerd/containerd/blob/main/docs/cri/config.md)
 * [Security Contexts design document](https://git.k8s.io/design-proposals-archive/auth/security_context.md)
 * [Ownership Management design document](https://git.k8s.io/design-proposals-archive/storage/volume-ownership-management.md)
-* [PodSecurity Admission](/docs/concepts/security/pod-security-admission/)
+* [PodSecurity Admission](/ja/docs/concepts/security/pod-security-admission/)
 * [AllowPrivilegeEscalation design document](https://git.k8s.io/design-proposals-archive/auth/no-new-privs.md)
 * Linuxのセキュリティについてさらに知りたい場合は、[Overview of Linux Kernel Security Features](https://www.linux.com/learn/overview-linux-kernel-security-features)を確認してください(注: 一部の情報は古くなっています)。

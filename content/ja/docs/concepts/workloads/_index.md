@@ -18,7 +18,7 @@ Podには定義されたライフサイクルがあります。たとえば、�
 * [Deployment](/ja/docs/concepts/workloads/controllers/deployment/)と[ReplicaSet](/ja/docs/concepts/workloads/controllers/replicaset/)(レガシーなリソース{{< glossary_tooltip text="ReplicationController" term_id="replication-controller" >}}を置き換えるものです)
 * [StatefulSet](/ja/docs/concepts/workloads/controllers/statefulset/)
 * [DaemonSet](/ja/docs/concepts/workloads/controllers/daemonset/)(ストレージドライバやネットワークプラグインなど、ノードローカルな機能を提供するためのPodを実行するために使われます)
-* [Job](/docs/concepts/workloads/controllers/job/)と[CronJob](/ja/docs/concepts/workloads/controllers/cron-jobs/)(実行後に完了するようなタスクのために使われます)
+* [Job](/ja/docs/concepts/workloads/controllers/job/)と[CronJob](/ja/docs/concepts/workloads/controllers/cron-jobs/)(実行後に完了するようなタスクのために使われます)
 
 多少関連のある2種類の補助的な概念もあります。
 * [ガベージコレクション](/ja/docs/concepts/workloads/controllers/garbage-collection/)は、オブジェクトが _所有するリソース_ が削除された後に、そのオブジェクトをクラスターからクリーンアップします。

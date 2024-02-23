@@ -8,7 +8,7 @@ weight: 50
 
 Linuxでは、{{< glossary_tooltip text="コントロールグループ" term_id="cgroup" >}}がプロセスに割り当てられるリソースを制限しています。
 
-コンテナ化されたワークロードの、CPU/メモリーの要求と制限を含む[Podとコンテナのリソース管理](/docs/concepts/configuration/manage-resources-containers/)を強制するために、
+コンテナ化されたワークロードの、CPU/メモリーの要求と制限を含む[Podとコンテナのリソース管理](/ja/docs/concepts/configuration/manage-resources-containers/)を強制するために、
 {{< glossary_tooltip text="kubelet" term_id="kubelet" >}}と基盤となるコンテナランタイムはcgroupをインターフェースとして接続する必要があります。
 
 Linuxではcgroup v1とcgroup v2の2つのバージョンのcgroupがあります。
@@ -32,7 +32,7 @@ cgroup v2はリソース管理機能を強化した統合制御システムを�
   - ページキャッシュの書き戻しといった、非即時のリソース変更
 
 Kubernetesのいくつかの機能では、強化されたリソース管理と隔離のためにcgroup v2のみを使用しています。
-例えば、[MemoryQoS](/blog/2021/11/26/qos-memory-resources/)機能はメモリーQoSを改善し、cgroup v2の基本的な機能に依存しています。
+例えば、[MemoryQoS](/ja/blog/2021/11/26/qos-memory-resources/)機能はメモリーQoSを改善し、cgroup v2の基本的な機能に依存しています。
 
 ## cgroup v2を使う {#using-cgroupv2}
 

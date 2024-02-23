@@ -14,7 +14,7 @@ weight: 80
 
 klogは、Kubernetesのログライブラリです。[klog](https://github.com/kubernetes/klog)は、Kubernetesのシステムコンポーネント向けのログメッセージを生成します。
 
-klogの設定に関する詳しい情報については、[コマンドラインツールのリファレンス](/docs/reference/command-line-tools-reference/)を参照してください。
+klogの設定に関する詳しい情報については、[コマンドラインツールのリファレンス](/ja/docs/reference/command-line-tools-reference/)を参照してください。
 
 klogネイティブ形式の例:
 
@@ -52,7 +52,7 @@ I1025 00:15:15.525108       1 controller_utils.go:116] "Pod status updated" pod=
 {{< feature-state for_k8s_version="v1.19" state="alpha" >}}
 
 {{<warning >}}
-JSONの出力は多数の標準のklogフラグをサポートしていません。非対応のklogフラグの一覧については、[コマンドラインツールリファレンス](/docs/reference/command-line-tools-reference/)を参照してください。
+JSONの出力は多数の標準のklogフラグをサポートしていません。非対応のklogフラグの一覧については、[コマンドラインツールリファレンス](/ja/docs/reference/command-line-tools-reference/)を参照してください。
 
 すべてのログがJSON形式で書き込むことに対応しているわけではありません(たとえば、プロセスの開始時など)。ログのパースを行おうとしている場合、JSONではないログの行に対処できるようにしてください。
 
@@ -121,6 +121,6 @@ systemdを使用しているマシンでは、kubeletとコンテナランタイ
 
 ## {{% heading "whatsnext" %}}
 
-* [Kubernetesのログのアーキテクチャ](/docs/concepts/cluster-administration/logging/)について読む。
+* [Kubernetesのログのアーキテクチャ](/ja/docs/concepts/cluster-administration/logging/)について読む。
 * [構造化ログ](https://github.com/kubernetes/enhancements/tree/master/keps/sig-instrumentation/1602-structured-logging)について読む。
 * [ログの深刻度の慣習](https://github.com/kubernetes/community/blob/master/contributors/devel/sig-instrumentation/logging.md)について読む。

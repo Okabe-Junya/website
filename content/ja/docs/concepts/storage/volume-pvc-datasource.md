@@ -6,7 +6,7 @@ weight: 70
 
 <!-- overview -->
 
-このドキュメントではKubernetesで既存のCSIボリュームの複製についてのコンセプトを説明します。このページを読む前にあらかじめ[ボリューム](/docs/concepts/storage/volumes)についてよく理解していることが望ましいです。
+このドキュメントではKubernetesで既存のCSIボリュームの複製についてのコンセプトを説明します。このページを読む前にあらかじめ[ボリューム](/ja/docs/concepts/storage/volumes)についてよく理解していることが望ましいです。
 
 
 

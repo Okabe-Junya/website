@@ -6,9 +6,9 @@ weight: 10
 
 <!-- overview -->
 
-Podに対するセキュリティの設定は通常[Security Context](/docs/tasks/configure-pod-container/security-context/)を使用して適用されます。Security ContextはPod単位での特権やアクセスコントロールの定義を実現します。
+Podに対するセキュリティの設定は通常[Security Context](/ja/docs/tasks/configure-pod-container/security-context/)を使用して適用されます。Security ContextはPod単位での特権やアクセスコントロールの定義を実現します。
 
-クラスターにおけるSecurity Contextの強制やポリシーベースの定義は[Pod Security Policy](/docs/concepts/policy/pod-security-policy/)によって実現されてきました。
+クラスターにおけるSecurity Contextの強制やポリシーベースの定義は[Pod Security Policy](/ja/docs/concepts/policy/pod-security-policy/)によって実現されてきました。
 _Pod Security Policy_ はクラスターレベルのリソースで、Pod定義のセキュリティに関する設定を制御します。
 
 しかし、PodSecurityPolicyを拡張したり代替する、ポリシーを強制するための多くの方法が生まれてきました。
@@ -356,7 +356,7 @@ _Pod Security Policy_ はクラスターレベルのリソースで、Pod定義�
 
 機構が成熟してきたら、ポリシーごとに下記に定義されます。それぞれのポリシーを強制する方法についてはここでは定義しません。
 
-[**PodSecurityPolicy**](/docs/concepts/policy/pod-security-policy/)
+[**PodSecurityPolicy**](/ja/docs/concepts/policy/pod-security-policy/)
 
 - [特権](https://raw.githubusercontent.com/kubernetes/website/master/content/en/examples/policy/privileged-psp.yaml)
 - [ベースライン](https://raw.githubusercontent.com/kubernetes/website/master/content/en/examples/policy/baseline-psp.yaml)
@@ -374,12 +374,12 @@ _Pod Security Policy_ はクラスターレベルのリソースで、Pod定義�
 
 ### セキュリティポリシーとセキュリティコンテキストの違いは何ですか?
 
-[Security Context](/docs/tasks/configure-pod-container/security-context/)は実行時のコンテナやPodを設定するものです。
+[Security Context](/ja/docs/tasks/configure-pod-container/security-context/)は実行時のコンテナやPodを設定するものです。
 Security ContextはPodのマニフェストの中でPodやコンテナの仕様の一部として定義され、コンテナランタイムへ渡されるパラメーターを示します。
 
 セキュリティポリシーはコントロールプレーンの機構で、Security Contextとそれ以外も含め、特定の設定を強制するものです。
 2020年2月時点では、ネイティブにサポートされているポリシー強制の機構は[Pod Security
-Policy](/docs/concepts/policy/pod-security-policy/)です。これはクラスター全体にわたってセキュリティポリシーを中央集権的に強制するものです。
+Policy](/ja/docs/concepts/policy/pod-security-policy/)です。これはクラスター全体にわたってセキュリティポリシーを中央集権的に強制するものです。
 セキュリティポリシーを強制する他の手段もKubernetesのエコシステムでは開発が進められています。例えば[OPA
 Gatekeeper](https://github.com/open-policy-agent/gatekeeper)があります。
 

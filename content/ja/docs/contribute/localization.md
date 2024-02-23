@@ -139,4 +139,4 @@ cron「の」ジョブは、「の」が続く事による解釈の難から基�
 
 ## アップストリームのコントリビューター
 
-SIG Docsでは、英語のソースに対する[アップストリームへのコントリビュートや誤りの訂正](/docs/contribute/intermediate#localize-content)を歓迎しています。
+SIG Docsでは、英語のソースに対する[アップストリームへのコントリビュートや誤りの訂正](/ja/docs/contribute/intermediate#localize-content)を歓迎しています。

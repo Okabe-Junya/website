@@ -52,6 +52,6 @@ kube-proxyは、`spec.internalTrafficPolicy`の設定に基づいて、ルーテ
 
 ## {{% heading "whatsnext" %}}
 
-* [Topology Aware Hints](/docs/concepts/services-networking/topology-aware-hints)を読む
+* [Topology Aware Hints](/ja/docs/concepts/services-networking/topology-aware-hints)を読む
 * [Service External Traffic Policy](/docs/tasks/access-application-cluster/create-external-load-balancer/#preserving-the-client-source-ip)を読む
 * [サービスとアプリケーションの接続](/ja/docs/concepts/services-networking/connect-applications-service/)を読む

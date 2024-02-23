@@ -11,7 +11,7 @@ weight: 20
 
 <!-- overview -->
 
-このドキュメントではKubernetesの _PersistentVolume_ について説明します。[ボリューム](/docs/concepts/storage/volumes/)を一読することをおすすめします。
+このドキュメントではKubernetesの _PersistentVolume_ について説明します。[ボリューム](/ja/docs/concepts/storage/volumes/)を一読することをおすすめします。
 
 
 
@@ -22,7 +22,7 @@ weight: 20
 
 ストレージを管理することはインスタンスを管理することとは全くの別物です。PersistentVolumeサブシステムは、ストレージが何から提供されているか、どのように消費されているかをユーザーと管理者から抽象化するAPIを提供します。これを実現するためのPersistentVolumeとPersistentVolumeClaimという2つの新しいAPIリソースを紹介します。
 
-_PersistentVolume_ (PV)は[ストレージクラス](/docs/concepts/storage/storage-classes/)を使って管理者もしくは動的にプロビジョニングされるクラスターのストレージの一部です。これはNodeと同じようにクラスターリソースの一部です。PVはVolumeのようなボリュームプラグインですが、PVを使う個別のPodとは独立したライフサイクルを持っています。このAPIオブジェクトはNFS、iSCSIやクラウドプロバイダー固有のストレージシステムの実装の詳細を捕捉します。
+_PersistentVolume_ (PV)は[ストレージクラス](/ja/docs/concepts/storage/storage-classes/)を使って管理者もしくは動的にプロビジョニングされるクラスターのストレージの一部です。これはNodeと同じようにクラスターリソースの一部です。PVはVolumeのようなボリュームプラグインですが、PVを使う個別のPodとは独立したライフサイクルを持っています。このAPIオブジェクトはNFS、iSCSIやクラウドプロバイダー固有のストレージシステムの実装の詳細を捕捉します。
 
 _PersistentVolumeClaim_ (PVC)はユーザーによって要求されるストレージです。これはPodと似ています。PodはNodeリソースを消費し、PVCはPVリソースを消費します。Podは特定レベルのCPUとメモリーリソースを要求することができます。クレームは特定のサイズやアクセスモード(例えば、ReadWriteOnce、ReadOnlyMany、ReadWriteManyにマウントできます。詳しくは[アクセスモード](#access-modes)を参照してください)を要求することができます。
 
@@ -46,7 +46,7 @@ PVは静的か動的どちらかでプロビジョニングされます。
 #### 動的
 
 ユーザーのPersistentVolumeClaimが管理者の作成したいずれの静的PVにも一致しない場合、クラスターはPVC用にボリュームを動的にプロビジョニングしようとする場合があります。
-このプロビジョニングはStorageClassに基づいています。PVCは[ストレージクラス](/docs/concepts/storage/storage-classes/)の要求が必要であり、管理者は動的プロビジョニングを行うためにストレージクラスの作成・設定が必要です。ストレージクラスを""にしたストレージ要求は、自身の動的プロビジョニングを事実上無効にします。
+このプロビジョニングはStorageClassに基づいています。PVCは[ストレージクラス](/ja/docs/concepts/storage/storage-classes/)の要求が必要であり、管理者は動的プロビジョニングを行うためにストレージクラスの作成・設定が必要です。ストレージクラスを""にしたストレージ要求は、自身の動的プロビジョニングを事実上無効にします。
 
 ストレージクラスに基づいたストレージの動的プロビジョニングを有効化するには、クラスター管理者が`DefaultStorageClass`[アドミッションコントローラー](/docs/reference/access-authn-authz/admission-controllers/#defaultstorageclass)をAPIサーバーで有効化する必要があります。
 これは例えば、`DefaultStorageClass`がAPIサーバーコンポーネントの`--enable-admission-plugins`フラグのコンマ区切りの順序付きリストの中に含まれているかで確認できます。
@@ -171,7 +171,7 @@ spec:
 永続ボリュームが存在し、その`claimRef`フィールドで永続ボリュームクレームを予約していない場合に永続ボリュームと永続ボリュームクレームがバインドされます。
 
 バインディングは、ノードアフィニティを含むいくつかのボリュームの一致基準に関係なく発生します。
-コントロールプレーンは、依然として[ストレージクラス](/docs/concepts/storage/storage-classes/)、アクセスモード、および要求されたストレージサイズが有効であることをチェックします。
+コントロールプレーンは、依然として[ストレージクラス](/ja/docs/concepts/storage/storage-classes/)、アクセスモード、および要求されたストレージサイズが有効であることをチェックします。
 
 ```yaml
 apiVersion: v1
@@ -261,7 +261,7 @@ FlexVolumeは、Podの再起動時にサイズ変更できます。
 {{< feature-state for_k8s_version="v1.15" state="beta" >}}
 
 {{< note >}}
-使用中のPVCの拡張は、Kubernetes 1.15以降のベータ版と、1.11以降のアルファ版として利用可能です。`ExpandInUsePersistentVolume`機能を有効化する必要があります。これはベータ機能のため多くのクラスターで自動的に行われます。詳細については、[フィーチャーゲート](/docs/reference/command-line-tools-reference/feature-gates/)のドキュメントを参照してください。
+使用中のPVCの拡張は、Kubernetes 1.15以降のベータ版と、1.11以降のアルファ版として利用可能です。`ExpandInUsePersistentVolume`機能を有効化する必要があります。これはベータ機能のため多くのクラスターで自動的に行われます。詳細については、[フィーチャーゲート](/ja/docs/reference/command-line-tools-reference/feature-gates/)のドキュメントを参照してください。
 {{< /note >}}
 
 この場合、既存のPVCを使用しているPodまたはDeploymentを削除して再作成する必要はありません。使用中のPVCは、ファイルシステムが拡張されるとすぐにPodで自動的に使用可能になります。この機能は、PodまたはDeploymentで使用されていないPVCには影響しません。拡張を完了する前に、PVCを使用するPodを作成する必要があります。
@@ -290,32 +290,32 @@ EBSの拡張は時間がかかる操作です。また変更は、ボリュー�
 
 PersistentVolumeの種類はプラグインとして実装されます。Kubernetesは現在次のプラグインに対応しています。
 
-* [`awsElasticBlockStore`](/docs/concepts/storage/volumes/#awselasticblockstore) - AWS Elastic Block Store (EBS)
-* [`azureDisk`](/docs/concepts/storage/volumes/#azuredisk) - Azure Disk
-* [`azureFile`](/docs/concepts/storage/volumes/#azurefile) - Azure File
-* [`cephfs`](/docs/concepts/storage/volumes/#cephfs) - CephFS volume
-* [`cinder`](/docs/concepts/storage/volumes/#cinder) - Cinder (OpenStack block storage)
+* [`awsElasticBlockStore`](/ja/docs/concepts/storage/volumes/#awselasticblockstore) - AWS Elastic Block Store (EBS)
+* [`azureDisk`](/ja/docs/concepts/storage/volumes/#azuredisk) - Azure Disk
+* [`azureFile`](/ja/docs/concepts/storage/volumes/#azurefile) - Azure File
+* [`cephfs`](/ja/docs/concepts/storage/volumes/#cephfs) - CephFS volume
+* [`cinder`](/ja/docs/concepts/storage/volumes/#cinder) - Cinder (OpenStack block storage)
   (**非推奨**)
-* [`csi`](/docs/concepts/storage/volumes/#csi) - Container Storage Interface (CSI)
-* [`fc`](/docs/concepts/storage/volumes/#fc) - Fibre Channel (FC) storage
-* [`flexVolume`](/docs/concepts/storage/volumes/#flexVolume) - FlexVolume
-* [`flocker`](/docs/concepts/storage/volumes/#flocker) - Flocker storage
-* [`gcePersistentDisk`](/docs/concepts/storage/volumes/#gcepersistentdisk) - GCE Persistent Disk
-* [`glusterfs`](/docs/concepts/storage/volumes/#glusterfs) - Glusterfs volume
-* [`hostPath`](/docs/concepts/storage/volumes/#hostpath) - HostPath volume
+* [`csi`](/ja/docs/concepts/storage/volumes/#csi) - Container Storage Interface (CSI)
+* [`fc`](/ja/docs/concepts/storage/volumes/#fc) - Fibre Channel (FC) storage
+* [`flexVolume`](/ja/docs/concepts/storage/volumes/#flexVolume) - FlexVolume
+* [`flocker`](/ja/docs/concepts/storage/volumes/#flocker) - Flocker storage
+* [`gcePersistentDisk`](/ja/docs/concepts/storage/volumes/#gcepersistentdisk) - GCE Persistent Disk
+* [`glusterfs`](/ja/docs/concepts/storage/volumes/#glusterfs) - Glusterfs volume
+* [`hostPath`](/ja/docs/concepts/storage/volumes/#hostpath) - HostPath volume
   (テスト用の単一ノードのみ。マルチノードクラスターでは動作しません。代わりに`local`ボリュームを利用することを検討してください。)
-* [`iscsi`](/docs/concepts/storage/volumes/#iscsi) - iSCSI (SCSI over IP) storage
-* [`local`](/docs/concepts/storage/volumes/#local) - ノードにマウントされたローカルストレージデバイス
-* [`nfs`](/docs/concepts/storage/volumes/#nfs) - Network File System (NFS) storage
+* [`iscsi`](/ja/docs/concepts/storage/volumes/#iscsi) - iSCSI (SCSI over IP) storage
+* [`local`](/ja/docs/concepts/storage/volumes/#local) - ノードにマウントされたローカルストレージデバイス
+* [`nfs`](/ja/docs/concepts/storage/volumes/#nfs) - Network File System (NFS) storage
 * `photonPersistentDisk` - Photon controller persistent disk
   (対応するクラウドプロバイダーが削除されたため、このボリュームタイプは機能しなくなりました。)
-* [`portworxVolume`](/docs/concepts/storage/volumes/#portworxvolume) - Portworx volume
-* [`quobyte`](/docs/concepts/storage/volumes/#quobyte) - Quobyte volume
-* [`rbd`](/docs/concepts/storage/volumes/#rbd) - Rados Block Device (RBD) volume
-* [`scaleIO`](/docs/concepts/storage/volumes/#scaleio) - ScaleIO volume
+* [`portworxVolume`](/ja/docs/concepts/storage/volumes/#portworxvolume) - Portworx volume
+* [`quobyte`](/ja/docs/concepts/storage/volumes/#quobyte) - Quobyte volume
+* [`rbd`](/ja/docs/concepts/storage/volumes/#rbd) - Rados Block Device (RBD) volume
+* [`scaleIO`](/ja/docs/concepts/storage/volumes/#scaleio) - ScaleIO volume
   (**非推奨**)
-* [`storageos`](/docs/concepts/storage/volumes/#storageos) - StorageOS volume
-* [`vsphereVolume`](/docs/concepts/storage/volumes/#vspherevolume) - vSphere VMDK volume
+* [`storageos`](/ja/docs/concepts/storage/volumes/#storageos) - StorageOS volume
+* [`vsphereVolume`](/ja/docs/concepts/storage/volumes/#vspherevolume) - vSphere VMDK volume
 
 ## 永続ボリューム
 
@@ -388,7 +388,7 @@ PersistentVolumeは、リソースプロバイダーがサポートする方法�
 `ReadWriteOncePod`
 : ボリュームは、単一のPodで読み取り/書き込みとしてマウントできます。クラスター全体で1つのPodのみがそのPVCの読み取りまたは書き込みを行えるようにする場合は、ReadWriteOncePodアクセスモードを使用します。これは、CSIボリュームとKubernetesバージョン1.22以降でのみサポートされます。
 
-これについてはブログ[Introducing Single Pod Access Mode for PersistentVolumes](/blog/2021/09/13/read-write-once-pod-access-mode-alpha/)に詳細が記載されています。
+これについてはブログ[Introducing Single Pod Access Mode for PersistentVolumes](/ja/blog/2021/09/13/read-write-once-pod-access-mode-alpha/)に詳細が記載されています。
 
 CLIではアクセスモードは次のように略されます。
 
@@ -425,7 +425,7 @@ CLIではアクセスモードは次のように略されます。
 
 ### Class
 
-PVはクラスを持つことができます。これは`storageClassName`属性を[ストレージクラス](/docs/concepts/storage/storage-classes/)の名前に設定することで指定されます。特定のクラスのPVは、そのクラスを要求するPVCにのみバインドできます。`storageClassName`にクラスがないPVは、特定のクラスを要求しないPVCにのみバインドできます。
+PVはクラスを持つことができます。これは`storageClassName`属性を[ストレージクラス](/ja/docs/concepts/storage/storage-classes/)の名前に設定することで指定されます。特定のクラスのPVは、そのクラスを要求するPVCにのみバインドできます。`storageClassName`にクラスがないPVは、特定のクラスを要求しないPVCにのみバインドできます。
 
 以前`volume.beta.kubernetes.io/storage-class`アノテーションは、`storageClassName`属性の代わりに使用されていました。このアノテーションはまだ機能しています。ただし、将来のKubernetesリリースでは完全に非推奨です。
 
@@ -470,7 +470,7 @@ Kubernetes管理者は永続ボリュームがNodeにマウントされるとき
 ### ノードアフィニティ
 
 {{< note >}}
-ほとんどのボリュームタイプはこのフィールドを設定する必要がありません。[AWS EBS](/docs/concepts/storage/volumes/#awselasticblockstore)、[GCE PD](/docs/concepts/storage/volumes/#gcepersistentdisk)、もしくは[Azure Disk](/docs/concepts/storage/volumes/#azuredisk)ボリュームブロックタイプの場合自動的に設定されます。[local](/docs/concepts/storage/volumes/#local)ボリュームは明示的に設定する必要があります。
+ほとんどのボリュームタイプはこのフィールドを設定する必要がありません。[AWS EBS](/ja/docs/concepts/storage/volumes/#awselasticblockstore)、[GCE PD](/ja/docs/concepts/storage/volumes/#gcepersistentdisk)、もしくは[Azure Disk](/ja/docs/concepts/storage/volumes/#azuredisk)ボリュームブロックタイプの場合自動的に設定されます。[local](/ja/docs/concepts/storage/volumes/#local)ボリュームは明示的に設定する必要があります。
 {{< /note >}}
 
 PVは[ノードアフィニティ](/docs/reference/generated/kubernetes-api/{{< param "version" >}}/#volumenodeaffinity-v1-core)を指定して、このボリュームにアクセスできるNodeを制限する制約を定義できます。PVを使用するPodは、ノードアフィニティによって選択されたNodeにのみスケジュールされます。
@@ -536,7 +536,7 @@ Podと同様に、クレームは特定の量のリソースを要求できま�
 
 ### クラス
 
-クレームは、`storageClassName`属性を使用して[ストレージクラス](/docs/concepts/storage/storage-classes/)の名前を指定することにより、特定のクラスを要求できます。PVCにバインドできるのは、PVCと同じ`storageClassName`を持つ、要求されたクラスのPVのみです。
+クレームは、`storageClassName`属性を使用して[ストレージクラス](/ja/docs/concepts/storage/storage-classes/)の名前を指定することにより、特定のクラスを要求できます。PVCにバインドできるのは、PVCと同じ`storageClassName`を持つ、要求されたクラスのPVのみです。
 
 PVCは必ずしもクラスをリクエストする必要はありません。`storageClassName`が`""`に設定されているPVCは、クラスのないPVを要求していると常に解釈されるため、クラスのないPVにのみバインドできます（アノテーションがないか、`""`に等しい1つのセット）。`storageClassName`のないPVCはまったく同じではなく、[`DefaultStorageClass`アドミッションプラグイン](/docs/reference/access-authn-authz/admission-controllers/#defaultstorageclass)がオンになっているかどうかによって、クラスターによって異なる方法で処理されます。
 
@@ -682,7 +682,7 @@ Podにrawブロックデバイスを追加する場合は、マウントパス�
 
 {{< feature-state for_k8s_version="v1.17" state="beta" >}}
 
-ボリュームスナップショット機能は、CSIボリュームプラグインのみをサポートするために追加されました。詳細については、[ボリュームのスナップショット](/docs/concepts/storage/volume-snapshots/)を参照してください。
+ボリュームスナップショット機能は、CSIボリュームプラグインのみをサポートするために追加されました。詳細については、[ボリュームのスナップショット](/ja/docs/concepts/storage/volume-snapshots/)を参照してください。
 
 ボリュームスナップショットのデータソースからボリュームを復元する機能を有効にするには、apiserverおよびcontroller-managerで`VolumeSnapshotDataSource`フィーチャーゲートを有効にします。
 

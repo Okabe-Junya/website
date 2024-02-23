@@ -6,7 +6,7 @@ weight: 180
 ---
 
 <!-- overview -->
-このドキュメントでは、Pod同士の通信を制御するネットワークポリシーを定義するための、Kubernetesの[NetworkPolicy API](/docs/concepts/services-networking/network-policies/)を使い始める手助けをします。
+このドキュメントでは、Pod同士の通信を制御するネットワークポリシーを定義するための、Kubernetesの[NetworkPolicy API](/ja/docs/concepts/services-networking/network-policies/)を使い始める手助けをします。
 
 ## {{% heading "prerequisites" %}}
 

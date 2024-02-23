@@ -97,6 +97,6 @@ Pull Requestがコンテンツの公開に使用されるブランチにマー�
 
 Kubernetesドキュメントへの貢献の詳細については、以下を参照してください：
 
-- [Contributing new content](/docs/contribute/new-content/overview/)
-- [Reviewing content](/docs/contribute/review/reviewing-prs)
+- [Contributing new content](/ja/docs/contribute/new-content/overview/)
+- [Reviewing content](/ja/docs/contribute/review/reviewing-prs)
 - [ドキュメントスタイルの概要](/ja/docs/contribute/style/)

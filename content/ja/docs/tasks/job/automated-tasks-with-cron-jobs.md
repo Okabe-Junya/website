@@ -142,7 +142,7 @@ CronJobの特に`spec`へのすべての修正は、それ以降の実行にの�
 
 ### Job Template
 
-`.spec.jobTemplate`はJobのテンプレートであり、必須です。[Job](/docs/concepts/workloads/controllers/job/)と完全に同一のスキーマを持ちますが、フィールドがネストされている点と、`apiVersion`と`kind`が存在しない点だけが異なります。Jobの`.spec`を書くための情報については、[JobのSpecを書く](/docs/concepts/workloads/controllers/job/#writing-a-job-spec)を参照してください。
+`.spec.jobTemplate`はJobのテンプレートであり、必須です。[Job](/ja/docs/concepts/workloads/controllers/job/)と完全に同一のスキーマを持ちますが、フィールドがネストされている点と、`apiVersion`と`kind`が存在しない点だけが異なります。Jobの`.spec`を書くための情報については、[JobのSpecを書く](/ja/docs/concepts/workloads/controllers/job/#writing-a-job-spec)を参照してください。
 
 ### Starting Deadline
 

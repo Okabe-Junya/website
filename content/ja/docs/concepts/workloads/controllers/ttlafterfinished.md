@@ -12,7 +12,7 @@ weight: 70
 TTLコントローラーは実行を終えたリソースオブジェクトのライフタイムを制御するためのTTL (time to live) メカニズムを提供します。  
 TTLコントローラーは現在{{< glossary_tooltip text="Job" term_id="job" >}}のみ扱っていて、将来的にPodやカスタムリソースなど、他のリソースの実行終了を扱えるように拡張される予定です。
 
-α版の免責事項: この機能は現在α版の機能で、kube-apiserverとkube-controller-managerの[Feature Gate](/docs/reference/command-line-tools-reference/feature-gates/)の`TTLAfterFinished`を有効にすることで使用可能です。
+α版の免責事項: この機能は現在α版の機能で、kube-apiserverとkube-controller-managerの[Feature Gate](/ja/docs/reference/command-line-tools-reference/feature-gates/)の`TTLAfterFinished`を有効にすることで使用可能です。
 
 
 

@@ -6,7 +6,7 @@ weight: 21 # just after persistent volumes
 
 <!-- overview -->
 
-このドキュメントでは、Kubernetesの*投影ボリューム*について説明します。[ボリューム](/docs/concepts/storage/volumes/)に精通していることをお勧めします。
+このドキュメントでは、Kubernetesの*投影ボリューム*について説明します。[ボリューム](/ja/docs/concepts/storage/volumes/)に精通していることをお勧めします。
 
 <!-- body -->
 
@@ -16,9 +16,9 @@ weight: 21 # just after persistent volumes
 
 現在、次のタイプのボリュームソースを投影できます。
 
-* [`secret`](/docs/concepts/storage/volumes/#secret)
-* [`downwardAPI`](/docs/concepts/storage/volumes/#downwardapi)
-* [`configMap`](/docs/concepts/storage/volumes/#configmap)
+* [`secret`](/ja/docs/concepts/storage/volumes/#secret)
+* [`downwardAPI`](/ja/docs/concepts/storage/volumes/#downwardapi)
+* [`configMap`](/ja/docs/concepts/storage/volumes/#configmap)
 * `serviceAccountToken`
 
 すべてのソースは、Podと同じnamespaceにある必要があります。詳細は[all-in-one volume](https://github.com/kubernetes/design-proposals-archive/blob/main/node/all-in-one-volume.md)デザインドキュメントを参照してください。
@@ -49,7 +49,7 @@ weight: 21 # just after persistent volumes
 
 
 {{< note >}}
-投影ボリュームソースを[`subPath`](/docs/concepts/storage/volumes/#using-subpath)ボリュームマウントとして使用しているコンテナは、それらのボリュームソースの更新を受信しません。
+投影ボリュームソースを[`subPath`](/ja/docs/concepts/storage/volumes/#using-subpath)ボリュームマウントとして使用しているコンテナは、それらのボリュームソースの更新を受信しません。
 {{< /note >}}
 
 ## SecurityContextの相互作用

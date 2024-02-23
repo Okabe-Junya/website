@@ -107,7 +107,7 @@ HorizontalPodAutoscalerに複数のメトリクスが指定されている場合
 
 Horizontal Pod Autoscalerは、Kubernetesの`autoscaling` APIグループのAPIリソースです。現行の安定バージョンは、メモリーおよびカスタムメトリクスに対するスケーリングのサポートを含む`autoscaling/v2` APIバージョンに見つけることができます。`autoscaling/v2`で導入された新たなフィールドは、`autoscaling/v1`で作業する際にアノテーションとして保持されます。
 
-HorizontalPodAutoscaler APIオブジェクトを作成するときは、指定された名前が有効な[DNSサブドメイン名](/ja/docs/concepts/overview/working-with-objects/names#dns-subdomain-names)であることを確認してください。APIオブジェクトについての詳細は、[HorizontalPodAutoscaler Object](/docs/reference/generated/kubernetes-api/v1.27/#horizontalpodautoscaler-v2-autoscaling)で見つけることができます。
+HorizontalPodAutoscaler APIオブジェクトを作成するときは、指定された名前が有効な[DNSサブドメイン名](/ja/docs/concepts/overview/working-with-objects/names#dns-subdomain-names)であることを確認してください。APIオブジェクトについての詳細は、[HorizontalPodAutoscaler Object](/ja/docs/reference/generated/kubernetes-api/v1.27/#horizontalpodautoscaler-v2-autoscaling)で見つけることができます。
 
 ## ワークロードスケールの安定性 {#flapping}
 
@@ -198,7 +198,7 @@ HorizontalPodAutoscalerが追跡しているコンテナの名前を変更する
 
 これらの異なるメトリクスパスとその違いについての詳細は、[HPA V2](https://git.k8s.io/design-proposals-archive/autoscaling/hpa-v2.md)、[custom.metrics.k8s.io](https://git.k8s.io/design-proposals-archive/instrumentation/custom-metrics-api.md)、および[external.metrics.k8s.io](https://git.k8s.io/design-proposals-archive/instrumentation/external-metrics-api.md)の関連デザイン提案をご覧ください。
 
-これらの使用方法の例については、[カスタムメトリクスの使用方法](/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/#autoscaling-on-multiple-metrics-and-custom-metrics)と[外部メトリクスの使用方法](/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/#autoscaling-on-metrics-not-related-to-kubernetes-objects)をご覧ください。
+これらの使用方法の例については、[カスタムメトリクスの使用方法](/ja/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/#autoscaling-on-multiple-metrics-and-custom-metrics)と[外部メトリクスの使用方法](/ja/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/#autoscaling-on-metrics-not-related-to-kubernetes-objects)をご覧ください。
 
 ## 設定可能なスケーリング動作 {#configurable-scaling-behavior}
 

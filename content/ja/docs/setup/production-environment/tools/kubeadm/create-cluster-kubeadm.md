@@ -90,7 +90,7 @@ kubeadmでは、`--control-plane-endpoint`を渡さずに構築したシング�
 
 ### 詳細な情報
 
-`kubeadm init`の引数のより詳細な情報は、[kubeadmリファレンスガイド](/docs/reference/setup-tools/kubeadm/kubeadm/)を参照してください。
+`kubeadm init`の引数のより詳細な情報は、[kubeadmリファレンスガイド](/ja/docs/reference/setup-tools/kubeadm/kubeadm/)を参照してください。
 
 設定オプションの全リストは、[設定ファイルのドキュメント](/docs/reference/setup-tools/kubeadm/kubeadm-init/#config-file)で確認できます。
 
@@ -197,7 +197,7 @@ export KUBECONFIG=/etc/kubernetes/admin.conf
 
 - Podネットワークがホストネットワークと決して重ならないように気をつけてください。もし重なると、様々な問題が起こってしまう可能性があります。(ネットワークプラグインが優先するPodネットワークとホストのネットワークの一部が衝突することが分かった場合、適切な代わりのCIDRを考える必要があります。そして、`kubeadm init`の実行時に`--pod-network-cidr`にそのCIDRを指定し、ネットワークプラグインのYAMLでは代わりにそのCIDRを使用してください)
 
-- デフォルトでは、`kubeadm`は[RBAC](/docs/reference/access-authn-authz/rbac/)(role based access control)の使用を強制します。PodネットワークプラグインがRBACをサポートしていて、またそのデプロイに使用するマニフェストもRBACをサポートしていることを確認してください。
+- デフォルトでは、`kubeadm`は[RBAC](/ja/docs/reference/access-authn-authz/rbac/)(role based access control)の使用を強制します。PodネットワークプラグインがRBACをサポートしていて、またそのデプロイに使用するマニフェストもRBACをサポートしていることを確認してください。
 
 - クラスターでIPv6を使用したい場合、デュアルスタック、IPv6のみのシングルスタックのネットワークのいずれであっても、PodネットワークプラグインがIPv6をサポートしていることを確認してください。IPv6のサポートは、CNIの[v0.6.0](https://github.com/containernetworking/cni/releases/tag/v0.6.0)で追加されました。
 
@@ -393,11 +393,11 @@ kubectl delete node <node name>
 
 * [Sonobuoy](https://github.com/heptio/sonobuoy)を使用してクラスターが適切に動作しているか検証する。
 * <a id="lifecycle" />`kubeadm`を使用したクラスターをアップグレードする方法について、[kubeadmクラスターをアップグレードする](/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/)を読む。
-* `kubeadm`の高度な利用方法について[kubeadmリファレンスドキュメント](/docs/reference/setup-tools/kubeadm/kubeadm)で学ぶ。
+* `kubeadm`の高度な利用方法について[kubeadmリファレンスドキュメント](/ja/docs/reference/setup-tools/kubeadm/kubeadm)で学ぶ。
 * Kubernetesの[コンセプト](/ja/docs/concepts/)や[`kubectl`](/ja/docs/reference/kubectl/)についてもっと学ぶ。
 * Podネットワークアドオンのより完全なリストを[クラスターのネットワーク](/ja/docs/concepts/cluster-administration/networking/)で確認する。
 * <a id="other-addons" />ロギング、モニタリング、ネットワークポリシー、仮想化、Kubernetesクラスターの制御のためのツールなど、その他のアドオンについて、[アドオンのリスト](/ja/docs/concepts/cluster-administration/addons/)で確認する。
-* クラスターイベントやPod内で実行中のアプリケーションから送られるログをクラスターがハンドリングする方法を設定する。関係する要素の概要を理解するために、[ロギングのアーキテクチャ](/docs/concepts/cluster-administration/logging/)を読んでください。
+* クラスターイベントやPod内で実行中のアプリケーションから送られるログをクラスターがハンドリングする方法を設定する。関係する要素の概要を理解するために、[ロギングのアーキテクチャ](/ja/docs/concepts/cluster-administration/logging/)を読んでください。
 
 ### フィードバック {#feedback}
 

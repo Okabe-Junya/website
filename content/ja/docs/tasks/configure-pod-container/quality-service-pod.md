@@ -241,11 +241,11 @@ kubectl delete namespace qos-example
 
 ### クラスター管理者向け
 
-* [Namespaceにメモリー要求および制限のデフォルト値を設定する](/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/)
+* [Namespaceにメモリー要求および制限のデフォルト値を設定する](/ja/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/)
 
 * [NamespaceにCPU要求および制限のデフォルト値を設定する](/docs/tasks/administer-cluster/manage-resources/cpu-default-namespace/)
 
-* [Namespaceに最小および最大メモリー量の制約を設定する](/docs/tasks/administer-cluster/manage-resources/memory-constraint-namespace/)
+* [Namespaceに最小および最大メモリー量の制約を設定する](/ja/docs/tasks/administer-cluster/manage-resources/memory-constraint-namespace/)
 
 * [Namespaceに最小および最大のCPU使用量の制約を設定する](/docs/tasks/administer-cluster/manage-resources/cpu-constraint-namespace/)
 
@@ -255,7 +255,7 @@ kubectl delete namespace qos-example
 
 * [APIオブジェクトのクォータを設定する](/docs/tasks/administer-cluster/quota-api-object/)
 
-* [ノードのトポロジー管理ポリシーを制御する](/docs/tasks/administer-cluster/topology-manager/)
+* [ノードのトポロジー管理ポリシーを制御する](/ja/docs/tasks/administer-cluster/topology-manager/)
 
 
 

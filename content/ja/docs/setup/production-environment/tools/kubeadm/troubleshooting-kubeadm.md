@@ -133,7 +133,7 @@ journalctl -u docker
 
 ## `coredns`(もしくは`kube-dns`)が`Pending`状態でスタックする
 
-kubeadmはネットワークプロバイダに依存しないため、管理者は選択した[Podネットワークソリューションをインストール](/docs/concepts/cluster-administration/addons/)をする必要があります。CoreDNSを完全にデプロイする前にPodネットワークをインストールする必要があります。したがって、ネットワークがセットアップされる前の `Pending`状態になります。
+kubeadmはネットワークプロバイダに依存しないため、管理者は選択した[Podネットワークソリューションをインストール](/ja/docs/concepts/cluster-administration/addons/)をする必要があります。CoreDNSを完全にデプロイする前にPodネットワークをインストールする必要があります。したがって、ネットワークがセットアップされる前の `Pending`状態になります。
 
 ## `HostPort`サービスが動かない
 
@@ -301,7 +301,7 @@ Tこの問題のトラッキング問題は[こちら](https://github.com/kubern
 
 少なくとも2つの回避策があります:
 
-1. 空のスライスの代わりに`node-role.kubernetes.io/master:PreferNoSchedule`テイントを使用します。他のノードに容量がない限り、[Podsはマスター上でスケジュールされます](/docs/concepts/scheduling-eviction/taint-and-toleration/)。
+1. 空のスライスの代わりに`node-role.kubernetes.io/master:PreferNoSchedule`テイントを使用します。他のノードに容量がない限り、[Podsはマスター上でスケジュールされます](/ja/docs/concepts/scheduling-eviction/taint-and-toleration/)。
 
 2. kubeadm init終了後のテイントの除去:
 ```bash

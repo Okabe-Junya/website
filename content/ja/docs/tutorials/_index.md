@@ -8,7 +8,7 @@ content_type: concept
 
 <!-- overview -->
 
-本セクションにはチュートリアルが含まれています。チュートリアルでは、単一の[タスク](/docs/tasks/)よりも大きな目標を達成する方法を示します。通常、チュートリアルにはいくつかのセクションがあり、各セクションには一連のステップがあります。各チュートリアルを進める前に、後で参照できるように[標準化された用語集](/docs/reference/glossary/)ページをブックマークしておくことをお勧めします。
+本セクションにはチュートリアルが含まれています。チュートリアルでは、単一の[タスク](/ja/docs/tasks/)よりも大きな目標を達成する方法を示します。通常、チュートリアルにはいくつかのセクションがあり、各セクションには一連のステップがあります。各チュートリアルを進める前に、後で参照できるように[標準化された用語集](/ja/docs/reference/glossary/)ページをブックマークしておくことをお勧めします。
 
 
 
@@ -46,13 +46,13 @@ content_type: concept
 
 ## サービス
 
-* [Connecting Applications with Services](/docs/tutorials/services/connect-applications-service/)
+* [Connecting Applications with Services](/ja/docs/tutorials/services/connect-applications-service/)
 * [Source IPを使う](/ja/docs/tutorials/services/source-ip/)
 
 ## セキュリティ
 
-* [クラスターレベルのPod Securityの標準の適用](/docs/tutorials/security/cluster-level-pss/)
-* [NamespaceレベルのPod Securityの標準の適用](/docs/tutorials/security/ns-level-pss/)
+* [クラスターレベルのPod Securityの標準の適用](/ja/docs/tutorials/security/cluster-level-pss/)
+* [NamespaceレベルのPod Securityの標準の適用](/ja/docs/tutorials/security/ns-level-pss/)
 * [AppArmor](/docs/tutorials/security/apparmor/)
 * [Seccomp](/docs/tutorials/security/seccomp/)
 

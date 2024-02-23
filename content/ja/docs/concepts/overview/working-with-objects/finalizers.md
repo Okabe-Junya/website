@@ -36,7 +36,7 @@ Podが`PersistentVolume`の利用を停止するとKubernetesは`pv-protection`�
 ## オーナーリファレンス、ラベル、ファイナライザー {#owners-labels-finalizers}
 
 {{<glossary_tooltip text="ラベル" term_id="label">}}のように、
-[オーナーリファレンス](/docs/concepts/overview/working-with-objects/owners-dependents/)はKubernetesのオブジェクト間の関係性を説明しますが、利用される目的が異なります。
+[オーナーリファレンス](/ja/docs/concepts/overview/working-with-objects/owners-dependents/)はKubernetesのオブジェクト間の関係性を説明しますが、利用される目的が異なります。
 {{<glossary_tooltip text="コントローラー" term_id="controller">}} がPodのようなオブジェクトを管理するとき、関連するオブジェクトのグループの変更を追跡するためにラベルを利用します。
 例えば、{{<glossary_tooltip text="Job" term_id="job">}}がいくつかのPodを作成するとき、JobコントローラーはそれらのPodにラベルを付け、クラスター内の同じラベルを持つPodの変更を追跡します。
 
@@ -56,4 +56,4 @@ Podが実行されているときにJobを削除すると、Kubernetesはオー�
 
 ## {{% heading "whatsnext" %}}
 
-* Kubernetesブログの[ファイナライザーを利用した削除の制御](/blog/2021/05/14/using-finalizers-to-control-deletion/)をお読みください。
+* Kubernetesブログの[ファイナライザーを利用した削除の制御](/ja/blog/2021/05/14/using-finalizers-to-control-deletion/)をお読みください。

@@ -82,12 +82,12 @@ Kubernetesにおける権限付与は、意図的にハイレベルであり、�
 
 これは、ネームスペースが割り当てることのできるCPU、メモリー、永続的なディスクの量を制限するためによく使われますが、各ネームスペースに存在するPod、サービス、ボリュームの数を制御することもできます。
 
-[Limit ranges](/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/)は、上記のリソースの一部の最大または最小サイズを制限することで、ユーザーがメモリーなどの一般的に予約されたリソースに対して不当に高いまたは低い値を要求するのを防いだり、何も指定されていない場合にデフォルトの制限を提供したりします。
+[Limit ranges](/ja/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/)は、上記のリソースの一部の最大または最小サイズを制限することで、ユーザーがメモリーなどの一般的に予約されたリソースに対して不当に高いまたは低い値を要求するのを防いだり、何も指定されていない場合にデフォルトの制限を提供したりします。
 
 ### コンテナが利用する特権の制御
 
-Podの定義には、[security context](/docs/tasks/configure-pod-container/security-context/)が含まれており、ノード上の特定の Linux ユーザー(rootなど)として実行するためのアクセス、特権的に実行するためのアクセス、ホストネットワークにアクセスするためのアクセス、その他の制御を要求することができます。
-[Pod security policies](/docs/concepts/policy/pod-security-policy/)は、危険なセキュリティコンテキスト設定を提供できるユーザーやサービスアカウントを制限することができます。
+Podの定義には、[security context](/ja/docs/tasks/configure-pod-container/security-context/)が含まれており、ノード上の特定の Linux ユーザー(rootなど)として実行するためのアクセス、特権的に実行するためのアクセス、ホストネットワークにアクセスするためのアクセス、その他の制御を要求することができます。
+[Pod security policies](/ja/docs/concepts/policy/pod-security-policy/)は、危険なセキュリティコンテキスト設定を提供できるユーザーやサービスアカウントを制限することができます。
 
 たとえば、Podのセキュリティポリシーでは、ボリュームマウント、特に`hostPath`を制限することができ、これはPodの制御すべき側面です。
 一般に、ほとんどのアプリケーションワークロードでは、ホストリソースへのアクセスを制限する必要があります。
@@ -180,7 +180,7 @@ Kubernetesへの多くのサードパーティの統合は、クラスターの�
 
 例えば、多くのセキュリティ統合は、事実上そのコンポーネントをクラスター管理者にしているクラスター上のすべての秘密を見るためのアクセスを要求するかもしれません。
 疑問がある場合は、可能な限り単一の名前空間で機能するように統合を制限してください。
-Podを作成するコンポーネントも、`kube-system`名前空間のような名前空間内で行うことができれば、予想外に強力になる可能性があります。これは、サービスアカウントのシークレットにアクセスしたり、サービスアカウントに寛容な[pod security policies](/docs/concepts/policy/pod-security-policy/)へのアクセスが許可されている場合に、昇格したパーミッションでPodが実行される可能性があるからです。
+Podを作成するコンポーネントも、`kube-system`名前空間のような名前空間内で行うことができれば、予想外に強力になる可能性があります。これは、サービスアカウントのシークレットにアクセスしたり、サービスアカウントに寛容な[pod security policies](/ja/docs/concepts/policy/pod-security-policy/)へのアクセスが許可されている場合に、昇格したパーミッションでPodが実行される可能性があるからです。
 
 ### etcdにあるSecretを暗号化
 

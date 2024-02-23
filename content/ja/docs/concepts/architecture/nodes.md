@@ -249,7 +249,7 @@ kubeletはリソースの割当を決定する際にトポロジーのヒント�
 
 kubeletは、ノードのシステムシャットダウンを検出すると、ノード上で動作しているPodを終了させます。
 
-Kubelet は、ノードのシャットダウン時に、ポッドが通常の[通常のポッド終了プロセス](/docs/concepts/workloads/pods/pod-lifecycle/#pod-termination)に従うようにします。
+Kubelet は、ノードのシャットダウン時に、ポッドが通常の[通常のポッド終了プロセス](/ja/docs/concepts/workloads/pods/pod-lifecycle/#pod-termination)に従うようにします。
 
 Graceful Node Shutdownはsystemdに依存しているため、[systemd inhibitor locks](https://www.freedesktop.org/wiki/Software/systemd/inhibit/)を
 利用してノードのシャットダウンを一定時間遅らせることができます。
@@ -284,7 +284,7 @@ Reason:         Shutdown
 Message:        Node is shutting, evicting pods
 ```
 
-失敗したポッドオブジェクトは、明示的に削除されるか、[GCによってクリーンアップ](/docs/concepts/workloads/pods/pod-lifecycle/#pod-garbage-collection)されるまで保存されます。
+失敗したポッドオブジェクトは、明示的に削除されるか、[GCによってクリーンアップ](/ja/docs/concepts/workloads/pods/pod-lifecycle/#pod-garbage-collection)されるまで保存されます。
 これは、ノードが突然終了した場合とは異なった振る舞いです。
 
 {{< /note >}}

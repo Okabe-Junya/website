@@ -223,7 +223,7 @@ selector:
 
 #### *集合ベース* の要件指定をサポートするリソース
 
-[`Job`](/docs/concepts/workloads/controllers/job/)や[`Deployment`](/ja/docs/concepts/workloads/controllers/deployment/)、[`ReplicaSet`](/ja/docs/concepts/workloads/controllers/replicaset/)や[`DaemonSet`](/ja/docs/concepts/workloads/controllers/daemonset/)などの比較的新しいリソースは、*集合ベース* での要件指定もサポートしています。  
+[`Job`](/ja/docs/concepts/workloads/controllers/job/)や[`Deployment`](/ja/docs/concepts/workloads/controllers/deployment/)、[`ReplicaSet`](/ja/docs/concepts/workloads/controllers/replicaset/)や[`DaemonSet`](/ja/docs/concepts/workloads/controllers/daemonset/)などの比較的新しいリソースは、*集合ベース* での要件指定もサポートしています。  
 ```yaml
 selector:
   matchLabels:

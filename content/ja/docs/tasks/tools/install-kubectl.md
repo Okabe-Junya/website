@@ -295,7 +295,7 @@ Google Cloud SDKの一部として、kubectlをインストールすることも
 
 ## kubectlの設定を検証する
 
-kubectlがKubernetesクラスターを探索し接続するために、[kubeconfigファイル](/docs/concepts/configuration/organize-cluster-access-kubeconfig/)が必要になります。これは、[kube-up.sh](https://github.com/kubernetes/kubernetes/blob/master/cluster/kube-up.sh)によりクラスターを作成した際や、Minikubeクラスターを正常にデプロイした際に自動生成されます。デフォルトでは、kubectlの設定は`~/.kube/config`に格納されています。
+kubectlがKubernetesクラスターを探索し接続するために、[kubeconfigファイル](/ja/docs/concepts/configuration/organize-cluster-access-kubeconfig/)が必要になります。これは、[kube-up.sh](https://github.com/kubernetes/kubernetes/blob/master/cluster/kube-up.sh)によりクラスターを作成した際や、Minikubeクラスターを正常にデプロイした際に自動生成されます。デフォルトでは、kubectlの設定は`~/.kube/config`に格納されています。
 
 クラスターの状態を取得し、kubectlが適切に設定されていることを確認してください:
 

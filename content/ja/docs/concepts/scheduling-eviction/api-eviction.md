@@ -89,4 +89,4 @@ APIサーバーが退去を許可した場合、以下の流れでPodが削除�
 ## {{% heading "whatsnext" %}}
 * [Pod Disruption Budget](/docs/tasks/run-application/configure-pdb/)でアプリケーションを保護する方法について学ぶ
 * [Node不足による退避](/docs/concepts/scheduling-eviction/node-pressure-eviction/)について学ぶ
-* [Podの優先度とプリエンプション](/docs/concepts/scheduling-eviction/pod-priority-preemption/)について学ぶ
+* [Podの優先度とプリエンプション](/ja/docs/concepts/scheduling-eviction/pod-priority-preemption/)について学ぶ

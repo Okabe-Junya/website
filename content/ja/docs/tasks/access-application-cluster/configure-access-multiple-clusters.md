@@ -335,5 +335,5 @@ $Env:KUBECONFIG=$ENV:KUBECONFIG_SAVED
 ## {{% heading "whatsnext" %}}
 
 
-* [kubeconfigファイルを使ってクラスターへのアクセスを管理する](/docs/concepts/configuration/organize-cluster-access-kubeconfig/)
+* [kubeconfigファイルを使ってクラスターへのアクセスを管理する](/ja/docs/concepts/configuration/organize-cluster-access-kubeconfig/)
 * [kubectl config](/docs/reference/generated/kubectl/kubectl-commands#config)

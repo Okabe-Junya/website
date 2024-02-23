@@ -86,7 +86,7 @@ Kubeconfigの認証方法は、外部IDプロバイダーやx509証明書ベー�
   アプリケーション名は、選択したKubernetes[名前空間](/docs/tasks/administer-cluster/namespaces/)内で一意である必要があります。
   小文字で始まり、小文字または数字で終わり、小文字、数字、ダッシュ(-)のみを含む必要があります。文字数は24文字に制限されています。先頭と末尾のスペースは無視されます。
 
-- **Container image** (必須): 任意のレジストリ上の公開Docker[コンテナイメージ](/docs/concepts/containers/images/)、またはプライベートイメージ(一般的にはGoogle Container RegistryやDocker Hub上でホストされている)のURLです。
+- **Container image** (必須): 任意のレジストリ上の公開Docker[コンテナイメージ](/ja/docs/concepts/containers/images/)、またはプライベートイメージ(一般的にはGoogle Container RegistryやDocker Hub上でホストされている)のURLです。
   コンテナイメージの指定はコロンで終わらせる必要があります。
 
   クラスター全体で必要な数のPodを維持するために、[Deployment](/ja/docs/concepts/workloads/controllers/deployment/)が作成されます。
@@ -147,7 +147,7 @@ Kubeconfigの認証方法は、外部IDプロバイダーやx509証明書ベー�
   イメージプルシークレットの作成に成功した場合は、デフォルトで選択されています。作成に失敗した場合は、シークレットは適用されません。
 
 - **CPU requirement (cores)**と**Memory requirement (MiB)**:
-  コンテナの最小[リソース制限](/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/)を指定することができます。デフォルトでは、PodはCPUとメモリの制限がない状態で実行されます。
+  コンテナの最小[リソース制限](/ja/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/)を指定することができます。デフォルトでは、PodはCPUとメモリの制限がない状態で実行されます。
 
 - **Run command**と**Run command arguments**:
   デフォルトでは、コンテナは指定されたDockerイメージのデフォルトの[entrypointコマンド](/docs/tasks/inject-data-application/define-command-argument-container/)を実行します。
