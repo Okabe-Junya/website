@@ -281,7 +281,7 @@ kubectl -n my-ns delete pod,svc --all                                     # 名�
 kubectl get pods  -n mynamespace --no-headers=true | awk '/pattern1|pattern2/{print $1}' | xargs  kubectl delete -n mynamespace pod
 ```
 
-## 実行中のポッドとの対話処理
+## 実行中のPodとの対話処理
 
 ```bash
 kubectl logs my-pod                                 # Podのログをダンプします(標準出力)

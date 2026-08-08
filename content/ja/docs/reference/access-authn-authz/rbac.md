@@ -108,11 +108,11 @@ RoleBindingまたはClusterRoleBindingオブジェクトは有効な
 #### RoleBindingの例 {#rolebinding-example}
 
 以下はNamespace「default」内でユーザー「jane」に「pod-reader」のRoleを付与するRoleBindingの例です。
-これにより、「jane」にNamespace「default」のポッドの読み取り許可されます。
+これにより、「jane」にNamespace「default」のPodの読み取り許可されます。
 
 ```yaml
 apiVersion: rbac.authorization.k8s.io/v1
-# このRoleBindingは「jane」にNamespace「default」のポッドの読み取りを許可する
+# このRoleBindingは「jane」にNamespace「default」のPodの読み取りを許可する
 # そのNamespaceでRole「pod-reader」を既に持っている必要があります。
 kind: RoleBinding
 metadata:
@@ -638,7 +638,7 @@ Secretsの内容を読み取るとNamespaceのServiceAccountのクレデンシ�
 <tr>
 <td><b>system:node</b></td>
 <td>None</td>
-<td><b>すべてのsecretへの読み取りアクセス、すべてのポッドステータスオブジェクトへの書き込みアクセスなど、</b>kubeletが必要とするリソースへのアクセスを許可します。
+<td><b>すべてのsecretへの読み取りアクセス、すべてのPodステータスオブジェクトへの書き込みアクセスなど、</b>kubeletが必要とするリソースへのアクセスを許可します。
 
 <tt>system:node</tt>Roleの代わりに<a href="/docs/reference/access-authn-authz/node/">Node authorizer</a>と <a href="/docs/reference/access-authn-authz/admission-controllers/#noderestriction">NodeRestriction admission plugin</a>を使用し、それらで実行するようにスケジュールされたPodに基づいてkubeletへのAPIアクセスを許可する必要があります。
 
@@ -815,7 +815,7 @@ subjects:
 
 以下に、単一のNamespace内で権限を定義するRoleオブジェクトをいくつか例として作成します。
 
-* ユーザーがポッドで `get`、` watch`、および `list`を実行できるように「pod-reader」という名前のRoleを作成します。
+* ユーザーがPodで `get`、` watch`、および `list`を実行できるように「pod-reader」という名前のRoleを作成します。
 
     ```shell
     kubectl create role pod-reader --verb=get --verb=list --verb=watch --resource=pods
@@ -849,7 +849,7 @@ subjects:
 
 以下にClusterRoleをいくつか例として作成します。
 
-* ユーザーがポッドに対して`get`、` watch`、および `list`を実行できるようにする「pod-reader」という名前のClusterRoleを作成します。
+* ユーザーがPodに対して`get`、` watch`、および `list`を実行できるようにする「pod-reader」という名前のClusterRoleを作成します。
 
     ```shell
     kubectl create clusterrole pod-reader --verb=get,list,watch --resource=pods
@@ -985,7 +985,7 @@ subjects:
     アプリケーションが `serviceAccountName`を指定しない場合、サービスアカウント「default」を使用します。
 
     {{< note >}}
-  サービスアカウント「default」に付与された権限は、`serviceAccountName`を指定しないNamespace内のすべてのポッドで利用できます。
+  サービスアカウント「default」に付与された権限は、`serviceAccountName`を指定しないNamespace内のすべてのPodで利用できます。
     {{< /note >}}
 
     たとえば、「my-namespace」内の読み取り専用権限をサービスアカウント「default」に付与します。
@@ -1042,7 +1042,7 @@ subjects:
     権限の分割をまったく考慮しない場合は、すべてのサービスアカウントにスーパーユーザーアクセスを許可できます。
 
     {{< warning >}}
-    これにより、すべてのアプリケーションにクラスターへのフルアクセスが許可され、Secretsの読み取りアクセス権(または任意のポッドを作成する機能)を持つユーザーに、クラスターへのフルアクセスが許可されます。
+    これにより、すべてのアプリケーションにクラスターへのフルアクセスが許可され、Secretsの読み取りアクセス権(または任意のPodを作成する機能)を持つユーザーに、クラスターへのフルアクセスが許可されます。
     {{< /warning >}}
 
     ```shell

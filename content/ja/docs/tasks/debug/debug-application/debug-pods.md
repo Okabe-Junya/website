@@ -64,7 +64,7 @@ Podがスケジュールされると、[実行中のPodのデバッグ](/ja/docs
 
 #### Podが期待する通りに動きません
 
-Podが期待した動作をしない場合、ポッドの記述(ローカルマシンの `mypod.yaml` ファイルなど)に誤りがあり、Pod作成時にその誤りが黙って無視された可能性があります。Pod記述のセクションのネストが正しくないか、キー名が間違って入力されていることがよくあり、そのようなとき、そのキーは無視されます。たとえば、`command`のスペルを`commnd`と間違えた場合、Podは作成されますが、あなたが意図したコマンドラインは使用されません。
+Podが期待した動作をしない場合、Podの記述(ローカルマシンの `mypod.yaml` ファイルなど)に誤りがあり、Pod作成時にその誤りが黙って無視された可能性があります。Pod記述のセクションのネストが正しくないか、キー名が間違って入力されていることがよくあり、そのようなとき、そのキーは無視されます。たとえば、`command`のスペルを`commnd`と間違えた場合、Podは作成されますが、あなたが意図したコマンドラインは使用されません。
 
 まずPodを削除して、`--validate` オプションを付けて再度作成してみてください。
 例えば、`kubectl apply --validate -f mypod.yaml`と実行します。
@@ -79,7 +79,7 @@ pods/mypod
 <!-- TODO: Now that #11914 is merged, this advice may need to be updated -->
 
 次に確認することは、apiserver上のPodが、作成しようとしたPod(例えば、ローカルマシンのyamlファイル)と一致しているかどうかです。
-例えば、`kubectl get pods/mypod -o yaml > mypod-on-apiserver.yaml` を実行して、元のポッドの説明である`mypod.yaml`とapiserverから戻ってきた`mypod-on-apiserver.yaml`を手動で比較してみてください。
+例えば、`kubectl get pods/mypod -o yaml > mypod-on-apiserver.yaml` を実行して、元のPodの説明である`mypod.yaml`とapiserverから戻ってきた`mypod-on-apiserver.yaml`を手動で比較してみてください。
 通常、"apiserver" バージョンには、元のバージョンにはない行がいくつかあります。これは予想されることです。
 しかし、もし元のバージョンにある行がapiserverバージョンにない場合、これはあなたのPod specに問題があることを示している可能性があります。
 

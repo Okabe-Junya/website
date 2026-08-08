@@ -112,7 +112,7 @@ StorageClassによって動的に作成されるPersistentVolumeには、クラ�
 `Immediate`モードは、PersistentVolumeClaimが作成されると、ボリュームバインディングと動的プロビジョニングが発生することを示します。トポロジに制約があり、クラスター内のすべてのノードからグローバルにアクセスできないストレージバックエンドの場合、PersistentVolumeはPodのスケジューリング要件を知らなくてもバインドまたはプロビジョニングされます。これにより、Podがスケジュール不能になる可能性があります。
 
 クラスター管理者は、PersistentVolumeClaimを使用するPodが作成されるまでPersistentVolumeのバインドとプロビジョニングを遅らせる`WaitForFirstConsumer`モードを指定することで、この問題に対処できます。
-PersistentVolumeは、Podのスケジュール制約によって指定されたトポロジに準拠して選択またはプロビジョニングされます。これらには、[リソース要件](/ja/docs/concepts/configuration/manage-resources-containers/)、[ノードセレクター](/ja/docs/concepts/scheduling-eviction/assign-pod-node/#nodeselector)、[ポッドアフィニティとアンチアフィニティ](/ja/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity)、および[taints and tolerations](/ja/docs/concepts/scheduling-eviction/taint-and-toleration)が含まれますが、これらに限定されません。
+PersistentVolumeは、Podのスケジュール制約によって指定されたトポロジに準拠して選択またはプロビジョニングされます。これらには、[リソース要件](/ja/docs/concepts/configuration/manage-resources-containers/)、[ノードセレクター](/ja/docs/concepts/scheduling-eviction/assign-pod-node/#nodeselector)、[Podアフィニティとアンチアフィニティ](/ja/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity)、および[taints and tolerations](/ja/docs/concepts/scheduling-eviction/taint-and-toleration)が含まれますが、これらに限定されません。
 
 次のプラグインは、動的プロビジョニングで`WaitForFirstConsumer`をサポートしています。
 
