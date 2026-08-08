@@ -19,17 +19,17 @@ Secretを使用すれば、アプリケーションコードに機密データ�
 Podの作成、閲覧、編集といったワークフローの中でSecret(およびそのデータ)が漏洩する危険性が低くなるためです。
 また、Kubernetesやクラスター内で動作するアプリケーションは、不揮発性ストレージに機密データを書き込まないようにするなど、Secretで追加の予防措置を取ることができます。
 
-Secretsは、{{< glossary_tooltip text="ConfigMaps" term_id="configmap" >}}に似ていますが、機密データを保持するために用います。
+Secretは、{{< glossary_tooltip text="ConfigMap" term_id="configmap" >}}に似ていますが、機密データを保持するために用います。
 
 
 {{< caution >}}
 KubernetesのSecretは、デフォルトでは、APIサーバーの基礎となるデータストア(etcd)に暗号化されずに保存されます。APIにアクセスできる人は誰でもSecretを取得または変更でき、etcdにアクセスできる人も同様です。
 さらに、名前空間でPodを作成する権限を持つ人は、そのアクセスを使用して、その名前空間のあらゆるSecretを読むことができます。これには、Deploymentを作成する能力などの間接的なアクセスも含まれます。
 
-Secretsを安全に使用するには、以下の手順を推奨します。
+Secretを安全に使用するには、以下の手順を推奨します。
 
-1. Secretsを[安全に暗号化する](/docs/tasks/administer-cluster/encrypt-data/)
-2. Secretsのデータの読み取りを制限する[RBACルール](/docs/reference/access-authn-authz/authorization/)の有効化または設定 
+1. Secretを[安全に暗号化する](/docs/tasks/administer-cluster/encrypt-data/)
+2. Secretのデータの読み取りを制限する[RBACルール](/docs/reference/access-authn-authz/authorization/)の有効化または設定 
 3. 適切な場合には、RBACなどのメカニズムを使用して、どの原則が新しいSecretの作成や既存のSecretの置き換えを許可されるかを制限します。
 
 {{< /caution >}}
@@ -45,7 +45,7 @@ PodがSecretを使う方法は3種類あります。
 - [コンテナの環境変数](#using-secrets-as-environment-variables)として利用する
 - Podを生成するために[kubeletがイメージをpullする](#using-imagepullsecrets)ときに使用する
 
-KubernetesのコントロールプレーンでもSecretsは使われています。例えば、[bootstrap token Secrets](#bootstrap-token-secrets)は、ノード登録を自動化するための仕組みです。
+KubernetesのコントロールプレーンでもSecretは使われています。例えば、[bootstrap token Secret](#bootstrap-token-secrets)は、ノード登録を自動化するための仕組みです。
 
 Secretオブジェクトの名称は正当な[DNSサブドメイン名](/ja/docs/concepts/overview/working-with-objects/names/#dns-subdomain-names)である必要があります。
 シークレットの構成ファイルを作成するときに、`data`および/または`stringData`フィールドを指定できます。`data`フィールドと`stringData`フィールドはオプションです。
@@ -654,7 +654,7 @@ echo $SECRET_PASSWORD
 
 {{< feature-state for_k8s_version="v1.19" state="beta" >}}
 
-Kubernetesベータ機能*ImmutableSecrets and ConfigMaps*は、個々のSecretsとConfigMapsをimutableとして設定するオプションを提供します。Secret（少なくとも数万の、SecretからPodへの一意のマウント）を広範囲に使用するクラスターの場合、データの変更を防ぐことには次の利点があります。
+Kubernetesベータ機能*ImmutableSecrets and ConfigMaps*は、個々のSecretとConfigMapをimutableとして設定するオプションを提供します。Secret（少なくとも数万の、SecretからPodへの一意のマウント）を広範囲に使用するクラスターの場合、データの変更を防ぐことには次の利点があります。
 
 - アプリケーションの停止を引き起こす可能性のある偶発的な（または不要な）更新からユーザーを保護します
 - imutableとしてマークされたSecretのウォッチを閉じることで、kube-apiserverの負荷を大幅に削減することができ、クラスターのパフォーマンスを向上させます。

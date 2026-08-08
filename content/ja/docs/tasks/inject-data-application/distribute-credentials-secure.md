@@ -1,5 +1,5 @@
 ---
-title: Secretsで安全にクレデンシャルを配布する
+title: Secretで安全にクレデンシャルを配布する
 content_type: task
 weight: 50
 min-kubernetes-server-version: v1.6

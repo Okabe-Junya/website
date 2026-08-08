@@ -79,13 +79,13 @@ no_list: true
 
 - *認証*: APIサーバーはクライアント証明書、bearerトークン、認証プロキシまたはHTTPベーシック認証を使用し、ユーザーを認証できます。使用したい認証の方法を選択できます。プラグインを使用することで、APIサーバーはLDAPやKerberosなどの組織の既存の認証方法を活用できます。Kubernetesユーザーを認証する様々な方法の説明は[認証](/ja/docs/reference/access-authn-authz/authentication/)をご覧ください。
 - *認可*: 通常のユーザーを認可する際には、おそらくRBACとABACの認可方法のどちらかを選択することになります。様々なユーザーアカウントの認可方式(およびサービスアカウントによるクラスターがアクセスするための認可方式)を評価するために、[認可の概要](/docs/reference/access-authn-authz/authorization/)をご覧ください。
-- *ロールベースアクセスコントロール*: ([RBAC](/ja/docs/reference/access-authn-authz/rbac/)): 認証されたユーザーに特定の権限のセットを許可することによってクラスターへのアクセスを割り当てることができます。特定のNamespace(Role)やクラスター全体(ClusterRole)に権限を割り当てることができます。RoleBindingsやClusterRoleBindingsを使用することによって、権限を特定のユーザーに付与することができます。
+- *ロールベースアクセスコントロール*: ([RBAC](/ja/docs/reference/access-authn-authz/rbac/)): 認証されたユーザーに特定の権限のセットを許可することによってクラスターへのアクセスを割り当てることができます。特定のNamespace(Role)やクラスター全体(ClusterRole)に権限を割り当てることができます。RoleBindingやClusterRoleBindingを使用することによって、権限を特定のユーザーに付与することができます。
 - *属性ベースアクセスコントロール* ([ABAC](/ja/docs/reference/access-authn-authz/abac/)): クラスターのリソース属性に基づいたポリシーを作成し、その属性に基づいてアクセスを許可または拒否することができます。ポリシーファイルの各行は、バージョニングプロパティ(apiVersionとkind)やsubject(ユーザーやグループ)に紐づくプロパティとリソースに紐づくプロパティとリソースに紐づかないプロパティ(/version or /apis)と読み取り専用プロパティを持つmapのspecプロパティを特定します。詳細は、[Examples](/docs/reference/access-authn-authz/abac/#examples)をご覧ください。
 
 プロダクション用のKubernetesクラスターの認証認可をセットアップするにあたって、いくつかの考慮事項があります。
 
 - *認証モードの設定*: Kubernetes APIサーバー ([kube-apiserver](/docs/reference/command-line-tools-reference/kube-apiserver/))の起動時に、*--authorization-mode*フラグを使用しサポートされた認証モードを設定しなければいけません。例えば、*/etc/kubernetes/manifests*配下の*kube-adminserver.yaml*ファイルで*--authorization-mode*フラグにNodeやRBACを設定することで、認証されたリクエストに対してノードやRBACの認証を許可することができます。
-- *ユーザー証明書とロールバインディングの作成(RMAC)*: RBAC認証を使用している場合、ユーザーはクラスター証明機関により署名された証明書署名要求(CSR)を作成でき、各ユーザーにRolesとClusterRolesをバインドすることができます。詳細は[証明書署名要求](/docs/reference/access-authn-authz/certificate-signing-requests/)をご覧ください。
+- *ユーザー証明書とロールバインディングの作成(RMAC)*: RBAC認証を使用している場合、ユーザーはクラスター証明機関により署名された証明書署名要求(CSR)を作成でき、各ユーザーにRoleとClusterRoleをバインドすることができます。詳細は[証明書署名要求](/docs/reference/access-authn-authz/certificate-signing-requests/)をご覧ください。
 - *属性を組み合わせたポリシーの作成(ABAC)*: ABAC認証を使用している場合、特定のリソース（例えばPod）、Namespace、またはAPIグループにアクセスするために、選択されたユーザーやグループに属性の組み合わせで形成されたポリシーを割り当てることができます。より多くの情報は[Examples](/docs/reference/access-authn-authz/abac/#examples)をご覧ください。
 - *アドミッションコントローラーの考慮事項*: APIサーバーを経由してくるリクエストのための追加の認証形式に[Webhookトークン認証](/ja/docs/reference/access-authn-authz/authentication/#webhook-token-authentication)があります。Webhookや他の特別な認証形式はAPIサーバーへアドミッションコントローラーを追加し有効化される必要があります。
 

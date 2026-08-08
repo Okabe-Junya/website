@@ -135,7 +135,7 @@ Deploymentを名前を指定して削除します:
 
     kubectl delete deployment nginx-deployment
 
-## ReplicationControllers -- 昔のやり方
+## ReplicationController -- 昔のやり方
 
 複製アプリケーションを作成するための好ましい方法はDeploymentを使用することです。そして、DeploymentはReplicaSetを使用します。 DeploymentとReplicaSetがKubernetesに追加される前は、[ReplicationController](/docs/concepts/workloads/controllers/replicationcontroller/)を使用して複製アプリケーションを構成していました。
 

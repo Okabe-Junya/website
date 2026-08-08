@@ -15,5 +15,5 @@ tags:
 
 <!--more-->
 {{< glossary_tooltip term_id="deployment" >}}などのワークロードオブジェクトは、ReplicaSetの仕様に基づいて、
-設定された数の{{< glossary_tooltip term_id="pod" text="Pods" >}}がクラスターで稼働することを保証するために、
+設定された数の{{< glossary_tooltip term_id="pod" text="Pod" >}}がクラスターで稼働することを保証するために、
 ReplicaSetを使用します。

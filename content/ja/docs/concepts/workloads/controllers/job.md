@@ -543,7 +543,7 @@ status:
 
 Jobのcondition.typeが"Suspended"で、statusが"True"になった場合、Jobは一時停止中になります。`lastTransitionTime`フィールドで、どのぐらい中断されたかを判断できます。statusが"False"になった場合、Jobは一時停止状態でしたが、今は実行されていることになります。conditionが書いていない場合、Jobは一度も停止していないことになります。
 
-Jobが一時停止して再開した場合、Eventsも作成されます:
+Jobが一時停止して再開した場合、Eventも作成されます:
 
 ```shell
 kubectl describe jobs/myjob

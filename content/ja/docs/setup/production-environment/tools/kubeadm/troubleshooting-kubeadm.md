@@ -129,7 +129,7 @@ journalctl -u docker
 
 - `kubeadm init`の _直後_ にこれらの状態のいずれかにPodがある場合は、kubeadmのリポジトリにIssueを立ててください。ネットワークソリューションをデプロイするまでは`coredns`(または`kube-dns`)は`Pending`状態でなければなりません。
 - ネットワークソリューションをデプロイしても`coredns`(または`kube-dns`)に何も起こらない場合にRunContainerError`、`CrashLoopBackOff`、`Error`の状態でPodが表示された場合は、インストールしたPodネットワークソリューションが壊れている可能性が高いです。より多くのRBACの特権を付与するか、新しいバージョンを使用する必要があるかもしれません。PodネットワークプロバイダーのイシュートラッカーにIssueを出して、そこで問題をトリアージしてください。
-- 1.12.1よりも古いバージョンのDockerをインストールした場合は、`systemd`で`dockerd`を起動する際に`MountFlags=slave`オプションを削除して`docker`を再起動してください。マウントフラグは`/usr/lib/systemd/system/docker.service`で確認できます。MountFlagsはKubernetesがマウントしたボリュームに干渉し、Podsを`CrashLoopBackOff`状態にすることがあります。このエラーは、Kubernetesが`var/run/secrets/kubernetes.io/serviceaccount`ファイルを見つけられない場合に発生します。
+- 1.12.1よりも古いバージョンのDockerをインストールした場合は、`systemd`で`dockerd`を起動する際に`MountFlags=slave`オプションを削除して`docker`を再起動してください。マウントフラグは`/usr/lib/systemd/system/docker.service`で確認できます。MountFlagsはKubernetesがマウントしたボリュームに干渉し、Podを`CrashLoopBackOff`状態にすることがあります。このエラーは、Kubernetesが`var/run/secrets/kubernetes.io/serviceaccount`ファイルを見つけられない場合に発生します。
 
 ## `coredns`(もしくは`kube-dns`)が`Pending`状態でスタックする
 
@@ -279,7 +279,7 @@ yum install docker-ce-18.06.1.ce-3.el7.x86_64
 
 クラウドプロバイダーのシナリオでは、クラウドコントローラーマネージャがノードアドレスを初期化する前に、kube-proxyが新しいワーカーノードでスケジューリングされてしまうことがあります。これにより、kube-proxyがノードのIPアドレスを正しく拾えず、ロードバランサを管理するプロキシ機能に悪影響を及ぼします。
 
-kube-proxy Podsでは以下のようなエラーが発生します:
+kube-proxy Podでは以下のようなエラーが発生します:
 ```
 server.go:610] Failed to retrieve node IP: host IP unknown; known addresses: []
 proxier.go:340] invalid nodeIP, initializing kube-proxy with 127.0.0.1 as nodeIP
@@ -301,7 +301,7 @@ Tこの問題のトラッキング問題は[こちら](https://github.com/kubern
 
 少なくとも2つの回避策があります:
 
-1. 空のスライスの代わりに`node-role.kubernetes.io/master:PreferNoSchedule`テイントを使用します。他のノードに容量がない限り、[Podsはマスター上でスケジュールされます](/docs/concepts/scheduling-eviction/taint-and-toleration/)。
+1. 空のスライスの代わりに`node-role.kubernetes.io/master:PreferNoSchedule`テイントを使用します。他のノードに容量がない限り、[Podはマスター上でスケジュールされます](/docs/concepts/scheduling-eviction/taint-and-toleration/)。
 
 2. kubeadm init終了後のテイントの除去:
 ```bash

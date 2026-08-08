@@ -51,7 +51,7 @@ Deployment用のHorizontalPodAutoscalerを構成する[ウォークスルーチ�
 _VerticalPodAutoscaler_ (VPA)を使用してワークロードを垂直方向に自動的にスケールできます。
 HPAと異なり、VPAはデフォルトでKubernetesに付属していませんが、[GitHubで](https://github.com/kubernetes/autoscaler/tree/9f87b78df0f1d6e142234bb32e8acbd71295585a/vertical-pod-autoscaler)見つかる別のプロジェクトです。
 
-インストールすることにより、管理されたレプリカのリソースを _どのように_ _いつ_ スケールするのかを定義するワークロードの{{< glossary_tooltip text="CustomResourceDefinitions" term_id="customresourcedefinition" >}}(CRDs)を作成できるようになります。
+インストールすることにより、管理されたレプリカのリソースを _どのように_ _いつ_ スケールするのかを定義するワークロードの{{< glossary_tooltip text="CustomResourceDefinition" term_id="customresourcedefinition" >}}(CRD)を作成できるようになります。
 
 {{< note >}}
 VPAが機能するにはクラスターに[Metrics Server](https://github.com/kubernetes-sigs/metrics-server)がインストールされている必要があります。

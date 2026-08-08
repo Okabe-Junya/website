@@ -60,7 +60,7 @@ Kubernetesの主要な要素は、WindowsでもLinuxと同じように機能し�
   * Podステータスフィールド
   * ReadinessとLiveness Probe
   * postStartとpreStopコンテナのライフサイクルイベント
-  * 環境変数またはボリュームとしてのConfigMap、 Secrets
+  * 環境変数またはボリュームとしてのConfigMap、 Secret
   * EmptyDir
   * 名前付きパイプホストマウント
   * リソース制限

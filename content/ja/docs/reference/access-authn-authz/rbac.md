@@ -36,7 +36,7 @@ Roleは常に特定の{{< glossary_tooltip text="namespace" term_id="namespace" 
 
 対照的にClusterRoleは、Namespaceに属さないリソースです。Kubernetesオブジェクトは常にNamespaceに属するか、属さないかのいずれかである必要があり、リソースは異なる名前(RoleとClusterRole)を持っています。つまり、両方であることは不可能です。
 
-ClusterRolesにはいくつかの用途があります。ClusterRoleを利用して、以下のことができます。
+ClusterRoleにはいくつかの用途があります。ClusterRoleを利用して、以下のことができます。
 
 1. Namespaceに属するリソースに対する権限を定義し、個々のNamespace内で付与する
 2. Namespaceに属するリソースに対する権限を定義し、すべてのNamespaceにわたって付与する
@@ -64,7 +64,7 @@ rules:
 #### ClusterRoleの例
 
 ClusterRoleを使用してRoleと同じ権限を付与できます。
-ClusterRolesはクラスター単位でスコープされているため、以下へのアクセスの許可もできます。
+ClusterRoleはクラスター単位でスコープされているため、以下へのアクセスの許可もできます。
 
 * クラスター単位でスコープされているリソースに({{< glossary_tooltip text="node" term_id="node" >}}など)
 * 非リソースエンドポイントに(`/healthz`など)
@@ -78,7 +78,7 @@ ClusterRolesはクラスター単位でスコープされているため、以�
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  # 「namespace」はClusterRolesがNamespaceに属していないため、省略されています
+  # 「namespace」はClusterRoleがNamespaceに属していないため、省略されています
   name: secret-reader
 rules:
 - apiGroups: [""]
@@ -133,11 +133,11 @@ roleRef:
 RoleBindingはClusterRoleを参照し、ClusterRoleで定義されている権限をRoleBinding内のNamespaceのリソースに権限付与もできます。この種類の参照を利用すると、クラスター全体で共通のRoleのセットを定義して、それらを複数のNamespace内での再利用できます。
 
 例えば、以下のRoleBindingがClusterRoleを参照している場合でも、
-「dave」(大文字と小文字が区別されるsubject)はRoleBindingのNamespace(メタデータ内)が「development」のため、Namespace「development」のSecretsのみの読み取りができます。
+「dave」(大文字と小文字が区別されるsubject)はRoleBindingのNamespace(メタデータ内)が「development」のため、Namespace「development」のSecretのみの読み取りができます。
 
 ```yaml
 apiVersion: rbac.authorization.k8s.io/v1
-# このRoleBindingは「dave」にNamespace「development」のSecretsの読み取りを許可する
+# このRoleBindingは「dave」にNamespace「development」のSecretの読み取りを許可する
 # ClusterRole「secret-reader」を既に持っている必要があります。
 kind: RoleBinding
 metadata:
@@ -160,11 +160,11 @@ roleRef:
 
 クラスター全体に権限を付与するには、ClusterRoleBindingを使用できます。
 以下のClusterRoleBindingはグループ「manager」のすべてのユーザーに
-Secretsの読み取りを許可します。
+Secretの読み取りを許可します。
 
 ```yaml
 apiVersion: rbac.authorization.k8s.io/v1
-# このClusterRoleBindingはグループ「manager」のすべてのユーザーに任意のNamespaceのSecretsの読み取りを許可します。
+# このClusterRoleBindingはグループ「manager」のすべてのユーザーに任意のNamespaceのSecretの読み取りを許可します。
 kind: ClusterRoleBinding
 metadata:
   name: read-secrets-global
@@ -279,7 +279,7 @@ rules:
   verbs: ["get", "list", "watch"]
 ```
 
-[デフォルトのユーザー向けRole](#デフォルトroleとclusterrolebinding)はClusterRoleの集約を使用します。これによりクラスター管理者として、 デフォルトroleを拡張するため、{{< glossary_tooltip term_id="CustomResourceDefinition" text="CustomResourceDefinitions" >}}または集約されたAPIサーバーなどによって提供されたルールをカスタムリソースに含めることができます。
+[デフォルトのユーザー向けRole](#デフォルトroleとclusterrolebinding)はClusterRoleの集約を使用します。これによりクラスター管理者として、 デフォルトroleを拡張するため、{{< glossary_tooltip term_id="CustomResourceDefinition" text="CustomResourceDefinition" >}}または集約されたAPIサーバーなどによって提供されたルールをカスタムリソースに含めることができます。
 
 例えば、次のClusterRoleでは、「admin」と「edit」のデフォルトのRoleでCronTabという名前のカスタムリソースを管理できますが、「view」のRoleではCronTabリソースに対して読み取りアクションのみを実行できます。CronTabオブジェクトは、APIサーバーから見たURLで`"crontabs"`と名前が付けられていると想定できます。
 
@@ -327,7 +327,7 @@ rules:
   verbs: ["get", "list", "watch"]
 ```
 
-APIグループ`" extensions "`と `" apps "` の両方で、Deploymentsへの読み取り/書き込みを許可します。
+APIグループ`" extensions "`と `" apps "` の両方で、Deploymentへの読み取り/書き込みを許可します。
 (HTTPレベルでURLのリソース部分に`"deployments"`を持つオブジェクトで)
 
 ```yaml
@@ -396,7 +396,7 @@ rules:
 
 ### subjectsを参照する
 
-RoleBindingまたはClusterRoleBindingは、Roleをsubjectsにバインドします。subjectsはグループ、ユーザー、または{{< glossary_tooltip text="ServiceAccounts" term_id="service-account" >}}にすることができます。
+RoleBindingまたはClusterRoleBindingは、Roleをsubjectsにバインドします。subjectsはグループ、ユーザー、または{{< glossary_tooltip text="ServiceAccount" term_id="service-account" >}}にすることができます。
 
 Kubernetesはユーザー名を文字列として表します。
 これらは次のようにできます。「alice」などの単純な名前。「bob@example.com」のような電子メール形式の名前。または文字列として表される数値のユーザーID。 認証が必要な形式のユーザー名を生成するように[認証モジュール](https://kubernetes.io/ja/docs/reference/access-authn-authz/authentication/)を構成するかどうかは、クラスター管理者が決定します。
@@ -502,7 +502,7 @@ APIサーバーは、デフォルトのClusterRoleオブジェクトとClusterRo
 デフォルトのすべてのClusterRoleおよびClusterRoleBindingには、ラベル`kubernetes.io/bootstrapping=rbac-defaults`が付いています。
 
 {{< caution >}}
-プレフィックスとして`system:`を含む名前で、ClusterRolesおよびClusterRoleBindingsを変更する場合は注意してください。
+プレフィックスとして`system:`を含む名前で、ClusterRoleおよびClusterRoleBindingを変更する場合は注意してください。
 これらのリソースを変更すると、クラスターが機能しなくなる可能性があります。
 {{< /caution >}}
 
@@ -559,9 +559,9 @@ ClusterRoleを編集すると、変更が[自動調整](#自動調整)によるA
 
 ### ユーザー向けRole
 
-一部のデフォルトClusterRolesにはプレフィックス`system:`が付いていません。これらは、ユーザー向けのroleを想定しています。それらは、スーパーユーザーのRole(`cluster-admin`)、ClusterRoleBindingsを使用してクラスター全体に付与されることを意図しているRole、そしてRoleBindings(`admin`, `edit`, `view`)を使用して、特定のNamespace内に付与されることを意図しているRoleを含んでいます。
+一部のデフォルトClusterRoleにはプレフィックス`system:`が付いていません。これらは、ユーザー向けのroleを想定しています。それらは、スーパーユーザーのRole(`cluster-admin`)、ClusterRoleBindingを使用してクラスター全体に付与されることを意図しているRole、そしてRoleBinding(`admin`, `edit`, `view`)を使用して、特定のNamespace内に付与されることを意図しているRoleを含んでいます。
 
-ユーザー向けのClusterRolesは[ClusterRoleの集約](#集約clusterrole)を使用して、管理者がこれらのClusterRolesにカスタムリソースのルールを含めることができるようにします。ルールを`admin`、`edit`、または`view` Roleに追加するには、次のラベルの一つ以上でClusterRoleを作成します。
+ユーザー向けのClusterRoleは[ClusterRoleの集約](#集約clusterrole)を使用して、管理者がこれらのClusterRoleにカスタムリソースのルールを含めることができるようにします。ルールを`admin`、`edit`、または`view` Roleに追加するには、次のラベルの一つ以上でClusterRoleを作成します。
 
 ```yaml
 metadata:
@@ -598,7 +598,7 @@ metadata:
 <td>Namespace内のほとんどのオブジェクトへの読み取り/書き込みアクセスを許可します。
 
 このRoleは、RoleまたはRoleBindingの表示または変更を許可しません。
-ただし、このRoleでは、Secretsにアクセスして、Namespace内の任意のServiceAccountとしてPodsを実行できるため、Namespace内の任意のServiceAccountのAPIアクセスレベルを取得するために使用できます。</td>
+ただし、このRoleでは、Secretにアクセスして、Namespace内の任意のServiceAccountとしてPodを実行できるため、Namespace内の任意のServiceAccountのAPIアクセスレベルを取得するために使用できます。</td>
 </tr>
 <tr>
 <td><b>view</b></td>
@@ -606,7 +606,7 @@ metadata:
 <td>Namespace内のほとんどのオブジェクトを表示するための読み取り専用アクセスを許可します。
 RoleまたはRoleBindingは表示できません。
 
-Secretsの内容を読み取るとNamespaceのServiceAccountのクレデンシャルにアクセスできるため、このRoleではSecretsの表示は許可されません。これにより、Namespace内の任意のServiceAccountとしてAPIアクセスが許可されます(特権昇格の形式)。</td>
+Secretの内容を読み取るとNamespaceのServiceAccountのクレデンシャルにアクセスできるため、このRoleではSecretの表示は許可されません。これにより、Namespace内の任意のServiceAccountとしてAPIアクセスが許可されます(特権昇格の形式)。</td>
 </tr>
 </table>
 
@@ -752,7 +752,7 @@ RBAC APIは、RoleまたはRoleBindingを編集することにより、ユーザ
 1. 変更対象のオブジェクトと同じスコープで、Roleに含まれるすべての権限を既に持っている(ClusterRoleの場合はクラスター全体。Roleの場合は、同じNamespace内またはクラスター全体)。
 2. `rbac.authorization.k8s.io`APIグループの` roles`または`clusterroles`リソースで` escalate` verbを実行する明示的な権限が付与されている。
 
-たとえば、 `user-1`にクラスター全体でSecretsを一覧表示する権限がない場合、それらにその権限を含むClusterRoleを作成できません。
+たとえば、 `user-1`にクラスター全体でSecretを一覧表示する権限がない場合、それらにその権限を含むClusterRoleを作成できません。
 ユーザーがRoleを作成/更新できるようにするには、以下のいずれかを実施します。
 
 1. 必要に応じて、RoleオブジェクトまたはClusterRoleオブジェクトを作成/更新できるRoleを付与する。
@@ -764,7 +764,7 @@ RBAC APIは、RoleまたはRoleBindingを編集することにより、ユーザ
 
 参照されるRoleに含まれるすべての権限を(RoleBindingと同じスコープで)すでに持っている場合、
 *または*参照されたRoleで`bind` verbを実行する認可されている場合のみ、RoleBindingを作成/更新できます。
-たとえば、 `user-1`にクラスター全体でSecretsを一覧表示する権限がない場合、ClusterRoleBindingを作成してもRoleにその権限を付与できません。
+たとえば、 `user-1`にクラスター全体でSecretを一覧表示する権限がない場合、ClusterRoleBindingを作成してもRoleにその権限を付与できません。
 ユーザーがRoleBindingを作成/更新できるようにするには、以下のいずれかを実施します。
 
 1. 必要に応じて、RoleBindingまたはClusterRoleBindingオブジェクトを作成/更新できるようにする役割を付与する。
@@ -965,7 +965,7 @@ subjects:
 
 これにより、必要に応じて特定のServiceAccountに特定のRoleを付与できます。
 きめ細かいRoleBindingはセキュリティを強化しますが、管理にはより多くの労力が必要です。
-より広範な権限は、不必要な(そして潜在的にエスカレートする)APIアクセスをServiceAccountsに与える可能性がありますが、管理が簡単です。
+より広範な権限は、不必要な(そして潜在的にエスカレートする)APIアクセスをServiceAccountに与える可能性がありますが、管理が簡単です。
 
 アプローチを最も安全なものから最も安全でないものの順に並べると、次のとおりです。
 
@@ -1002,7 +1002,7 @@ subjects:
     これらのアドオンをスーパーユーザーアクセスでの実行を許可するには、Namespace`kube-system`のサービスアカウント「default」のcluster-admin権限を付与します。
 
     {{< caution >}}
-    これを有効にすると、 Namespace`kube-systemにクラスターのAPIへのスーパーユーザーアクセス許可するSecretsが含まれます。
+    これを有効にすると、 Namespace`kube-systemにクラスターのAPIへのスーパーユーザーアクセス許可するSecretが含まれます。
     {{< /caution >}}
 
     ```shell
@@ -1042,7 +1042,7 @@ subjects:
     権限の分割をまったく考慮しない場合は、すべてのサービスアカウントにスーパーユーザーアクセスを許可できます。
 
     {{< warning >}}
-    これにより、すべてのアプリケーションにクラスターへのフルアクセスが許可され、Secretsの読み取りアクセス権(または任意のポッドを作成する機能)を持つユーザーに、クラスターへのフルアクセスが許可されます。
+    これにより、すべてのアプリケーションにクラスターへのフルアクセスが許可され、Secretの読み取りアクセス権(または任意のポッドを作成する機能)を持つユーザーに、クラスターへのフルアクセスが許可されます。
     {{< /warning >}}
 
     ```shell

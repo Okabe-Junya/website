@@ -119,20 +119,20 @@ Kubernetes v1.16以降、Windowsコンテナは、イメージのデフォルト
 
 Kubernetes v1.14以降、Windowsコンテナワークロードは、Group Managed Service Accounts(GMSA)を使用するように構成できます。Group Managed Service Accountsは、自動パスワード管理、簡略化されたサービスプリンシパル名（SPN）管理、および複数のサーバー間で他の管理者に管理を委任する機能を提供する特定の種類のActive Directoryアカウントです。GMSAで構成されたコンテナは、GMSAで構成されたIDを保持しながら、外部Active Directoryドメインリソースにアクセスできます。Windowsコンテナ用のGMSAの構成と使用の詳細は[こちら](/docs/tasks/configure-pod-container/configure-gmsa/)。
 
-## TaintsとTolerations
+## TaintとToleration
 
-今日のユーザーは、LinuxとWindowsのワークロードをそれぞれのOS固有のノードで維持するために、Taintsとノードセレクターのいくつかの組み合わせを使用する必要があります。これはおそらくWindowsユーザーにのみ負担をかけます。推奨されるアプローチの概要を以下に示します。主な目標の1つは、このアプローチによって既存のLinuxワークロードの互換性が損なわれないようにすることです。
+今日のユーザーは、LinuxとWindowsのワークロードをそれぞれのOS固有のノードで維持するために、Taintとノードセレクターのいくつかの組み合わせを使用する必要があります。これはおそらくWindowsユーザーにのみ負担をかけます。推奨されるアプローチの概要を以下に示します。主な目標の1つは、このアプローチによって既存のLinuxワークロードの互換性が損なわれないようにすることです。
 
 ### OS固有のワークロードが適切なコンテナホストに確実に到達するようにする
 
-ユーザーは、TaintsとTolerationsを使用して、Windowsコンテナを適切なホストでスケジュールできるようにすることができます。現在、すべてのKubernetesノードには次のデフォルトラベルがあります。:
+ユーザーは、TaintとTolerationを使用して、Windowsコンテナを適切なホストでスケジュールできるようにすることができます。現在、すべてのKubernetesノードには次のデフォルトラベルがあります。:
 
 * kubernetes.io/os = [windows|linux]
 * kubernetes.io/arch = [amd64|arm64|...]
 
 Podの仕様で`"kubernetes.io/os": windows`のようなnodeSelectorが指定されていない場合、PodをWindowsまたはLinuxの任意のホストでスケジュールすることができます。WindowsコンテナはWindowsでのみ実行でき、LinuxコンテナはLinuxでのみ実行できるため、これは問題になる可能性があります。ベストプラクティスは、nodeSelectorを使用することです。
 
-ただし、多くの場合、ユーザーには既存の多数のLinuxコンテナのdeployment、およびコミュニティHelmチャートのような既成構成のエコシステムやOperatorのようなプログラム的にPodを生成するケースがあることを理解しています。このような状況では、nodeSelectorsを追加するための構成変更をためらう可能性があります。代替策は、Taintsを使用することです。kubeletは登録中にTaintsを設定できるため、Windowsだけで実行する時に自動的にTaintを追加するように簡単に変更できます。
+ただし、多くの場合、ユーザーには既存の多数のLinuxコンテナのdeployment、およびコミュニティHelmチャートのような既成構成のエコシステムやOperatorのようなプログラム的にPodを生成するケースがあることを理解しています。このような状況では、nodeSelectorsを追加するための構成変更をためらう可能性があります。代替策は、Taintを使用することです。kubeletは登録中にTaintを設定できるため、Windowsだけで実行する時に自動的にTaintを追加するように簡単に変更できます。
 
 例:`--register-with-taints='os=windows:NoSchedule'`
 
@@ -167,7 +167,7 @@ Kubernetes 1.17では、これを簡単するために新しいラベル`node.ku
 
 ### RuntimeClassによる簡素化
 
-[RuntimeClass]は、TaintsとTolerationsを使用するプロセスを簡略化するために使用できます。クラスター管理者は、これらのTaintsとTolerationsをカプセル化するために使用する`RuntimeClass`オブジェクトを作成できます。
+[RuntimeClass]は、TaintとTolerationを使用するプロセスを簡略化するために使用できます。クラスター管理者は、これらのTaintとTolerationをカプセル化するために使用する`RuntimeClass`オブジェクトを作成できます。
 
 1. このファイルを`runtimeClasses.yml`に保存します。これには、Windows OS、アーキテクチャ、およびバージョンに適切な`nodeSelector`が含まれています。
 

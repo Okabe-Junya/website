@@ -359,7 +359,7 @@ spec:
 
 {{< feature-state for_k8s_version="v1.18" state="stable" >}}
 
-KubernetesはPersistentVolumesの2つの`volumeModes`をサポートしています: `Filesystem`と`Block`です。  
+KubernetesはPersistentVolumeの2つの`volumeModes`をサポートしています: `Filesystem`と`Block`です。  
 `volumeMode`は任意のAPIパラメーターです。  
 `Filesystem`は`volumeMode`パラメーターが省略されたときに使用されるデフォルトのモードです。  
 

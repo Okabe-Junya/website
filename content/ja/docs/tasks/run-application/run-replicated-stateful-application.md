@@ -470,7 +470,7 @@ kubectl delete pvc data-mysql-4
    No resources found.
    ```
 
-1. ConfigMap、Services、およびPersistentVolumeClaimを削除します。
+1. ConfigMap、Service、およびPersistentVolumeClaimを削除します。
 
    ```shell
    kubectl delete configmap,service,pvc -l app=mysql

@@ -622,7 +622,7 @@ ConfigMapを[subPath](/docs/concepts/storage/volumes/#using-subpath)ボリュー
 
 <!-- discussion -->
 
-## ConfigMapとPodsを理解する
+## ConfigMapとPodを理解する
 
 ConfigMap APIリソースは構成情報をキーバリューペアとして保存します。データはPodで利用したり、コントローラーなどのシステムコンポーネントに提供できます。ConfigMapは[Secret](/docs/concepts/configuration/secret/)に似ていますが、機密情報を含まない文字列を含まない操作する手段を提供します。ユーザーとシステムコンポーネントはどちらも構成情報をConfigMapに保存できます。
 
